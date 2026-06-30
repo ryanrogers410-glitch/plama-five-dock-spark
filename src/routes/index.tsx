@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import heroImg from "@/assets/hero-structure.jpg";
+import plamaLogo from "@/assets/plama-logo.png.asset.json";
 import founderImg from "@/assets/founder-lucas.jpg";
 import secCommercial from "@/assets/sector-commercial.jpg";
 import secResidential from "@/assets/sector-residential.jpg";
@@ -83,12 +84,8 @@ function Nav() {
   return (
     <header className="absolute top-0 left-0 right-0 z-50">
       <div className="container-px mx-auto max-w-7xl flex items-center justify-between py-6">
-        <a href="#top" className="flex items-center gap-2.5">
-          <div className="grid h-9 w-9 place-items-center rounded-md bg-[var(--brand)] text-white font-display text-lg">P</div>
-          <div className="leading-tight">
-            <div className="font-display text-lg text-white">Plama</div>
-            <div className="text-[10px] tracking-[0.25em] uppercase text-white/70 -mt-0.5">Projects</div>
-          </div>
+        <a href="#top" className="flex items-center">
+          <img src={plamaLogo.url} alt="Plama Projects" className="h-6 md:h-7 w-auto bg-white rounded-sm px-2 py-1" />
         </a>
         <nav className="hidden md:flex items-center gap-9 text-sm text-white/85">
           <a href="#services" className="hover:text-white transition">Services</a>
@@ -525,7 +522,7 @@ function Footer() {
     <footer className="bg-[#000d1f] text-white/70 border-t border-white/10">
       <div className="container-px mx-auto max-w-7xl py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
         <div className="flex items-center gap-3">
-          <div className="grid h-8 w-8 place-items-center rounded-md bg-[var(--brand)] text-white font-display">P</div>
+          <img src={plamaLogo.url} alt="Plama Projects" className="h-5 w-auto bg-white rounded-sm px-1.5 py-1" />
           <span>Plama Projects · Multidisciplinary Engineering Consultancy</span>
         </div>
         <div>© {new Date().getFullYear()} Plama Projects. All rights reserved.</div>
