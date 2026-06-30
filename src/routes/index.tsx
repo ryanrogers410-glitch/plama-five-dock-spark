@@ -84,12 +84,8 @@ function Nav() {
   return (
     <header className="absolute top-0 left-0 right-0 z-50">
       <div className="container-px mx-auto max-w-7xl flex items-center justify-between py-6">
-        <a href="#top" className="flex items-center gap-2.5">
-          <div className="grid h-9 w-9 place-items-center rounded-md bg-[var(--brand)] text-white font-display text-lg">P</div>
-          <div className="leading-tight">
-            <div className="font-display text-lg text-white">Plama</div>
-            <div className="text-[10px] tracking-[0.25em] uppercase text-white/70 -mt-0.5">Projects</div>
-          </div>
+        <a href="#top" className="flex items-center">
+          <img src={plamaLogo.url} alt="Plama Projects" className="h-6 md:h-7 w-auto bg-white rounded-sm px-2 py-1" />
         </a>
         <nav className="hidden md:flex items-center gap-9 text-sm text-white/85">
           <a href="#services" className="hover:text-white transition">Services</a>
