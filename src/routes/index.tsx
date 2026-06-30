@@ -522,7 +522,7 @@ function Footer() {
     <footer className="bg-[#000d1f] text-white/70 border-t border-white/10">
       <div className="container-px mx-auto max-w-7xl py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
         <div className="flex items-center gap-3">
-          <div className="grid h-8 w-8 place-items-center rounded-md bg-[var(--brand)] text-white font-display">P</div>
+          <img src={plamaLogo.url} alt="Plama Projects" className="h-5 w-auto bg-white rounded-sm px-1.5 py-1" />
           <span>Plama Projects · Multidisciplinary Engineering Consultancy</span>
         </div>
         <div>© {new Date().getFullYear()} Plama Projects. All rights reserved.</div>
