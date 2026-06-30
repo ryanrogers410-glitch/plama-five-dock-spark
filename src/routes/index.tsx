@@ -103,29 +103,29 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="top" className="relative min-h-[100vh] overflow-hidden bg-[var(--brand-deep)]">
+    <section id="top" className="relative min-h-[88vh] overflow-hidden bg-[var(--brand-deep)]">
       <img src={heroImg} alt="" width={1920} height={1280}
         className="absolute inset-0 h-full w-full object-cover opacity-55" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#001a36]/85 via-[#001a36]/55 to-[#001a36]/95" />
       <div className="absolute inset-0 bg-gradient-to-r from-[#001a36]/70 to-transparent" />
 
-      <div className="relative container-px mx-auto max-w-7xl pt-40 pb-24 md:pt-48 md:pb-32">
+      <div className="relative container-px mx-auto max-w-7xl pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="max-w-4xl animate-rise">
           <div className="inline-flex items-center gap-3 text-xs tracking-[0.22em] uppercase text-white/80">
             <span className="h-px w-10 bg-[var(--accent-orange)]" />
             Engineering Consultancy · Sydney
           </div>
-          <h1 className="mt-7 font-display text-white text-balance text-[2.75rem] leading-[1.02] sm:text-6xl md:text-7xl lg:text-[5.25rem]">
+          <h1 className="mt-5 font-display text-white text-balance text-[2.5rem] leading-[1.05] sm:text-5xl md:text-6xl lg:text-[4.5rem]">
             Engineering that<br />
             <span className="italic font-light text-white/90">stands up</span> to
             <span className="text-[var(--accent-orange)]"> scrutiny.</span>
           </h1>
-          <p className="mt-8 max-w-2xl text-lg md:text-xl text-white/75 leading-relaxed">
+          <p className="mt-6 max-w-2xl text-base md:text-lg text-white/75 leading-relaxed">
             For nearly two decades, Plama Projects has delivered multidisciplinary engineering
             for the homes, buildings and waterfronts that shape Sydney — with the rigour of a
             large practice and the responsiveness of a boutique.
           </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
+          <div className="mt-8 flex flex-wrap items-center gap-4">
             <a href="#contact" className="btn-primary">
               Request a Consultation <ArrowUpRight className="h-4 w-4" />
             </a>
@@ -135,16 +135,16 @@ function Hero() {
           </div>
         </div>
 
-        <div className="mt-20 md:mt-28 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/15 border border-white/15 rounded-2xl overflow-hidden backdrop-blur-sm">
+        <div className="mt-14 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/15 border border-white/15 rounded-2xl overflow-hidden backdrop-blur-sm">
           {[
             ["20", "Years of practice"],
             ["10", "Engineering disciplines"],
             ["8", "Sectors served"],
             ["100%", "In-house delivery"],
           ].map(([k, v]) => (
-            <div key={v} className="bg-[#001a36]/60 px-6 py-7">
-              <div className="font-display text-4xl md:text-5xl text-white">{k}<span className="text-[var(--accent-orange)]">.</span></div>
-              <div className="mt-2 text-xs uppercase tracking-[0.18em] text-white/65">{v}</div>
+            <div key={v} className="bg-[#001a36]/60 px-6 py-5">
+              <div className="font-display text-3xl md:text-4xl text-white">{k}<span className="text-[var(--accent-orange)]">.</span></div>
+              <div className="mt-1.5 text-xs uppercase tracking-[0.18em] text-white/65">{v}</div>
             </div>
           ))}
         </div>
