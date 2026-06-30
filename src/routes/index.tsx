@@ -430,32 +430,32 @@ function Contact() {
       <div className="absolute inset-0 opacity-20" style={{
         backgroundImage: "radial-gradient(circle at 20% 30%, var(--accent-orange) 0%, transparent 40%), radial-gradient(circle at 80% 70%, var(--brand) 0%, transparent 50%)",
       }} />
-      <div className="container-px mx-auto max-w-7xl py-24 md:py-36 relative">
-        <div className="grid lg:grid-cols-12 gap-14">
+      <div className="container-px mx-auto max-w-7xl py-16 md:py-24 relative">
+        <div className="grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-7">
             <span className="inline-flex items-center gap-2 text-xs tracking-[0.22em] uppercase text-white/70">
               <span className="h-px w-8 bg-[var(--accent-orange)]" /> Start a Project
             </span>
-            <h2 className="mt-6 font-display text-4xl md:text-6xl lg:text-7xl text-balance">
+            <h2 className="mt-4 font-display text-3xl md:text-5xl lg:text-6xl text-balance">
               Let's engineer<br />
               <span className="italic text-white/80">your next</span>
               <span className="text-[var(--accent-orange)]"> project.</span>
             </h2>
-            <p className="mt-8 max-w-xl text-lg text-white/75 leading-relaxed">
+            <p className="mt-6 max-w-xl text-base text-white/75 leading-relaxed">
               Tell us about your site, your timeline, and what you're trying to build. We'll
               respond with a fixed scope, fixed fee, and a senior engineer on your call.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-wrap gap-4">
               <a href="tel:0452588578" className="btn-primary">
                 Call 0452 588 578 <Phone className="h-4 w-4" />
               </a>
-              <a href="mailto:plama.pro@outlook.com" className="inline-flex items-center gap-2.5 rounded-full border border-white/25 text-white px-7 py-[0.95rem] text-sm font-medium hover:bg-white hover:text-[var(--brand)] transition">
+              <a href="mailto:plama.pro@outlook.com" className="inline-flex items-center gap-2.5 rounded-full border border-white/25 text-white px-6 py-3 text-sm font-medium hover:bg-white hover:text-[var(--brand)] transition">
                 Email the Team <Mail className="h-4 w-4" />
               </a>
             </div>
           </div>
 
-          <div className="lg:col-span-5 lg:pl-10 lg:border-l border-white/15 space-y-7">
+          <div className="lg:col-span-5 lg:pl-10 lg:border-l border-white/15 space-y-6">
             <ContactRow icon={Phone} label="Phone" value="0452 588 578" href="tel:0452588578" />
             <ContactRow icon={Mail} label="Email" value="plama.pro@outlook.com" href="mailto:plama.pro@outlook.com" />
             <ContactRow icon={MapPin} label="Office" value={<>1 Kerin Avenue<br />Five Dock NSW 2046</>} />
