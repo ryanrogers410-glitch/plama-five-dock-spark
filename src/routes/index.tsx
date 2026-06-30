@@ -212,16 +212,16 @@ function Intro() {
 
 function Services() {
   return (
-    <section id="services" className="bg-[var(--surface)] py-24 md:py-36">
+    <section id="services" className="bg-[var(--surface)] py-16 md:py-24">
       <div className="container-px mx-auto max-w-7xl">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
           <div className="max-w-2xl">
             <span className="eyebrow">Services</span>
-            <h2 className="mt-6 font-display text-4xl md:text-5xl lg:text-6xl text-[var(--ink)] text-balance">
+            <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] text-balance">
               Ten disciplines. <span className="italic text-[var(--brand)]">One team.</span>
             </h2>
           </div>
-          <p className="md:max-w-sm text-[var(--ink-soft)]">
+          <p className="md:max-w-sm text-sm text-[var(--ink-soft)]">
             From concept feasibility through certification, every service is delivered by
             registered engineers under one roof.
           </p>
@@ -230,15 +230,15 @@ function Services() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
           {services.map(({ icon: Icon, title, desc }, i) => (
             <div key={title}
-              className="group relative bg-white p-7 lg:p-8 transition-all duration-500 hover:bg-[var(--brand)]">
-              <div className="flex items-start justify-between mb-8">
-                <div className="grid h-12 w-12 place-items-center rounded-lg bg-[var(--brand)]/10 text-[var(--brand)] group-hover:bg-[var(--accent-orange)] group-hover:text-white transition-colors">
+              className="group relative bg-white p-6 lg:p-7 transition-all duration-500 hover:bg-[var(--brand)]">
+              <div className="flex items-start justify-between mb-6">
+                <div className="grid h-11 w-11 place-items-center rounded-lg bg-[var(--brand)]/10 text-[var(--brand)] group-hover:bg-[var(--accent-orange)] group-hover:text-white transition-colors">
                   <Icon className="h-5 w-5" strokeWidth={1.75} />
                 </div>
                 <span className="text-xs text-[var(--ink-soft)]/70 group-hover:text-white/60 transition-colors">0{i + 1}</span>
               </div>
-              <h3 className="font-display text-xl text-[var(--ink)] group-hover:text-white transition-colors">{title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-[var(--ink-soft)] group-hover:text-white/75 transition-colors">{desc}</p>
+              <h3 className="font-display text-lg text-[var(--ink)] group-hover:text-white transition-colors">{title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-[var(--ink-soft)] group-hover:text-white/75 transition-colors">{desc}</p>
             </div>
           ))}
         </div>
