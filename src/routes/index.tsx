@@ -249,30 +249,30 @@ function Services() {
 
 function Sectors() {
   return (
-    <section id="sectors" className="container-px mx-auto max-w-7xl py-24 md:py-36">
-      <div className="grid lg:grid-cols-12 gap-12 mb-16">
+    <section id="sectors" className="container-px mx-auto max-w-7xl py-16 md:py-24">
+      <div className="grid lg:grid-cols-12 gap-10 mb-10">
         <div className="lg:col-span-7">
           <span className="eyebrow">Industries</span>
-          <h2 className="mt-6 font-display text-4xl md:text-5xl lg:text-6xl text-[var(--ink)] text-balance">
+          <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] text-balance">
             Engineering across the <span className="italic text-[var(--brand)]">built environment.</span>
           </h2>
         </div>
         <div className="lg:col-span-5 flex items-end">
-          <p className="text-[var(--ink-soft)]">
+          <p className="text-sm text-[var(--ink-soft)]">
             We've engineered for families, builders, healthcare providers and waterfront
             developers — bringing the same rigour to every brief.
           </p>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
         {sectors.map(({ img, title }) => (
-          <a key={title} href="#contact" className="group relative aspect-[3/4] overflow-hidden rounded-xl block">
+          <a key={title} href="#contact" className="group relative aspect-[4/3] overflow-hidden rounded-xl block">
             <img src={img} alt={title} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#001a36]/90 via-[#001a36]/20 to-transparent" />
-            <div className="absolute inset-0 p-6 flex flex-col justify-end">
-              <h3 className="font-display text-2xl text-white">{title}</h3>
-              <div className="mt-3 inline-flex items-center gap-2 text-white/80 text-sm">
+            <div className="absolute inset-0 p-5 flex flex-col justify-end">
+              <h3 className="font-display text-xl text-white">{title}</h3>
+              <div className="mt-2 inline-flex items-center gap-2 text-white/80 text-sm">
                 <span className="h-px w-6 bg-[var(--accent-orange)]" /> Enquire
               </div>
             </div>
@@ -280,9 +280,9 @@ function Sectors() {
         ))}
       </div>
 
-      <div className="mt-12 flex flex-wrap gap-2.5">
+      <div className="mt-8 flex flex-wrap gap-2">
         {sectorTags.map((t) => (
-          <span key={t} className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm text-[var(--ink-soft)]">
+          <span key={t} className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1.5 text-sm text-[var(--ink-soft)]">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent-orange)]" />
             {t}
           </span>
