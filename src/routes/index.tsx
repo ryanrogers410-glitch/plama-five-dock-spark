@@ -295,15 +295,15 @@ function Sectors() {
 function Founder() {
   return (
     <section id="founder" className="bg-[var(--brand)] text-white relative overflow-hidden">
-      <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-[var(--accent-orange)]/20 blur-3xl" />
-      <div className="container-px mx-auto max-w-7xl py-24 md:py-36 relative">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+      <div className="absolute -top-32 -right-32 h-80 w-80 rounded-full bg-[var(--accent-orange)]/20 blur-3xl" />
+      <div className="container-px mx-auto max-w-7xl py-16 md:py-24 relative">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           <div className="lg:col-span-5">
             <div className="relative">
               <img src={founderImg} alt="Lucas Tran, Principal Engineer & Founder" loading="lazy" width={1024} height={1280}
                 className="w-full rounded-2xl object-cover aspect-[4/5]" />
-              <div className="absolute -bottom-6 -right-6 hidden md:block bg-[var(--accent-orange)] text-white p-6 rounded-xl max-w-[200px]">
-                <div className="font-display text-3xl leading-none">20<span className="text-xl">+</span></div>
+              <div className="absolute -bottom-5 -right-5 hidden md:block bg-[var(--accent-orange)] text-white p-5 rounded-xl max-w-[180px]">
+                <div className="font-display text-2xl leading-none">20<span className="text-lg">+</span></div>
                 <div className="mt-1 text-xs uppercase tracking-[0.18em]">Years engineering Sydney</div>
               </div>
             </div>
@@ -312,17 +312,17 @@ function Founder() {
             <span className="inline-flex items-center gap-2 text-xs tracking-[0.22em] uppercase text-white/70">
               <span className="h-px w-8 bg-[var(--accent-orange)]" /> Founder Spotlight
             </span>
-            <h2 className="mt-6 font-display text-4xl md:text-5xl lg:text-6xl text-balance">
+            <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-balance">
               Lucas Tran<span className="text-[var(--accent-orange)]">.</span>
             </h2>
-            <p className="mt-2 text-white/70 text-lg">Principal Engineer & Founder</p>
-            <p className="mt-8 text-lg leading-relaxed text-white/85">
+            <p className="mt-2 text-white/70 text-base">Principal Engineer & Founder</p>
+            <p className="mt-6 text-base leading-relaxed text-white/85">
               Lucas founded Plama Projects to bring senior-led engineering to every brief — no
               matter the scale. His work spans residential rebuilds through to large-format
               commercial and healthcare developments across New South Wales.
             </p>
 
-            <div className="mt-10 grid sm:grid-cols-2 gap-4">
+            <div className="mt-8 grid sm:grid-cols-2 gap-3">
               {[
                 "Chartered Professional Engineer (CPEng)",
                 "Registered Building Practitioner (NSW)",
@@ -335,9 +335,9 @@ function Founder() {
               ))}
             </div>
 
-            <blockquote className="mt-10 border-t border-white/15 pt-8">
-              <Quote className="h-6 w-6 text-[var(--accent-orange)] mb-3" />
-              <p className="font-display italic text-xl md:text-2xl text-white/95 text-balance leading-snug">
+            <blockquote className="mt-8 border-t border-white/15 pt-6">
+              <Quote className="h-5 w-5 text-[var(--accent-orange)] mb-2" />
+              <p className="font-display italic text-lg md:text-xl text-white/95 text-balance leading-snug">
                 "Great engineering is invisible. It lets architecture, builders and owners do
                 their best work — quietly, and without drama."
               </p>
