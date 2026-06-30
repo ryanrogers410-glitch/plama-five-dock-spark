@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import heroImg from "@/assets/hero-structure.jpg";
+import plamaLogo from "@/assets/plama-logo.png.asset.json";
 import founderImg from "@/assets/founder-lucas.jpg";
 import secCommercial from "@/assets/sector-commercial.jpg";
 import secResidential from "@/assets/sector-residential.jpg";
