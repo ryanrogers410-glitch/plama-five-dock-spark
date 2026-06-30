@@ -472,26 +472,26 @@ function ContactRow({
 }: { icon: typeof Phone; label: string; value: ReactNode; href?: string }) {
   const content = (
     <>
-      <div className="grid h-11 w-11 place-items-center rounded-full bg-white/10 text-[var(--accent-orange)] shrink-0 group-hover:bg-[var(--accent-orange)] group-hover:text-white transition">
-        <Icon className="h-5 w-5" strokeWidth={1.75} />
+      <div className="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-[var(--accent-orange)] shrink-0 group-hover:bg-[var(--accent-orange)] group-hover:text-white transition">
+        <Icon className="h-4 w-4" strokeWidth={1.75} />
       </div>
       <div className="min-w-0">
         <div className="text-[10px] uppercase tracking-[0.22em] text-white/55">{label}</div>
-        <div className="mt-1 font-display text-xl text-white leading-snug">{value}</div>
+        <div className="mt-1 font-display text-lg text-white leading-snug">{value}</div>
       </div>
     </>
   );
   return href ? (
-    <a href={href} className="flex items-start gap-4 group">{content}</a>
+    <a href={href} className="flex items-start gap-3.5 group">{content}</a>
   ) : (
-    <div className="flex items-start gap-4 group">{content}</div>
+    <div className="flex items-start gap-3.5 group">{content}</div>
   );
 }
 
 function Footer() {
   return (
     <footer className="bg-[#000d1f] text-white/70 border-t border-white/10">
-      <div className="container-px mx-auto max-w-7xl py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+      <div className="container-px mx-auto max-w-7xl py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
         <div className="flex items-center gap-3">
           <img src={plamaLogo.url} alt="Plama Projects" className="h-5 w-auto bg-white rounded-sm px-1.5 py-1" />
           <span>Plama Projects · Multidisciplinary Engineering Consultancy</span>
