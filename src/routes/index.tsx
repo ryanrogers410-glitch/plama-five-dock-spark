@@ -380,34 +380,6 @@ function Strengths() {
   );
 }
 
-function Areas() {
-  return (
-    <section className="bg-[var(--surface)] py-24 md:py-32 border-y border-border">
-      <div className="container-px mx-auto max-w-7xl">
-        <div className="grid lg:grid-cols-12 gap-10 items-end mb-14">
-          <div className="lg:col-span-7">
-            <span className="eyebrow">Service Areas</span>
-            <h2 className="mt-6 font-display text-4xl md:text-5xl lg:text-6xl text-[var(--ink)] text-balance">
-              Engineering across <span className="italic text-[var(--brand)]">greater Sydney.</span>
-            </h2>
-          </div>
-          <div className="lg:col-span-5 text-[var(--ink-soft)]">
-            <p>Headquartered in Five Dock — proudly servicing residents, builders and developers across the metropolitan area.</p>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-border border border-border">
-          {areas.map((a, i) => (
-            <div key={a} className="bg-white px-5 py-6 flex items-center justify-between group hover:bg-[var(--brand)] hover:text-white transition-colors">
-              <span className="font-display text-lg">{a}</span>
-              <span className="text-xs text-[var(--ink-soft)] group-hover:text-white/60">{String(i + 1).padStart(2, "0")}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Testimonials() {
   const items = [
