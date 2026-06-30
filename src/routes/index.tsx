@@ -158,10 +158,10 @@ function Marquee() {
   const row = [...items, ...items];
   return (
     <div className="relative bg-white border-y border-border overflow-hidden">
-      <div className="flex animate-marquee whitespace-nowrap py-6">
+      <div className="flex animate-marquee whitespace-nowrap py-4">
         {row.map((t, i) => (
-          <div key={i} className="flex items-center gap-12 px-8 text-[var(--brand)]/70">
-            <span className="font-display text-2xl md:text-3xl italic">{t}</span>
+          <div key={i} className="flex items-center gap-10 px-6 text-[var(--brand)]/70">
+            <span className="font-display text-xl md:text-2xl italic">{t}</span>
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent-orange)]" />
           </div>
         ))}
