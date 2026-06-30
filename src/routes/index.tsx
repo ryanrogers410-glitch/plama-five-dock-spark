@@ -172,35 +172,35 @@ function Marquee() {
 
 function Intro() {
   return (
-    <section className="container-px mx-auto max-w-7xl py-24 md:py-36">
-      <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+    <section className="container-px mx-auto max-w-7xl py-16 md:py-24">
+      <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
         <div className="lg:col-span-5">
           <span className="eyebrow">About Plama</span>
-          <h2 className="mt-6 font-display text-4xl md:text-5xl lg:text-6xl text-[var(--ink)] text-balance">
+          <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] text-balance">
             A consultancy built on <span className="italic text-[var(--brand)]">precision</span>, trust and craft.
           </h2>
         </div>
         <div className="lg:col-span-6 lg:col-start-7">
-          <p className="text-lg leading-relaxed text-[var(--ink-soft)]">
+          <p className="text-base leading-relaxed text-[var(--ink-soft)]">
             Plama Projects is a multidisciplinary engineering consultancy headquartered in
             Five Dock, NSW. We combine nearly 20 years of practice with a tightly integrated
             in-house team, so every project — from a knock-down rebuild to a hospital fit-out —
             is engineered by people who own the outcome end-to-end.
           </p>
-          <p className="mt-6 text-lg leading-relaxed text-[var(--ink-soft)]">
+          <p className="mt-4 text-base leading-relaxed text-[var(--ink-soft)]">
             We're known for clear documentation, fixed pricing and senior engineers who pick up
             the phone. That's the standard our clients return for.
           </p>
-          <div className="mt-10 grid sm:grid-cols-2 gap-px bg-border border border-border">
+          <div className="mt-8 grid sm:grid-cols-2 gap-px bg-border border border-border">
             {[
               ["Founded", "Sydney, NSW"],
               ["Practice", "~20 Years"],
               ["Team", "Multidisciplinary"],
               ["Approach", "Senior-led"],
             ].map(([l, v]) => (
-              <div key={l} className="bg-white p-5">
+              <div key={l} className="bg-white p-4">
                 <div className="text-[10px] uppercase tracking-[0.22em] text-[var(--ink-soft)]">{l}</div>
-                <div className="mt-2 font-display text-xl text-[var(--ink)]">{v}</div>
+                <div className="mt-1.5 font-display text-lg text-[var(--ink)]">{v}</div>
               </div>
             ))}
           </div>
