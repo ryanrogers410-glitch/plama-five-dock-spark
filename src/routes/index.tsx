@@ -72,7 +72,6 @@ function Home() {
       <Sectors />
       <Founder />
       <Strengths />
-      <Areas />
       <Testimonials />
       <Contact />
       <Footer />
