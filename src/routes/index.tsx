@@ -55,11 +55,6 @@ const strengths = [
   { icon: Hammer, title: "High-Quality Workmanship", desc: "Documentation built for builders — clear, buildable, defensible." },
 ];
 
-const areas = [
-  "Sydney CBD", "Eastern Suburbs", "Northern Beaches", "Hills District",
-  "Canterbury-Bankstown", "Western Sydney", "South Western Sydney", "Forest District",
-  "Fairfield-Liverpool", "Strathfield-Homebush", "Drummoyne", "Five Dock",
-];
 
 function Home() {
   return (
@@ -82,7 +77,7 @@ function Home() {
 function Nav() {
   return (
     <header className="absolute top-0 left-0 right-0 z-50">
-      <div className="container-px mx-auto max-w-7xl flex items-center justify-between py-6">
+      <div className="container-px mx-auto max-w-7xl flex items-center justify-between py-4 md:py-5">
         <a href="#top" className="flex items-center">
           <img src={plamaLogo.url} alt="Plama Projects" className="h-6 md:h-7 w-auto bg-white rounded-sm px-2 py-1" />
         </a>
