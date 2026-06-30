@@ -351,26 +351,26 @@ function Founder() {
 
 function Strengths() {
   return (
-    <section id="strengths" className="container-px mx-auto max-w-7xl py-24 md:py-36">
-      <div className="grid lg:grid-cols-12 gap-12 mb-16">
+    <section id="strengths" className="container-px mx-auto max-w-7xl py-16 md:py-24">
+      <div className="grid lg:grid-cols-12 gap-10 mb-10">
         <div className="lg:col-span-6">
           <span className="eyebrow">Why Plama</span>
-          <h2 className="mt-6 font-display text-4xl md:text-5xl lg:text-6xl text-[var(--ink)] text-balance">
+          <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] text-balance">
             The standard our clients <span className="italic text-[var(--brand)]">come back for.</span>
           </h2>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {strengths.map(({ icon: Icon, title, desc }, i) => (
-          <div key={title} className={`relative rounded-xl p-8 border border-border ${i === 0 ? "lg:col-span-2 bg-[var(--surface)]" : "bg-white"}`}>
-            <div className="flex items-start gap-5">
-              <div className="grid h-11 w-11 place-items-center rounded-full bg-[var(--accent-orange)]/10 text-[var(--accent-orange)] shrink-0">
+          <div key={title} className={`relative rounded-xl p-6 border border-border ${i === 0 ? "lg:col-span-2 bg-[var(--surface)]" : "bg-white"}`}>
+            <div className="flex items-start gap-4">
+              <div className="grid h-10 w-10 place-items-center rounded-full bg-[var(--accent-orange)]/10 text-[var(--accent-orange)] shrink-0">
                 <Icon className="h-5 w-5" strokeWidth={1.75} />
               </div>
               <div className="min-w-0">
-                <h3 className="font-display text-xl text-[var(--ink)]">{title}</h3>
-                <p className="mt-2 text-[var(--ink-soft)] leading-relaxed">{desc}</p>
+                <h3 className="font-display text-lg text-[var(--ink)]">{title}</h3>
+                <p className="mt-1 text-sm text-[var(--ink-soft)] leading-relaxed">{desc}</p>
               </div>
             </div>
           </div>
