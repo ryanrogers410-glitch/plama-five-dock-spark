@@ -388,35 +388,35 @@ function Testimonials() {
     { q: "Their façade engineering unlocked a design we thought we'd lost. Pragmatic, fast and commercially aware.", a: "Project Manager, Sydney CBD" },
   ];
   return (
-    <section className="container-px mx-auto max-w-7xl py-24 md:py-36">
-      <div className="max-w-3xl mb-16">
+    <section className="container-px mx-auto max-w-7xl py-16 md:py-24">
+      <div className="max-w-3xl mb-10">
         <span className="eyebrow">Trust Signals</span>
-        <h2 className="mt-6 font-display text-4xl md:text-5xl lg:text-6xl text-[var(--ink)] text-balance">
+        <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] text-balance">
           In the words of <span className="italic text-[var(--brand)]">those we've engineered for.</span>
         </h2>
       </div>
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-3 gap-4">
         {items.map((t, i) => (
-          <figure key={i} className="relative bg-white rounded-xl border border-border p-8">
-            <Quote className="h-7 w-7 text-[var(--accent-orange)]" />
-            <blockquote className="mt-5 font-display text-xl text-[var(--ink)] leading-snug text-balance">
+          <figure key={i} className="relative bg-white rounded-xl border border-border p-6">
+            <Quote className="h-6 w-6 text-[var(--accent-orange)]" />
+            <blockquote className="mt-4 font-display text-lg text-[var(--ink)] leading-snug text-balance">
               "{t.q}"
             </blockquote>
-            <figcaption className="mt-7 pt-5 border-t border-border text-sm text-[var(--ink-soft)]">{t.a}</figcaption>
+            <figcaption className="mt-5 pt-4 border-t border-border text-sm text-[var(--ink-soft)]">{t.a}</figcaption>
           </figure>
         ))}
       </div>
 
-      <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+      <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
         {[
           ["CPEng", "Chartered Professional"],
           ["NER", "National Engineering Register"],
           ["RBP", "Registered Building Practitioner"],
           ["EA", "Engineers Australia Member"],
         ].map(([k, v]) => (
-          <div key={k} className="border border-border rounded-xl px-5 py-7">
-            <div className="font-display text-3xl text-[var(--brand)]">{k}</div>
-            <div className="mt-2 text-xs uppercase tracking-[0.18em] text-[var(--ink-soft)]">{v}</div>
+          <div key={k} className="border border-border rounded-xl px-4 py-5">
+            <div className="font-display text-2xl text-[var(--brand)]">{k}</div>
+            <div className="mt-1.5 text-xs uppercase tracking-[0.18em] text-[var(--ink-soft)]">{v}</div>
           </div>
         ))}
       </div>
