@@ -384,7 +384,8 @@ function Founder() {
 
 function Strengths() {
   return (
-    <section id="strengths" className="container-px mx-auto max-w-7xl py-10 md:py-14">
+    <section id="strengths" className="relative z-20 container-px mx-auto max-w-7xl -mt-16 md:-mt-24 -mb-16 md:-mb-24 bg-white rounded-2xl shadow-2xl p-6 md:p-10 border border-border">
+      <div className="pt-2 pb-2"></div>
       <div className="grid lg:grid-cols-12 gap-8 mb-6">
         <div className="lg:col-span-6">
           <span className="eyebrow">Why Plama</span>
