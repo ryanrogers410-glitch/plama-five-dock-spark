@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import type { ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import heroImg from "@/assets/hero-structure.jpg";
 import plamaLogoUrl from "@/assets/plama-logo.png";
 const plamaLogo = { url: plamaLogoUrl };
