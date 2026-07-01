@@ -384,7 +384,7 @@ function Founder() {
 
 function Strengths() {
   return (
-    <section id="strengths" className="relative z-20 mx-auto max-w-6xl -mt-16 md:-mt-24 -mb-16 md:-mb-24 bg-white rounded-2xl shadow-2xl p-6 md:p-10 border border-border">
+    <section id="strengths" className="relative z-20 mx-4 md:mx-auto max-w-6xl -mt-16 md:-mt-24 -mb-16 md:-mb-24 bg-white rounded-2xl shadow-2xl p-6 md:p-10 border border-border">
       
       <div className="grid lg:grid-cols-12 gap-8 mb-6">
         <div className="lg:col-span-6">
