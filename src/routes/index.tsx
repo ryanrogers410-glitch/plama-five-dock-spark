@@ -86,7 +86,7 @@ function Nav() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[var(--brand)]/95 backdrop-blur-md shadow-lg"
+          ? "bg-white/95 backdrop-blur-md shadow-lg"
           : "bg-transparent"
       }`}
     >
@@ -94,14 +94,14 @@ function Nav() {
         <a href="#top" className="flex items-center">
           <img src={plamaLogo.url} alt="Plama Projects" className="h-10 md:h-12 w-auto" />
         </a>
-        <nav className="hidden md:flex items-center gap-7 text-sm text-white/85">
-          <a href="#services" className="hover:text-white transition">Services</a>
-          <a href="#sectors" className="hover:text-white transition">Sectors</a>
-          <a href="#founder" className="hover:text-white transition">Founder</a>
-          <a href="#strengths" className="hover:text-white transition">Why Us</a>
-          <a href="#contact" className="hover:text-white transition">Contact</a>
+        <nav className={`hidden md:flex items-center gap-7 text-sm transition-colors ${scrolled ? "text-[var(--ink)]" : "text-white/85"}`}>
+          <a href="#services" className="hover:opacity-70 transition">Services</a>
+          <a href="#sectors" className="hover:opacity-70 transition">Sectors</a>
+          <a href="#founder" className="hover:opacity-70 transition">Founder</a>
+          <a href="#strengths" className="hover:opacity-70 transition">Why Us</a>
+          <a href="#contact" className="hover:opacity-70 transition">Contact</a>
         </nav>
-        <a href="#contact" className="hidden sm:inline-flex items-center gap-2 rounded-full bg-white text-[var(--brand)] px-5 py-2.5 text-sm font-medium hover:bg-[var(--accent-orange)] hover:text-white transition">
+        <a href="#contact" className={`hidden sm:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition ${scrolled ? "bg-[var(--brand)] text-white hover:bg-[var(--accent-orange)]" : "bg-white text-[var(--brand)] hover:bg-[var(--accent-orange)] hover:text-white"}`}>
           Request Consultation <ArrowUpRight className="h-4 w-4" />
         </a>
       </div>
