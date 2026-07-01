@@ -384,7 +384,7 @@ function Founder() {
 
 function Strengths() {
   return (
-    <section id="strengths" className="section-pad container-page">
+    <section id="strengths" className="container-px mx-auto max-w-7xl py-10 md:py-14">
       
       <div className="grid lg:grid-cols-12 gap-8 mb-6">
         <div className="lg:col-span-6">
