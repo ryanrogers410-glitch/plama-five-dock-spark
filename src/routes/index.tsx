@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import type { ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import heroImg from "@/assets/hero-structure.jpg";
 import plamaLogoUrl from "@/assets/plama-logo.png";
 const plamaLogo = { url: plamaLogoUrl };
@@ -75,8 +75,21 @@ function Home() {
 }
 
 function Nav() {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   return (
-    <header className="absolute top-0 left-0 right-0 z-50">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-[var(--brand)]/95 backdrop-blur-md shadow-lg"
+          : "bg-transparent"
+      }`}
+    >
       <div className="container-px mx-auto max-w-7xl flex items-center justify-between py-4 md:py-5">
         <a href="#top" className="flex items-center">
           <img src={plamaLogo.url} alt="Plama Projects" className="h-10 md:h-12 w-auto" />
