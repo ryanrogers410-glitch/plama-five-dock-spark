@@ -381,8 +381,11 @@ function Founder() {
             </blockquote>
           </div>
         </div>
+          </div>
+        </div>
       </div>
     </section>
+
   );
 }
 
