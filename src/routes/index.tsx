@@ -232,7 +232,7 @@ function Services() {
                 <span className="text-[10px] text-[var(--ink-soft)]/70 group-hover:text-white/60 transition-colors">0{i + 1}</span>
               </div>
               <h3 className="font-display text-base text-[var(--ink)] group-hover:text-white transition-colors">{title}</h3>
-              <p className="mt-1.5 text-xs leading-relaxed text-[var(--ink-soft)] group-hover:text-white/75 transition-colors">{desc}</p>
+              <p className="mt-2 text-sm leading-relaxed text-[var(--ink-soft)] group-hover:text-white/75 transition-colors">{desc}</p>
             </div>
           ))}
         </div>
@@ -252,7 +252,7 @@ function Sectors() {
           </h2>
         </div>
         <div className="lg:col-span-5 flex items-end">
-          <p className="text-xs text-[var(--ink-soft)]">
+          <p className="text-sm text-[var(--ink-soft)]">
             We've engineered for families, builders, healthcare providers and waterfront
             developers — bringing the same rigour to every brief.
           </p>
@@ -364,7 +364,7 @@ function Strengths() {
               </div>
               <div className="min-w-0">
                 <h3 className="font-display text-base text-[var(--ink)]">{title}</h3>
-                <p className="mt-1 text-xs text-[var(--ink-soft)] leading-relaxed">{desc}</p>
+                <p className="mt-1 text-sm text-[var(--ink-soft)] leading-relaxed">{desc}</p>
               </div>
             </div>
           </div>
@@ -386,12 +386,12 @@ function Contact() {
             <span className="inline-flex items-center gap-2 text-xs tracking-[0.22em] uppercase text-white/70">
               <span className="h-px w-8 bg-[var(--accent-orange)]" /> Start a Project
             </span>
-            <h2 className="mt-4 font-display text-2xl md:text-4xl lg:text-5xl text-balance">
+            <h2 className="mt-4 font-display text-3xl md:text-5xl lg:text-6xl text-balance">
               Let's engineer<br />
               <span className="italic text-white/80">your next</span>
               <span className="text-[var(--accent-orange)]"> project.</span>
             </h2>
-            <p className="mt-4 max-w-xl text-sm text-white/75 leading-relaxed">
+            <p className="mt-4 max-w-xl text-base text-white/75 leading-relaxed">
               Tell us about your site, your timeline, and what you're trying to build. We'll
               respond with a fixed scope, fixed fee, and a senior engineer on your call.
             </p>
