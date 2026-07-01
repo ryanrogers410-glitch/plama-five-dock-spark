@@ -327,9 +327,12 @@ function Sectors() {
 
 function Founder() {
   return (
-    <section id="founder" className="bg-[var(--brand)] text-white relative overflow-hidden">
-      <div className="absolute -top-32 -right-32 h-80 w-80 rounded-full bg-[var(--accent-orange)]/20 blur-3xl" />
-      <div className="container-px mx-auto max-w-7xl pt-28 md:pt-40 pb-10 md:pb-14 relative">
+    <section id="founder" className="relative">
+      <div className="container-px mx-auto max-w-7xl">
+        <div className="relative -mt-24 md:-mt-40 z-10 bg-[var(--brand)] text-white rounded-2xl shadow-2xl overflow-hidden">
+          <div className="absolute -top-32 -right-32 h-80 w-80 rounded-full bg-[var(--accent-orange)]/20 blur-3xl" />
+          <div className="px-6 md:px-12 py-10 md:py-14 relative">
+
 
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           <div className="lg:col-span-5">
