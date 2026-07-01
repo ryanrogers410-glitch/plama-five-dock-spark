@@ -243,7 +243,7 @@ function Services() {
 
 function Sectors() {
   return (
-    <section id="sectors" className="container-px mx-auto max-w-7xl py-10 md:py-14">
+    <section id="sectors" className="relative z-10 container-px mx-auto max-w-7xl pt-10 md:pt-14 pb-24 md:pb-40 -mb-16 md:-mb-28">
       <div className="grid lg:grid-cols-12 gap-8 mb-6">
         <div className="lg:col-span-7">
           <span className="eyebrow">Industries</span>
@@ -329,7 +329,8 @@ function Founder() {
   return (
     <section id="founder" className="bg-[var(--brand)] text-white relative overflow-hidden">
       <div className="absolute -top-32 -right-32 h-80 w-80 rounded-full bg-[var(--accent-orange)]/20 blur-3xl" />
-      <div className="container-px mx-auto max-w-7xl py-10 md:py-14 relative">
+      <div className="container-px mx-auto max-w-7xl pt-28 md:pt-40 pb-10 md:pb-14 relative">
+
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           <div className="lg:col-span-5">
             <div className="relative">
