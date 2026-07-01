@@ -421,7 +421,7 @@ function Contact() {
       <div className="absolute inset-0 opacity-20" style={{
         backgroundImage: "radial-gradient(circle at 20% 30%, var(--accent-orange) 0%, transparent 40%), radial-gradient(circle at 80% 70%, var(--brand) 0%, transparent 50%)",
       }} />
-      <div className="container-px mx-auto max-w-7xl py-10 md:py-14 relative">
+      <div className="container-px mx-auto max-w-7xl pt-28 md:pt-40 pb-10 md:pb-14 relative">
         <div className="grid lg:grid-cols-12 gap-8">
           <div className="lg:col-span-7">
             <span className="inline-flex items-center gap-2 text-xs tracking-[0.22em] uppercase text-white/70">
