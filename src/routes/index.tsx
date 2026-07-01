@@ -206,7 +206,7 @@ function Intro() {
 
 function Services() {
   return (
-    <section id="services" className="bg-[var(--surface)] py-10 md:py-14">
+    <section id="services" className="relative z-20 bg-[var(--surface)] py-10 md:py-14 pb-24 md:pb-32 -mb-16 md:-mb-24 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.25)]">
       <div className="container-px mx-auto max-w-7xl">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
           <div className="max-w-2xl">
@@ -243,7 +243,7 @@ function Services() {
 
 function Sectors() {
   return (
-    <section id="sectors" className="relative z-10 container-px mx-auto max-w-7xl pt-10 md:pt-14 pb-24 md:pb-40 -mb-16 md:-mb-28">
+    <section id="sectors" className="relative z-10 container-px mx-auto max-w-7xl pt-24 md:pt-36 pb-24 md:pb-40 -mb-16 md:-mb-28">
       <div className="grid lg:grid-cols-12 gap-8 mb-6">
         <div className="lg:col-span-7">
           <span className="eyebrow">Industries</span>
