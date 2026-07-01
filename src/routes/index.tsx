@@ -109,12 +109,12 @@ function Hero() {
             <span className="h-px w-10 bg-[var(--accent-orange)]" />
             Engineering Consultancy · Sydney
           </div>
-          <h1 className="mt-4 font-display text-white text-balance text-[2.25rem] leading-[1.05] sm:text-4xl md:text-5xl lg:text-6xl">
+          <h1 className="mt-4 font-display text-white text-balance text-4xl leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl">
             Engineering that<br />
             <span className="italic font-light text-white/90">stands up</span> to
             <span className="text-[var(--accent-orange)]"> scrutiny.</span>
           </h1>
-          <p className="mt-5 max-w-2xl text-sm md:text-base text-white/75 leading-relaxed">
+          <p className="mt-6 max-w-2xl text-base md:text-lg text-white/75 leading-relaxed">
             For nearly two decades, Plama Projects has delivered multidisciplinary engineering
             for the homes, buildings and waterfronts that shape Sydney — with the rigour of a
             large practice and the responsiveness of a boutique.
@@ -170,18 +170,18 @@ function Intro() {
       <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
         <div className="lg:col-span-5">
           <span className="eyebrow">About Plama</span>
-          <h2 className="mt-4 font-display text-2xl md:text-3xl lg:text-4xl text-[var(--ink)] text-balance">
+          <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] text-balance">
             A consultancy built on <span className="italic text-[var(--brand)]">precision</span>, trust and craft.
           </h2>
         </div>
         <div className="lg:col-span-6 lg:col-start-7">
-          <p className="text-sm leading-relaxed text-[var(--ink-soft)]">
+          <p className="text-base leading-relaxed text-[var(--ink-soft)]">
             Plama Projects is a multidisciplinary engineering consultancy headquartered in
             Five Dock, NSW. We combine nearly 20 years of practice with a tightly integrated
             in-house team, so every project — from a knock-down rebuild to a hospital fit-out —
             is engineered by people who own the outcome end-to-end.
           </p>
-          <p className="mt-3 text-sm leading-relaxed text-[var(--ink-soft)]">
+          <p className="mt-3 text-base leading-relaxed text-[var(--ink-soft)]">
             We're known for clear documentation, fixed pricing and senior engineers who pick up
             the phone. That's the standard our clients return for.
           </p>
@@ -211,11 +211,11 @@ function Services() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
           <div className="max-w-2xl">
             <span className="eyebrow">Services</span>
-            <h2 className="mt-4 font-display text-2xl md:text-3xl lg:text-4xl text-[var(--ink)] text-balance">
+            <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] text-balance">
               Ten disciplines. <span className="italic text-[var(--brand)]">One team.</span>
             </h2>
           </div>
-          <p className="md:max-w-sm text-xs text-[var(--ink-soft)]">
+          <p className="md:max-w-sm text-sm text-[var(--ink-soft)]">
             From concept feasibility through certification, every service is delivered by
             registered engineers under one roof.
           </p>
@@ -247,7 +247,7 @@ function Sectors() {
       <div className="grid lg:grid-cols-12 gap-8 mb-6">
         <div className="lg:col-span-7">
           <span className="eyebrow">Industries</span>
-          <h2 className="mt-4 font-display text-2xl md:text-3xl lg:text-4xl text-[var(--ink)] text-balance">
+          <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] text-balance">
             Engineering across the <span className="italic text-[var(--brand)]">built environment.</span>
           </h2>
         </div>
@@ -306,7 +306,7 @@ function Founder() {
             <span className="inline-flex items-center gap-2 text-xs tracking-[0.22em] uppercase text-white/70">
               <span className="h-px w-8 bg-[var(--accent-orange)]" /> Founder Spotlight
             </span>
-            <h2 className="mt-4 font-display text-2xl md:text-3xl lg:text-4xl text-balance">
+            <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-balance">
               Lucas Tran<span className="text-[var(--accent-orange)]">.</span>
             </h2>
             <p className="mt-2 text-white/70 text-sm">Principal Engineer & Founder</p>
@@ -349,7 +349,7 @@ function Strengths() {
       <div className="grid lg:grid-cols-12 gap-8 mb-6">
         <div className="lg:col-span-6">
           <span className="eyebrow">Why Plama</span>
-          <h2 className="mt-4 font-display text-2xl md:text-3xl lg:text-4xl text-[var(--ink)] text-balance">
+          <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] text-balance">
             The standard our clients <span className="italic text-[var(--brand)]">come back for.</span>
           </h2>
         </div>
