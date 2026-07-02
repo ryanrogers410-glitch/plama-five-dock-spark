@@ -44,11 +44,20 @@ const strengths = [
 ];
 
 const featuredProjects = [
-  { img: secResidential, title: "High-End Residential", tag: "Structural · Civil" },
-  { img: secCommercial, title: "Commercial Fit-outs", tag: "Structural · Façade" },
-  { img: secHealthcare, title: "Healthcare Facilities", tag: "Structural · Project Management" },
-  { img: secMarine, title: "Waterfront Structures", tag: "Marine · Hydraulic" },
+  {
+    img: secResidential,
+    title: "High-End Residential",
+    tag: "Structural · Civil",
+    desc: "Bespoke Sydney homes engineered end-to-end — structural, civil and stormwater coordinated in-house for prestige new builds and knock-down rebuilds.",
+  },
+  {
+    img: secMarine,
+    title: "Waterfront Structures",
+    tag: "Marine · Hydraulic",
+    desc: "Jetties, seawalls and pontoons engineered against Sydney's coastal conditions — full authority approvals and marine-grade detailing.",
+  },
 ];
+
 
 function Home() {
   return (
