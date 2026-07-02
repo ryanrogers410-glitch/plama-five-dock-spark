@@ -238,31 +238,6 @@ export function ServicePage({ service }: { service: ServiceDef }) {
         </div>
       </section>
 
-      {/* Industries served */}
-      <section className="bg-[var(--brand)] text-white py-14 md:py-20">
-        <div className="container-px mx-auto w-full grid lg:grid-cols-12 gap-8 items-center">
-          <div className="lg:col-span-6">
-            <span className="inline-flex items-center gap-2 text-xs tracking-[0.22em] uppercase text-white/70">
-              <span className="h-px w-8 bg-[var(--accent-orange)]" /> Industries served
-            </span>
-            <h2 className="mt-4 font-display text-3xl md:text-4xl text-balance">
-              Trusted across the <span className="italic">built environment.</span>
-            </h2>
-          </div>
-          <div className="lg:col-span-6 flex flex-wrap gap-2">
-            {service.industries.map((i) => (
-              <span
-                key={i}
-                className="inline-flex items-center gap-2 rounded-full border border-white/25 px-3 py-1.5 text-sm text-white/90"
-              >
-                <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent-orange)]" />
-                {i}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* FAQs — asymmetric with side image */}
       {service.faqs && service.faqs.length > 0 && (
         <section className="container-px mx-auto w-full py-14 md:py-24">
@@ -299,43 +274,79 @@ export function ServicePage({ service }: { service: ServiceDef }) {
         </section>
       )}
 
-      {/* Related services */}
-      <section className="bg-[var(--surface)] py-14 md:py-20">
-        <div className="container-px mx-auto w-full">
-          <div className="flex items-end justify-between gap-4 mb-6">
-            <div>
-              <span className="eyebrow">Related services</span>
-              <h2 className="mt-4 font-display text-2xl md:text-3xl text-[var(--ink)]">
-                Explore adjacent disciplines.
-              </h2>
-            </div>
-            <Link
-              to="/services"
-              className="text-sm font-medium text-[var(--brand)] hover:text-[var(--accent-orange)] inline-flex items-center gap-1"
-            >
-              All services <ArrowUpRight className="h-4 w-4" />
-            </Link>
-          </div>
-          <div className="grid md:grid-cols-3 gap-3">
-            {related.map((r) => {
-              const RIcon = r.icon;
-              return (
-                <Link
-                  key={r.slug}
-                  to={r.route}
-                  className="group bg-white border border-border rounded-xl p-5 hover:border-[var(--brand)] transition-colors"
+      {/* Industries served + Related services — two vertical columns */}
+      <section className="bg-[var(--brand)] text-white py-14 md:py-24">
+        <div className="container-px mx-auto w-full grid lg:grid-cols-12 gap-10 lg:gap-16">
+          {/* Industries — left column, vertical list */}
+          <div className="lg:col-span-5">
+            <span className="inline-flex items-center gap-2 text-xs tracking-[0.22em] uppercase text-white/70">
+              <span className="h-px w-8 bg-[var(--accent-orange)]" /> Industries served
+            </span>
+            <h2 className="mt-4 font-display text-3xl md:text-4xl text-balance">
+              Trusted across the <span className="italic">built environment.</span>
+            </h2>
+            <ul className="mt-8 divide-y divide-white/10 border-y border-white/10">
+              {service.industries.map((i, idx) => (
+                <li
+                  key={i}
+                  className="flex items-center justify-between py-4 text-white/90"
                 >
-                  <div className="grid h-10 w-10 place-items-center rounded-lg bg-[var(--brand)]/10 text-[var(--brand)] group-hover:bg-[var(--accent-orange)] group-hover:text-white transition">
-                    <RIcon className="h-4 w-4" />
-                  </div>
-                  <h3 className="mt-4 font-display text-base text-[var(--ink)]">{r.title}</h3>
-                  <p className="mt-1 text-sm text-[var(--ink-soft)] leading-relaxed">{r.short}</p>
-                  <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold tracking-[0.15em] uppercase text-[var(--brand)] group-hover:text-[var(--accent-orange)]">
-                    Learn more <ArrowUpRight className="h-3.5 w-3.5" />
+                  <span className="flex items-center gap-3">
+                    <span className="text-xs tabular-nums tracking-[0.22em] text-[var(--accent-orange)]">
+                      {String(idx + 1).padStart(2, "0")}
+                    </span>
+                    <span className="text-base md:text-lg font-display">{i}</span>
                   </span>
-                </Link>
-              );
-            })}
+                  <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent-orange)]" />
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Related services — right column, vertical stack */}
+          <div className="lg:col-span-6 lg:col-start-7">
+            <div className="flex items-end justify-between gap-4">
+              <div>
+                <span className="inline-flex items-center gap-2 text-xs tracking-[0.22em] uppercase text-white/70">
+                  <span className="h-px w-8 bg-[var(--accent-orange)]" /> Related services
+                </span>
+                <h2 className="mt-4 font-display text-3xl md:text-4xl text-balance">
+                  Explore adjacent{" "}
+                  <span className="italic">disciplines.</span>
+                </h2>
+              </div>
+              <Link
+                to="/services"
+                className="hidden md:inline-flex items-center gap-1 text-sm font-medium text-white/80 hover:text-[var(--accent-orange)] shrink-0"
+              >
+                All services <ArrowUpRight className="h-4 w-4" />
+              </Link>
+            </div>
+            <div className="mt-8 flex flex-col gap-3">
+              {related.map((r) => {
+                const RIcon = r.icon;
+                return (
+                  <Link
+                    key={r.slug}
+                    to={r.route}
+                    className="group flex items-start gap-4 rounded-xl border border-white/15 bg-white/[0.03] hover:bg-white/[0.08] hover:border-white/30 transition-colors p-5"
+                  >
+                    <div className="grid h-11 w-11 place-items-center rounded-lg bg-white/10 text-white group-hover:bg-[var(--accent-orange)] transition shrink-0">
+                      <RIcon className="h-4 w-4" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="font-display text-base md:text-lg text-white">
+                        {r.title}
+                      </h3>
+                      <p className="mt-1 text-sm text-white/70 leading-relaxed">
+                        {r.short}
+                      </p>
+                    </div>
+                    <ArrowUpRight className="h-5 w-5 text-white/60 group-hover:text-[var(--accent-orange)] transition shrink-0 mt-1" />
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
