@@ -1,10 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import heroImg from "@/assets/hero-structure.jpg";
-import secCommercial from "@/assets/sector-commercial.jpg";
 import secResidential from "@/assets/sector-residential.jpg";
 import secMarine from "@/assets/sector-marine.jpg";
-import secHealthcare from "@/assets/sector-healthcare.jpg";
+
 import svcStructural from "@/assets/service-structural.jpg";
 import svcCivil from "@/assets/service-civil.jpg";
 import svcFacade from "@/assets/service-facade.jpg";
@@ -44,11 +43,20 @@ const strengths = [
 ];
 
 const featuredProjects = [
-  { img: secResidential, title: "High-End Residential", tag: "Structural · Civil" },
-  { img: secCommercial, title: "Commercial Fit-outs", tag: "Structural · Façade" },
-  { img: secHealthcare, title: "Healthcare Facilities", tag: "Structural · Project Management" },
-  { img: secMarine, title: "Waterfront Structures", tag: "Marine · Hydraulic" },
+  {
+    img: secResidential,
+    title: "High-End Residential",
+    tag: "Structural · Civil",
+    desc: "Bespoke Sydney homes engineered end-to-end — structural, civil and stormwater coordinated in-house for prestige new builds and knock-down rebuilds.",
+  },
+  {
+    img: secMarine,
+    title: "Waterfront Structures",
+    tag: "Marine · Hydraulic",
+    desc: "Jetties, seawalls and pontoons engineered against Sydney's coastal conditions — full authority approvals and marine-grade detailing.",
+  },
 ];
+
 
 function Home() {
   return (
@@ -243,9 +251,9 @@ function WhyUs() {
 
 function FeaturedProjects() {
   return (
-    <section className="bg-[var(--surface)] py-16 md:py-24">
+    <section className="bg-[var(--surface)] py-16 md:py-24 overflow-hidden">
       <div className="container-px mx-auto w-full">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12 md:mb-16">
           <div className="max-w-2xl">
             <span className="eyebrow">Featured Projects</span>
             <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] text-balance">
@@ -256,20 +264,39 @@ function FeaturedProjects() {
             View portfolio <ArrowUpRight className="h-4 w-4" />
           </Link>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          {featuredProjects.map((p) => (
-            <div key={p.title} className="group relative overflow-hidden rounded-xl aspect-[4/5] bg-[var(--brand)]">
-              <img src={p.img} alt={p.title} loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#001a36]/95 via-[#001a36]/30 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-4 text-white">
-                <div className="text-[10px] uppercase tracking-[0.22em] text-white/70">{p.tag}</div>
-                <div className="mt-1 font-display text-lg">{p.title}</div>
+
+        <div className="space-y-16 md:space-y-24">
+          {featuredProjects.map(({ img, title, tag, desc }, i) => {
+            const idx = String(i + 1).padStart(2, "0");
+            const isRight = i % 2 === 0;
+            return (
+              <div key={title} className="relative grid grid-cols-12 gap-3 md:gap-6 items-center">
+                <div className={`col-span-11 ${isRight ? "col-start-1" : "col-start-2"} relative`}>
+                  <div className="relative overflow-hidden aspect-[4/3] md:aspect-[16/9] group rounded-lg">
+                    <img src={img} alt={title} loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  </div>
+                </div>
+                <div className={`col-span-11 md:col-span-6 -mt-10 md:mt-0 md:absolute md:top-1/2 md:-translate-y-1/2 z-10 ${isRight ? "col-start-2 md:right-0" : "col-start-1 md:left-0"}`}>
+                  <div className={`bg-[var(--brand)] text-white p-5 md:p-7 shadow-xl ${isRight ? "border-l-4" : "border-r-4"} border-[var(--accent-orange)]`}>
+                    <div className="flex items-center gap-3 text-[10px] tracking-[0.22em] uppercase text-white/60">
+                      <span>{idx}</span>
+                      <span className="h-px w-8 bg-[var(--accent-orange)]" />
+                      <span>{tag}</span>
+                    </div>
+                    <h3 className="mt-2 font-display text-2xl md:text-3xl italic">{title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-white/80 max-w-md">{desc}</p>
+                    <Link to="/projects" className="mt-4 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-white group/link">
+                      View project <span className="h-px w-6 bg-[var(--accent-orange)] transition-all group-hover/link:w-10" />
+                    </Link>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
+
