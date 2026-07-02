@@ -1,10 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import heroImg from "@/assets/hero-structure.jpg";
-import secCommercial from "@/assets/sector-commercial.jpg";
 import secResidential from "@/assets/sector-residential.jpg";
 import secMarine from "@/assets/sector-marine.jpg";
-import secHealthcare from "@/assets/sector-healthcare.jpg";
+
 import svcStructural from "@/assets/service-structural.jpg";
 import svcCivil from "@/assets/service-civil.jpg";
 import svcFacade from "@/assets/service-facade.jpg";
