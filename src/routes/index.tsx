@@ -5,6 +5,10 @@ import secCommercial from "@/assets/sector-commercial.jpg";
 import secResidential from "@/assets/sector-residential.jpg";
 import secMarine from "@/assets/sector-marine.jpg";
 import secHealthcare from "@/assets/sector-healthcare.jpg";
+import svcStructural from "@/assets/service-structural.jpg";
+import svcCivil from "@/assets/service-civil.jpg";
+import svcFacade from "@/assets/service-facade.jpg";
+import svcMarine from "@/assets/service-marine.jpg";
 import { ShieldCheck, Layers, Sparkles, Wallet, Gauge, Headphones } from "lucide-react";
 import { services } from "@/data/services";
 import { CTASection } from "@/components/site/CTASection";
@@ -19,9 +23,16 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const featuredServices = services.filter((s) =>
-  ["structural", "civil", "facade", "marine"].includes(s.slug),
-);
+const serviceImages: Record<string, string> = {
+  structural: svcStructural,
+  civil: svcCivil,
+  facade: svcFacade,
+  marine: svcMarine,
+};
+
+const featuredServices = services
+  .filter((s) => ["structural", "civil", "facade", "marine"].includes(s.slug))
+  .map((s) => ({ ...s, image: serviceImages[s.slug] }));
 
 const strengths = [
   { icon: ShieldCheck, title: "Fully Insured & Accredited", desc: "Chartered engineers, complete professional indemnity coverage." },
