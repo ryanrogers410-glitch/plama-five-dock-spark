@@ -274,79 +274,87 @@ export function ServicePage({ service }: { service: ServiceDef }) {
         </section>
       )}
 
-      {/* Industries served + Related services — two vertical columns */}
+      {/* Industries served — separate section, vertical list beside a heading */}
       <section className="bg-[var(--brand)] text-white py-14 md:py-24">
         <div className="container-px mx-auto w-full grid lg:grid-cols-12 gap-10 lg:gap-16">
-          {/* Industries — left column, vertical list */}
           <div className="lg:col-span-5">
             <span className="inline-flex items-center gap-2 text-xs tracking-[0.22em] uppercase text-white/70">
               <span className="h-px w-8 bg-[var(--accent-orange)]" /> Industries served
             </span>
-            <h2 className="mt-4 font-display text-3xl md:text-4xl text-balance">
-              Trusted across the <span className="italic">built environment.</span>
+            <h2 className="mt-4 font-display text-3xl md:text-5xl text-balance leading-[1.05]">
+              Trusted across the{" "}
+              <span className="italic">built environment.</span>
             </h2>
-            <ul className="mt-8 divide-y divide-white/10 border-y border-white/10">
+            <p className="mt-5 text-white/70 max-w-md leading-relaxed">
+              A sector-fluent team — the codes, authorities and construction
+              realities of each industry are second nature.
+            </p>
+          </div>
+          <div className="lg:col-span-6 lg:col-start-7">
+            <ul className="divide-y divide-white/10 border-y border-white/10">
               {service.industries.map((i, idx) => (
                 <li
                   key={i}
-                  className="flex items-center justify-between py-4 text-white/90"
+                  className="flex items-center justify-between py-5 text-white/90"
                 >
-                  <span className="flex items-center gap-3">
+                  <span className="flex items-center gap-4">
                     <span className="text-xs tabular-nums tracking-[0.22em] text-[var(--accent-orange)]">
                       {String(idx + 1).padStart(2, "0")}
                     </span>
-                    <span className="text-base md:text-lg font-display">{i}</span>
+                    <span className="font-display text-lg md:text-xl">{i}</span>
                   </span>
                   <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent-orange)]" />
                 </li>
               ))}
             </ul>
           </div>
+        </div>
+      </section>
 
-          {/* Related services — right column, vertical stack */}
-          <div className="lg:col-span-6 lg:col-start-7">
-            <div className="flex items-end justify-between gap-4">
-              <div>
-                <span className="inline-flex items-center gap-2 text-xs tracking-[0.22em] uppercase text-white/70">
-                  <span className="h-px w-8 bg-[var(--accent-orange)]" /> Related services
-                </span>
-                <h2 className="mt-4 font-display text-3xl md:text-4xl text-balance">
-                  Explore adjacent{" "}
-                  <span className="italic">disciplines.</span>
-                </h2>
-              </div>
-              <Link
-                to="/services"
-                className="hidden md:inline-flex items-center gap-1 text-sm font-medium text-white/80 hover:text-[var(--accent-orange)] shrink-0"
-              >
-                All services <ArrowUpRight className="h-4 w-4" />
-              </Link>
-            </div>
-            <div className="mt-8 flex flex-col gap-3">
-              {related.map((r) => {
-                const RIcon = r.icon;
-                return (
-                  <Link
-                    key={r.slug}
-                    to={r.route}
-                    className="group flex items-start gap-4 rounded-xl border border-white/15 bg-white/[0.03] hover:bg-white/[0.08] hover:border-white/30 transition-colors p-5"
-                  >
-                    <div className="grid h-11 w-11 place-items-center rounded-lg bg-white/10 text-white group-hover:bg-[var(--accent-orange)] transition shrink-0">
-                      <RIcon className="h-4 w-4" />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <h3 className="font-display text-base md:text-lg text-white">
-                        {r.title}
-                      </h3>
-                      <p className="mt-1 text-sm text-white/70 leading-relaxed">
-                        {r.short}
-                      </p>
-                    </div>
-                    <ArrowUpRight className="h-5 w-5 text-white/60 group-hover:text-[var(--accent-orange)] transition shrink-0 mt-1" />
-                  </Link>
-                );
-              })}
-            </div>
+      {/* Related services — separate section, vertical stack beside a heading */}
+      <section className="bg-[var(--surface)] py-14 md:py-24">
+        <div className="container-px mx-auto w-full grid lg:grid-cols-12 gap-10 lg:gap-16">
+          <div className="lg:col-span-5">
+            <span className="eyebrow">Related services</span>
+            <h2 className="mt-4 font-display text-3xl md:text-5xl text-[var(--ink)] text-balance leading-[1.05]">
+              Explore adjacent{" "}
+              <span className="italic text-[var(--brand)]">disciplines.</span>
+            </h2>
+            <p className="mt-5 text-[var(--ink-soft)] max-w-md leading-relaxed">
+              Every project has adjacent needs. Keep one team accountable across
+              the disciplines that touch your build.
+            </p>
+            <Link
+              to="/services"
+              className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-[var(--brand)] hover:text-[var(--accent-orange)]"
+            >
+              View all services <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="lg:col-span-6 lg:col-start-7 flex flex-col gap-3">
+            {related.map((r) => {
+              const RIcon = r.icon;
+              return (
+                <Link
+                  key={r.slug}
+                  to={r.route}
+                  className="group flex items-start gap-4 rounded-xl border border-border bg-white hover:border-[var(--brand)] transition-colors p-5"
+                >
+                  <div className="grid h-11 w-11 place-items-center rounded-lg bg-[var(--brand)]/10 text-[var(--brand)] group-hover:bg-[var(--accent-orange)] group-hover:text-white transition shrink-0">
+                    <RIcon className="h-4 w-4" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-display text-base md:text-lg text-[var(--ink)]">
+                      {r.title}
+                    </h3>
+                    <p className="mt-1 text-sm text-[var(--ink-soft)] leading-relaxed">
+                      {r.short}
+                    </p>
+                  </div>
+                  <ArrowUpRight className="h-5 w-5 text-[var(--ink-soft)] group-hover:text-[var(--accent-orange)] transition shrink-0 mt-1" />
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
