@@ -5,6 +5,10 @@ import secCommercial from "@/assets/sector-commercial.jpg";
 import secResidential from "@/assets/sector-residential.jpg";
 import secMarine from "@/assets/sector-marine.jpg";
 import secHealthcare from "@/assets/sector-healthcare.jpg";
+import svcStructural from "@/assets/service-structural.jpg";
+import svcCivil from "@/assets/service-civil.jpg";
+import svcFacade from "@/assets/service-facade.jpg";
+import svcMarine from "@/assets/service-marine.jpg";
 import { ShieldCheck, Layers, Sparkles, Wallet, Gauge, Headphones } from "lucide-react";
 import { services } from "@/data/services";
 import { CTASection } from "@/components/site/CTASection";
@@ -19,9 +23,16 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const featuredServices = services.filter((s) =>
-  ["structural", "civil", "facade", "marine"].includes(s.slug),
-);
+const serviceImages: Record<string, string> = {
+  structural: svcStructural,
+  civil: svcCivil,
+  facade: svcFacade,
+  marine: svcMarine,
+};
+
+const featuredServices = services
+  .filter((s) => ["structural", "civil", "facade", "marine"].includes(s.slug))
+  .map((s) => ({ ...s, image: serviceImages[s.slug] }));
 
 const strengths = [
   { icon: ShieldCheck, title: "Fully Insured & Accredited", desc: "Chartered engineers, complete professional indemnity coverage." },
@@ -147,27 +158,43 @@ function FeaturedServices() {
           </Link>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
-          {featuredServices.map(({ icon: Icon, title, short, route }, i) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {featuredServices.map(({ title, short, route, image }, i) => (
             <Link
               key={title}
               to={route}
-              className="group relative bg-white p-5 lg:p-6 transition-all duration-500 hover:bg-[var(--brand)]"
+              className="group relative overflow-hidden rounded-xl bg-[var(--brand)] aspect-[4/5] block"
             >
-              <div className="flex items-start justify-between mb-5">
-                <div className="grid h-10 w-10 place-items-center rounded-lg bg-[var(--brand)]/10 text-[var(--brand)] group-hover:bg-[var(--accent-orange)] group-hover:text-white transition-colors">
-                  <Icon className="h-4 w-4" strokeWidth={1.75} />
+              <img
+                src={image}
+                alt={title}
+                loading="lazy"
+                width={1024}
+                height={1280}
+                className="absolute inset-0 h-full w-full object-cover opacity-70 transition-all duration-700 group-hover:opacity-90 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#001a36] via-[#001a36]/60 to-transparent" />
+              <div className="absolute inset-0 p-5 lg:p-6 flex flex-col justify-between text-white">
+                <div className="flex items-start justify-between">
+                  <span className="inline-flex items-center gap-2 text-[10px] tracking-[0.22em] uppercase text-white/80">
+                    <span className="h-px w-6 bg-[var(--accent-orange)]" />
+                    Service
+                  </span>
+                  <span className="text-[10px] text-white/60">0{i + 1}</span>
                 </div>
-                <span className="text-[10px] text-[var(--ink-soft)]/70 group-hover:text-white/60 transition-colors">0{i + 1}</span>
+                <div>
+                  <h3 className="font-display text-lg md:text-xl">{title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-white/80 line-clamp-3">{short}</p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold tracking-[0.15em] uppercase text-white group-hover:text-[var(--accent-orange)] transition-colors">
+                    Learn more
+                    <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </span>
+                </div>
               </div>
-              <h3 className="font-display text-base text-[var(--ink)] group-hover:text-white transition-colors">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-[var(--ink-soft)] group-hover:text-white/75 transition-colors">{short}</p>
-              <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold tracking-[0.15em] uppercase text-[var(--brand)] group-hover:text-[var(--accent-orange)]">
-                Learn more <ArrowUpRight className="h-3.5 w-3.5" />
-              </span>
             </Link>
           ))}
         </div>
+
       </div>
     </section>
   );
