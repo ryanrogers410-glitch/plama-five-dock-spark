@@ -1,3 +1,13 @@
 [build]
-  command = "bun run build"
-  publish = "dist"
+  # Install Bun in Netlify's build image, then run the Vite build.
+  command = "curl -fsSL https://bun.sh/install | bash && export BUN_INSTALL=$HOME/.bun && export PATH=$BUN_INSTALL/bin:$PATH && bun install && bun run build"
+  publish = "dist/client"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# SPA fallback so client-side routes work on refresh / deep links.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
