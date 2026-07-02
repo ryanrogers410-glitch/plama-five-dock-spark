@@ -143,66 +143,26 @@ export function ServicePage({ service }: { service: ServiceDef }) {
         </div>
       </section>
 
-      {/* Process — vertical timeline with connecting spine */}
-      <section className="bg-[var(--surface)] py-14 md:py-24">
+      {/* Process — horizontal steps */}
+      <section className="bg-[var(--surface)] py-14 md:py-20">
         <div className="container-px mx-auto w-full">
-          <div className="grid lg:grid-cols-12 gap-8 mb-12">
-            <div className="lg:col-span-5">
-              <span className="eyebrow">Our Process</span>
-              <h2 className="mt-4 font-display text-3xl md:text-5xl text-[var(--ink)] text-balance leading-[1.05]">
-                Brief to{" "}
-                <span className="italic text-[var(--brand)]">certification.</span>
-              </h2>
-            </div>
-            <div className="lg:col-span-6 lg:col-start-7 self-end">
-              <p className="text-[var(--ink-soft)] leading-relaxed">
-                Four disciplined stages. Every stage owned by a chartered engineer,
-                every deliverable coordinated in-house.
-              </p>
-            </div>
+          <div className="max-w-2xl">
+            <span className="eyebrow">Our Process</span>
+            <h2 className="mt-4 font-display text-3xl md:text-4xl text-[var(--ink)] text-balance">
+              How a project moves from{" "}
+              <span className="italic text-[var(--brand)]">brief to certification.</span>
+            </h2>
           </div>
-
-          <div className="relative">
-            {/* spine */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-border -translate-x-1/2" />
-            <div className="space-y-8 md:space-y-14">
-              {service.process.map((p, i) => {
-                const left = i % 2 === 0;
-                return (
-                  <div
-                    key={p.step}
-                    className="grid md:grid-cols-2 gap-6 md:gap-12 items-center relative"
-                  >
-                    {/* dot */}
-                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-3 w-3 rounded-full bg-[var(--accent-orange)] ring-4 ring-[var(--surface)] z-10" />
-
-                    <div className={left ? "md:pr-10 md:text-right" : "md:col-start-2 md:pl-10"}>
-                      <div className="font-display text-6xl md:text-7xl text-[var(--brand)]/15 leading-none">
-                        {p.step}
-                      </div>
-                      <h3 className="mt-2 font-display text-2xl text-[var(--ink)]">
-                        {p.title}
-                      </h3>
-                      <p className="mt-3 text-[var(--ink-soft)] leading-relaxed max-w-md md:max-w-none">
-                        {p.desc}
-                      </p>
-                    </div>
-                    <div className={left ? "md:col-start-2 md:pl-10" : "md:col-start-1 md:row-start-1 md:pr-10"}>
-                      <div className="h-40 md:h-56 rounded-xl overflow-hidden relative">
-                        <img
-                          src={i % 2 === 0 ? primary : imgDetail}
-                          alt=""
-                          aria-hidden
-                          loading="lazy"
-                          className="absolute inset-0 h-full w-full object-cover"
-                        />
-                        <div className="absolute inset-0 bg-[var(--brand)]/20" />
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+          <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
+            {service.process.map((p) => (
+              <div key={p.step} className="bg-white p-5">
+                <div className="text-xs tracking-[0.22em] uppercase text-[var(--accent-orange)]">
+                  {p.step}
+                </div>
+                <h3 className="mt-2 font-display text-lg text-[var(--ink)]">{p.title}</h3>
+                <p className="mt-2 text-sm text-[var(--ink-soft)] leading-relaxed">{p.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
