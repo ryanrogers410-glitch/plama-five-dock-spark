@@ -90,7 +90,7 @@ function Nav() {
           : "bg-transparent"
       }`}
     >
-      <div className="container-px mx-auto max-w-7xl flex items-center justify-between py-4 md:py-5">
+      <div className="container-px mx-auto w-full flex items-center justify-between py-4 md:py-5">
         <a href="#top" className="flex items-center">
           <img src={plamaLogo.url} alt="Plama Projects" className="h-10 md:h-12 w-auto" />
         </a>
@@ -117,7 +117,7 @@ function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#001a36]/85 via-[#001a36]/55 to-[#001a36]/95" />
       <div className="absolute inset-0 bg-gradient-to-r from-[#001a36]/70 to-transparent" />
 
-      <div className="relative container-px mx-auto max-w-7xl pt-28 pb-12 md:pt-32 md:pb-14">
+      <div className="relative container-px mx-auto w-full pt-28 pb-12 md:pt-32 md:pb-14">
         <div className="max-w-4xl animate-rise">
           <div className="inline-flex items-center gap-3 text-xs tracking-[0.22em] uppercase text-white/80">
             <span className="h-px w-10 bg-[var(--accent-orange)]" />
@@ -180,7 +180,7 @@ function Marquee() {
 
 function Intro() {
   return (
-    <section className="container-px mx-auto max-w-7xl py-10 md:py-14">
+    <section className="container-px mx-auto w-full py-10 md:py-14">
       <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
         <div className="lg:col-span-5">
           <span className="eyebrow">About Plama</span>
@@ -221,7 +221,7 @@ function Intro() {
 function Services() {
   return (
     <section id="services" className="bg-[var(--surface)] py-10 md:py-14">
-      <div className="container-px mx-auto max-w-7xl">
+      <div className="container-px mx-auto w-full">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
           <div className="max-w-2xl">
             <span className="eyebrow">Services</span>
@@ -257,7 +257,7 @@ function Services() {
 
 function Sectors() {
   return (
-    <section id="sectors" className="relative z-10 container-px mx-auto max-w-7xl pt-10 md:pt-14 pb-24 md:pb-40 -mb-16 md:-mb-28">
+    <section id="sectors" className="relative z-10 container-px mx-auto w-full pt-10 md:pt-14 pb-24 md:pb-40 -mb-16 md:-mb-28">
       <div className="grid lg:grid-cols-12 gap-8 mb-6">
         <div className="lg:col-span-7">
           <span className="eyebrow">Industries</span>
@@ -343,7 +343,7 @@ function Founder() {
   return (
     <section id="founder" className="bg-[var(--brand)] text-white relative overflow-hidden">
       <div className="absolute -top-32 -right-32 h-80 w-80 rounded-full bg-[var(--accent-orange)]/20 blur-3xl" />
-      <div className="container-px mx-auto max-w-7xl pt-28 md:pt-40 pb-10 md:pb-14 relative">
+      <div className="container-px mx-auto w-full pt-28 md:pt-40 pb-10 md:pb-14 relative">
 
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           <div className="lg:col-span-5">
@@ -399,7 +399,7 @@ function Founder() {
 
 function Strengths() {
   return (
-    <section id="strengths" className="container-px mx-auto max-w-7xl py-16 md:py-24">
+    <section id="strengths" className="container-px mx-auto w-full py-16 md:py-24">
       
       <div className="grid lg:grid-cols-12 gap-8 mb-6">
         <div className="lg:col-span-6">
@@ -435,7 +435,7 @@ function Contact() {
       <div className="absolute inset-0 opacity-20" style={{
         backgroundImage: "radial-gradient(circle at 20% 30%, var(--accent-orange) 0%, transparent 40%), radial-gradient(circle at 80% 70%, var(--brand) 0%, transparent 50%)",
       }} />
-      <div className="container-px mx-auto max-w-7xl py-10 md:py-14 relative">
+      <div className="container-px mx-auto w-full py-10 md:py-14 relative">
         <div className="grid lg:grid-cols-12 gap-8">
           <div className="lg:col-span-7">
             <span className="inline-flex items-center gap-2 text-xs tracking-[0.22em] uppercase text-white/70">
@@ -496,7 +496,7 @@ function ContactRow({
 function Footer() {
   return (
     <footer className="bg-[#000d1f] text-white/70 border-t border-white/10">
-      <div className="container-px mx-auto max-w-7xl py-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+      <div className="container-px mx-auto w-full py-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
         <div className="flex items-center gap-3">
           <img src={plamaLogo.url} alt="Plama Projects" className="h-7 w-auto" />
           <span>Plama Projects · Multidisciplinary Engineering Consultancy</span>
