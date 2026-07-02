@@ -1,3 +1,14 @@
 [build]
-  command = "bun run build"
-  publish = "dist"
+  # Netlify's default image doesn't ship Bun. Install it, then use npm to run
+  # the build so this works regardless of which package manager is available.
+  command = "curl -fsSL https://bun.sh/install | bash && export BUN_INSTALL=$HOME/.bun && export PATH=$BUN_INSTALL/bin:$PATH && bun install && bun run build && node scripts/postbuild-netlify.mjs"
+  publish = "dist/client"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# SPA fallback so TanStack Router handles deep links / refresh on Netlify.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
