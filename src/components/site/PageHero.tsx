@@ -25,6 +25,8 @@ export function PageHero({
         />
       )}
       <div className="absolute inset-0 bg-gradient-to-b from-[#14181C]/90 via-[#14181C]/70 to-[#14181C]/95" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 md:h-48 bg-gradient-to-b from-[#F6F3EC]/55 via-[#F6F3EC]/15 to-transparent" />
+
       <div className="relative container-px mx-auto w-full pt-36 pb-16 md:pt-44 md:pb-24">
         <div className="max-w-3xl animate-rise">
           <div className="inline-flex items-center gap-3 text-xs tracking-[0.22em] uppercase text-white/80">
