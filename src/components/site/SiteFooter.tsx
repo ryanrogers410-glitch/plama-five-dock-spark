@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, PhoneCall } from "lucide-react";
-import plamaLogoUrl from "@/assets/plama-logo.png";
+import plamaLogo from "@/assets/plama-logo.png.asset.json";
 
 const cols = [
   {
