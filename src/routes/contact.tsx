@@ -43,7 +43,8 @@ function Contact() {
             </div>
 
             <div className="space-y-4">
-              <Row icon={Phone} label="Phone" value="0452 588 578" href="tel:0452588578" />
+              <Row icon={PhoneCall} label="Landline" value="+61 2 8384 3919" href="tel:+61283843919" />
+              <Row icon={Phone} label="Mobile" value="0452 588 578" href="tel:0452588578" />
               <Row icon={Mail} label="Email" value="plama.pro@outlook.com" href="mailto:plama.pro@outlook.com" />
               <Row icon={MapPin} label="Office" value={<>1 Kerin Avenue<br />Five Dock NSW 2046</>} />
               <Row icon={Clock} label="Hours" value={<>Monday – Friday · 9:00am – 5:30pm<br /><span className="text-[var(--ink-soft)]">Flexible by appointment</span></>} />
