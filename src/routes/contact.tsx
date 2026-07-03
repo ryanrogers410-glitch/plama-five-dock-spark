@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, Phone, PhoneCall } from "lucide-react";
 import type { ReactNode } from "react";
 import { PageHero } from "@/components/site/PageHero";
 import heroImg from "@/assets/hero-structure.jpg";
