@@ -42,6 +42,10 @@ export function SiteFooter() {
           </p>
           <ul className="mt-6 space-y-2 text-sm">
             <li className="flex items-start gap-3">
+              <PhoneCall className="h-4 w-4 mt-0.5 text-[var(--accent-orange)]" />
+              <a href="tel:+61283843919" className="hover:text-white">+61 2 8384 3919</a>
+            </li>
+            <li className="flex items-start gap-3">
               <Phone className="h-4 w-4 mt-0.5 text-[var(--accent-orange)]" />
               <a href="tel:0452588578" className="hover:text-white">0452 588 578</a>
             </li>
