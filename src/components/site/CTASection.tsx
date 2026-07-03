@@ -11,7 +11,7 @@ export function CTASection({
   body?: string;
 }) {
   return (
-    <section className="relative bg-[#001a36] text-white overflow-hidden">
+    <section className="relative bg-[#14181C] text-white overflow-hidden">
       <div
         className="absolute inset-0 opacity-20"
         style={{

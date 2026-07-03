@@ -76,8 +76,8 @@ function Hero() {
     <section id="top" className="relative min-h-[80vh] overflow-hidden bg-[var(--brand-deep)]">
       <img src={heroImg} alt="" width={1920} height={1280}
         className="absolute inset-0 h-full w-full object-cover opacity-55" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#001a36]/85 via-[#001a36]/55 to-[#001a36]/95" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#001a36]/70 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#14181C]/85 via-[#14181C]/55 to-[#14181C]/95" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#14181C]/70 to-transparent" />
 
       <div className="relative container-px mx-auto w-full pt-32 pb-14 md:pt-40 md:pb-20">
         <div className="max-w-4xl animate-rise">
@@ -112,7 +112,7 @@ function Hero() {
             ["8", "Sectors served"],
             ["100%", "In-house delivery"],
           ].map(([k, v]) => (
-            <div key={v} className="bg-[#001a36]/60 px-5 py-4">
+            <div key={v} className="bg-[#14181C]/60 px-5 py-4">
               <div className="font-display text-2xl md:text-3xl text-white">{k}<span className="text-[var(--accent-orange)]">.</span></div>
               <div className="mt-1 text-[10px] uppercase tracking-[0.18em] text-white/65">{v}</div>
             </div>
@@ -181,7 +181,7 @@ function FeaturedServices() {
                 height={1280}
                 className="absolute inset-0 h-full w-full object-cover opacity-70 transition-all duration-700 group-hover:opacity-90 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#001a36] via-[#001a36]/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#14181C] via-[#14181C]/60 to-transparent" />
               <div className="absolute inset-0 p-5 lg:p-6 flex flex-col justify-between text-white">
                 <div className="flex items-start justify-between">
                   <span className="inline-flex items-center gap-2 text-[10px] tracking-[0.22em] uppercase text-white/80">

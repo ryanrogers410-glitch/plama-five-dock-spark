@@ -28,7 +28,7 @@ const cols = [
 
 export function SiteFooter() {
   return (
-    <footer className="bg-[#000d1f] text-white/75 border-t border-white/10">
+    <footer className="bg-[#14181C] text-white/75 border-t border-white/10">
       <div className="container-px mx-auto w-full py-14 grid gap-10 md:grid-cols-12">
         <div className="md:col-span-5">
           <Link to="/" className="inline-flex items-center">
