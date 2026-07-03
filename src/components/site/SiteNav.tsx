@@ -45,17 +45,9 @@ export function SiteNav() {
 
       <div className="container-px mx-auto w-full flex items-center justify-between py-4 md:py-5">
         <Link to="/" className="flex items-center">
-          <span
-            className="inline-flex items-center justify-center px-4 py-1 rounded-full"
-            style={{
-              background: solid
-                ? "transparent"
-                : "radial-gradient(ellipse at center, rgba(246,243,236,0.85) 0%, rgba(246,243,236,0.55) 45%, rgba(246,243,236,0) 80%)",
-            }}
-          >
-            <img src={plamaLogo.url} alt="Plama Projects" className="h-14 md:h-16 w-auto" />
-          </span>
+          <img src={plamaLogo.url} alt="Plama Projects" className="h-14 md:h-16 w-auto" />
         </Link>
+
 
 
         <nav
