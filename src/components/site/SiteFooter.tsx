@@ -29,8 +29,10 @@ const cols = [
 
 export function SiteFooter() {
   return (
-    <footer className="bg-[#14181C] text-white/75 border-t border-white/10">
-      <div className="container-px mx-auto w-full py-14 grid gap-10 md:grid-cols-12">
+    <footer className="relative bg-[#14181C] text-white/75 border-t border-white/10">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#F6F3EC]/45 via-[#F6F3EC]/12 to-transparent" />
+      <div className="relative container-px mx-auto w-full py-14 grid gap-10 md:grid-cols-12">
+
         <div className="md:col-span-5">
           <Link to="/" className="inline-flex items-center">
             <img src={plamaLogo.url} alt="Plama Projects" className="h-12 w-auto" />
