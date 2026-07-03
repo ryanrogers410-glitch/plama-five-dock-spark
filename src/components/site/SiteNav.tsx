@@ -33,20 +33,19 @@ export function SiteNav() {
     setServicesOpen(false);
   }, [pathname]);
 
-  // On non-home routes, always show the solid white nav (no hero underneath)
-  const solid = scrolled || !isHome;
+  // Nav is always solid so the wordmark logo reads on every route
+  const solid = true;
+  void scrolled; void isHome;
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        solid ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+        solid ? "bg-[#F6F3EC]/95 backdrop-blur-md shadow-[0_1px_0_0_#C9C3B6]" : "bg-transparent"
       }`}
     >
       <div className="container-px mx-auto w-full flex items-center justify-between py-4 md:py-5">
         <Link to="/" className="flex items-center">
-          <span className="inline-flex items-center rounded-lg bg-[#F6F3EC] px-3 py-2 shadow-sm ring-1 ring-[#C9C3B6]/60">
-            <img src={plamaLogo.url} alt="Plama Projects" className="h-12 md:h-14 w-auto" />
-          </span>
+          <img src={plamaLogo.url} alt="Plama Projects" className="h-14 md:h-16 w-auto" />
         </Link>
 
         <nav
