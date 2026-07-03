@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, PhoneCall } from "lucide-react";
 import plamaLogoUrl from "@/assets/plama-logo.png";
 
 const cols = [
@@ -10,6 +10,7 @@ const cols = [
       { to: "/services/civil", label: "Civil Engineering" },
       { to: "/services/facade", label: "Glass & Façade" },
       { to: "/services/hydraulic", label: "Hydraulic & Stormwater" },
+      { to: "/services/weatherproofing", label: "Weatherproofing & Waterproofing" },
       { to: "/services/marine", label: "Marine Structural" },
       { to: "/services/expert-reports", label: "Expert Reports" },
       { to: "/services/project-management", label: "Project Management" },
