@@ -44,7 +44,9 @@ export function SiteNav() {
     >
       <div className="container-px mx-auto w-full flex items-center justify-between py-4 md:py-5">
         <Link to="/" className="flex items-center">
-          <img src={plamaLogo.url} alt="Plama Projects" className="h-16 md:h-20 w-auto" />
+          <span className="inline-flex items-center rounded-lg bg-[#F6F3EC] px-3 py-2 shadow-sm ring-1 ring-[#C9C3B6]/60">
+            <img src={plamaLogo.url} alt="Plama Projects" className="h-12 md:h-14 w-auto" />
+          </span>
         </Link>
 
         <nav
