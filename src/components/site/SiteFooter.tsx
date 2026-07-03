@@ -32,9 +32,17 @@ export function SiteFooter() {
     <footer className="bg-[#14181C] text-white/75 border-t border-white/10">
       <div className="container-px mx-auto w-full py-14 grid gap-10 md:grid-cols-12">
         <div className="md:col-span-5">
-          <Link to="/" className="inline-flex items-center rounded-md bg-[#F6F3EC] px-3 py-2">
+          <Link
+            to="/"
+            className="inline-flex items-center px-4 py-2 rounded-full"
+            style={{
+              background:
+                "radial-gradient(ellipse at center, rgba(246,243,236,0.9) 0%, rgba(246,243,236,0.55) 50%, rgba(246,243,236,0) 85%)",
+            }}
+          >
             <img src={plamaLogo.url} alt="Plama Projects" className="h-12 w-auto" />
           </Link>
+
           <p className="mt-4 text-sm max-w-sm leading-relaxed text-white/60">
             Sydney-based multidisciplinary engineering consultancy. Structural, civil,
             façade, marine and hydraulic engineering — delivered by senior engineers,
