@@ -15,6 +15,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
+import { Route as ServicesWeatherproofingRouteImport } from './routes/services.weatherproofing'
 import { Route as ServicesStructuralRouteImport } from './routes/services.structural'
 import { Route as ServicesProjectManagementRouteImport } from './routes/services.project-management'
 import { Route as ServicesMarineRouteImport } from './routes/services.marine'
@@ -51,6 +52,11 @@ const IndexRoute = IndexRouteImport.update({
 const ServicesIndexRoute = ServicesIndexRouteImport.update({
   id: '/services/',
   path: '/services/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesWeatherproofingRoute = ServicesWeatherproofingRouteImport.update({
+  id: '/services/weatherproofing',
+  path: '/services/weatherproofing',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesStructuralRoute = ServicesStructuralRouteImport.update({
@@ -103,6 +109,7 @@ export interface FileRoutesByFullPath {
   '/services/marine': typeof ServicesMarineRoute
   '/services/project-management': typeof ServicesProjectManagementRoute
   '/services/structural': typeof ServicesStructuralRoute
+  '/services/weatherproofing': typeof ServicesWeatherproofingRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
@@ -118,6 +125,7 @@ export interface FileRoutesByTo {
   '/services/marine': typeof ServicesMarineRoute
   '/services/project-management': typeof ServicesProjectManagementRoute
   '/services/structural': typeof ServicesStructuralRoute
+  '/services/weatherproofing': typeof ServicesWeatherproofingRoute
   '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
@@ -134,6 +142,7 @@ export interface FileRoutesById {
   '/services/marine': typeof ServicesMarineRoute
   '/services/project-management': typeof ServicesProjectManagementRoute
   '/services/structural': typeof ServicesStructuralRoute
+  '/services/weatherproofing': typeof ServicesWeatherproofingRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
@@ -151,6 +160,7 @@ export interface FileRouteTypes {
     | '/services/marine'
     | '/services/project-management'
     | '/services/structural'
+    | '/services/weatherproofing'
     | '/services/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -166,6 +176,7 @@ export interface FileRouteTypes {
     | '/services/marine'
     | '/services/project-management'
     | '/services/structural'
+    | '/services/weatherproofing'
     | '/services'
   id:
     | '__root__'
@@ -181,6 +192,7 @@ export interface FileRouteTypes {
     | '/services/marine'
     | '/services/project-management'
     | '/services/structural'
+    | '/services/weatherproofing'
     | '/services/'
   fileRoutesById: FileRoutesById
 }
@@ -197,6 +209,7 @@ export interface RootRouteChildren {
   ServicesMarineRoute: typeof ServicesMarineRoute
   ServicesProjectManagementRoute: typeof ServicesProjectManagementRoute
   ServicesStructuralRoute: typeof ServicesStructuralRoute
+  ServicesWeatherproofingRoute: typeof ServicesWeatherproofingRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
@@ -242,6 +255,13 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services/'
       preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/weatherproofing': {
+      id: '/services/weatherproofing'
+      path: '/services/weatherproofing'
+      fullPath: '/services/weatherproofing'
+      preLoaderRoute: typeof ServicesWeatherproofingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/structural': {
@@ -309,6 +329,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesMarineRoute: ServicesMarineRoute,
   ServicesProjectManagementRoute: ServicesProjectManagementRoute,
   ServicesStructuralRoute: ServicesStructuralRoute,
+  ServicesWeatherproofingRoute: ServicesWeatherproofingRoute,
   ServicesIndexRoute: ServicesIndexRoute,
 }
 export const routeTree = rootRouteImport

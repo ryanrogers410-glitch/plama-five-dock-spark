@@ -19,6 +19,7 @@ const serviceImages: Record<string, string> = {
   facade: imgFacade,
   marine: imgMarine,
   hydraulic: imgHydraulic,
+  weatherproofing: imgHydraulic,
   "expert-reports": imgExpert,
   "project-management": imgPm,
 };
