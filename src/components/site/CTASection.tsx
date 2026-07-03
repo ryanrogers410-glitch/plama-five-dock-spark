@@ -51,6 +51,9 @@ export function CTASection({
             </div>
           </div>
           <div className="lg:col-span-4 lg:pl-8 lg:border-l border-white/15 flex flex-col justify-center gap-4 text-sm">
+            <a href="tel:+61283843919" className="flex items-center gap-3 hover:text-white text-white/80">
+              <Phone className="h-4 w-4 text-[var(--accent-orange)]" /> +61 2 8384 3919
+            </a>
             <a href="tel:0452588578" className="flex items-center gap-3 hover:text-white text-white/80">
               <Phone className="h-4 w-4 text-[var(--accent-orange)]" /> 0452 588 578
             </a>
