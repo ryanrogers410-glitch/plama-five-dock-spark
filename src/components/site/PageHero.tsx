@@ -25,7 +25,14 @@ export function PageHero({
         />
       )}
       <div className="absolute inset-0 bg-gradient-to-b from-[#14181C]/90 via-[#14181C]/70 to-[#14181C]/95" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 md:h-48 bg-gradient-to-b from-[#F6F3EC]/55 via-[#F6F3EC]/15 to-transparent" />
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-72 md:h-80"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(246,243,236,0.55) 0%, rgba(246,243,236,0.42) 20%, rgba(246,243,236,0.26) 45%, rgba(246,243,236,0.12) 70%, rgba(246,243,236,0.04) 88%, rgba(246,243,236,0) 100%)",
+        }}
+      />
+
 
       <div className="relative container-px mx-auto w-full pt-36 pb-16 md:pt-44 md:pb-24">
         <div className="max-w-3xl animate-rise">
