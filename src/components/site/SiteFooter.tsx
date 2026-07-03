@@ -30,7 +30,14 @@ const cols = [
 export function SiteFooter() {
   return (
     <footer className="relative bg-[#14181C] text-white/75 border-t border-white/10">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#F6F3EC]/45 via-[#F6F3EC]/12 to-transparent" />
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-64"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(246,243,236,0.45) 0%, rgba(246,243,236,0.32) 22%, rgba(246,243,236,0.18) 48%, rgba(246,243,236,0.08) 72%, rgba(246,243,236,0.02) 90%, rgba(246,243,236,0) 100%)",
+        }}
+      />
+
       <div className="relative container-px mx-auto w-full py-14 grid gap-10 md:grid-cols-12">
 
         <div className="md:col-span-5">
