@@ -19,6 +19,7 @@ const serviceImages: Record<string, string> = {
   facade: imgFacade,
   marine: imgMarine,
   hydraulic: imgHydraulic,
+  weatherproofing: imgHydraulic,
   "expert-reports": imgExpert,
   "project-management": imgPm,
 };
@@ -50,7 +51,7 @@ export function ServicePage({ service }: { service: ServiceDef }) {
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#001a36]/70 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#14181C]/70 via-transparent to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 flex items-center gap-3 text-white">
                 <div className="grid h-11 w-11 place-items-center rounded-lg bg-[var(--accent-orange)]">
                   <Icon className="h-5 w-5" strokeWidth={1.75} />
@@ -110,7 +111,7 @@ export function ServicePage({ service }: { service: ServiceDef }) {
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-[#001a36]/70" />
+            <div className="absolute inset-0 bg-[#14181C]/70" />
             <div className="relative z-10 h-full flex flex-col justify-end p-8 md:p-14 text-white">
               <span className="inline-flex items-center gap-2 text-xs tracking-[0.22em] uppercase text-white/70">
                 <span className="h-px w-8 bg-[var(--accent-orange)]" /> What we deliver
@@ -188,7 +189,7 @@ export function ServicePage({ service }: { service: ServiceDef }) {
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-[#001a36]/85 via-[#001a36]/55 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#14181C]/85 via-[#14181C]/55 to-transparent" />
             <div className="relative z-10 h-full p-8 flex flex-col justify-between text-white">
               <div className="grid h-12 w-12 place-items-center rounded-lg bg-[var(--accent-orange)]">
                 <Icon className="h-5 w-5" strokeWidth={1.75} />

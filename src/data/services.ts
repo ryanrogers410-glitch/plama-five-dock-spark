@@ -1,7 +1,7 @@
 import type { LucideIcon } from "lucide-react";
 import {
   Building2, HardHat, Layers, Waves, Droplets, FileText,
-  ClipboardList, Compass, BadgeCheck,
+  ClipboardList, Compass, BadgeCheck, Umbrella,
 } from "lucide-react";
 
 export type ServiceDef = {
@@ -139,6 +139,33 @@ export const services: ServiceDef[] = [
       { title: "Compliance Certificates", desc: "OSD, stormwater and connection certificates issued in-house." },
     ],
     industries: ["Residential", "Commercial", "Industrial", "Subdivisions", "Public Realm"],
+  },
+  {
+    slug: "weatherproofing",
+    route: "/services/weatherproofing",
+    icon: Umbrella,
+    title: "Weatherproofing & Waterproofing Engineering",
+    short: "Envelope waterproofing, membranes and moisture management for lasting building performance.",
+    eyebrow: "Weatherproofing",
+    hero: { italic: "sealed", accent: " for the long term." },
+    intro:
+      "Weather and water are the most common causes of premature building failure. Our team designs, reviews and certifies waterproofing and weatherproofing strategies that protect envelopes, wet areas and below-ground structures for the full service life.",
+    offerings: [
+      "Wet area and balcony waterproofing design",
+      "Below-ground tanking and basement waterproofing",
+      "Roof, planter and podium membrane systems",
+      "Façade weatherproofing and junction detailing",
+      "Remedial waterproofing assessments and rectification",
+      "Compliance to AS 3740, AS 4654 and AS 4858",
+    ],
+    process: baseProcess,
+    benefits: [
+      { title: "Membrane-Agnostic Advice", desc: "Systems specified on performance, not brand loyalty — the right membrane for the substrate and exposure." },
+      { title: "Junction-Level Detailing", desc: "Where water gets in — thresholds, penetrations, upstands — drawn to a scale builders can follow." },
+      { title: "Remedial Experience", desc: "We diagnose existing leaks and rebuild the detail, not just top up sealant." },
+      { title: "Certification Ready", desc: "Documentation and inspections that satisfy certifiers, insurers and owners corporations." },
+    ],
+    industries: ["Residential", "Commercial", "Healthcare", "Hospitality", "Strata & Remedial"],
   },
   {
     slug: "marine",

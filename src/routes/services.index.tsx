@@ -11,7 +11,7 @@ export const Route = createFileRoute("/services/")({
       { title: "Engineering Services — Plama Projects Sydney" },
       { name: "description", content: "Structural, civil, façade, hydraulic, marine and expert engineering services — delivered in-house across Sydney." },
       { property: "og:title", content: "Engineering Services — Plama Projects" },
-      { property: "og:description", content: "Ten disciplines. One team. Explore Plama Projects' full engineering service range." },
+      { property: "og:description", content: "Eight disciplines. One team. Explore Plama Projects' full engineering service range." },
     ],
   }),
   component: ServicesIndex,
@@ -22,7 +22,7 @@ function ServicesIndex() {
     <>
       <PageHero
         eyebrow="Services"
-        title="Ten disciplines."
+        title="Eight disciplines."
         italic="One"
         accent=" team."
         body="From concept feasibility through certification, every service is delivered by chartered engineers under one roof."

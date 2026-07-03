@@ -38,35 +38,35 @@
 
 :root {
   --radius: 0.5rem;
-  /* Brand */
-  --brand: oklch(0.39 0.14 256);          /* #003F80 */
-  --brand-deep: oklch(0.30 0.13 258);
-  --accent-orange: oklch(0.68 0.20 42);    /* #FF580B */
-  --accent-orange-soft: oklch(0.75 0.15 45);
+  /* Palette — Ink · Stone · Slate · Brass · Ivory · Mist */
+  --brand: #445066;              /* Slate — secondary UI, icons, cards */
+  --brand-deep: #14181C;         /* Ink — dark backgrounds, footer, hero */
+  --accent-orange: #9C7D3E;      /* Brass — used sparingly */
+  --accent-orange-soft: #B89A5E;
 
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.20 0.03 258);
-  --ink: oklch(0.18 0.03 258);
-  --ink-soft: oklch(0.42 0.02 258);
-  --surface: oklch(0.985 0.003 247);
-  --surface-alt: oklch(0.965 0.005 250);
+  --background: #F6F3EC;          /* Ivory — main page background */
+  --foreground: #14181C;
+  --ink: #14181C;
+  --ink-soft: #445066;
+  --surface: #EAE6DD;             /* Stone — section backgrounds */
+  --surface-alt: #E0DBCD;
 
-  --card: oklch(1 0 0);
+  --card: #F6F3EC;
   --card-foreground: var(--ink);
-  --popover: oklch(1 0 0);
+  --popover: #F6F3EC;
   --popover-foreground: var(--ink);
   --primary: var(--brand);
-  --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.96 0.005 250);
+  --primary-foreground: #F6F3EC;
+  --secondary: var(--surface);
   --secondary-foreground: var(--ink);
-  --muted: oklch(0.96 0.005 250);
+  --muted: var(--surface);
   --muted-foreground: var(--ink-soft);
   --accent: var(--accent-orange);
-  --accent-foreground: oklch(0.99 0 0);
+  --accent-foreground: #F6F3EC;
   --destructive: oklch(0.58 0.22 25);
-  --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.92 0.008 255);
-  --input: oklch(0.92 0.008 255);
+  --destructive-foreground: #F6F3EC;
+  --border: #C9C3B6;              /* Mist — dividers, thin borders */
+  --input: #C9C3B6;
   --ring: var(--brand);
 }
 
@@ -96,8 +96,8 @@
   letter-spacing: -0.01em;
   border-radius: 999px;
   transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-  box-shadow: 0 10px 30px -10px color-mix(in oklab, var(--accent-orange) 50%, transparent);
-  &:hover { transform: translateY(-2px); box-shadow: 0 18px 40px -12px color-mix(in oklab, var(--accent-orange) 60%, transparent); }
+  box-shadow: 0 6px 24px -12px color-mix(in oklab, var(--accent-orange) 40%, transparent);
+  &:hover { transform: translateY(-1px); box-shadow: 0 12px 32px -14px color-mix(in oklab, var(--accent-orange) 50%, transparent); }
 }
 @utility btn-ghost {
   display: inline-flex; align-items: center; gap: 0.625rem;
