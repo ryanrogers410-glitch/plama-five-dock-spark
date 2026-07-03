@@ -22,7 +22,7 @@ function ServicesIndex() {
     <>
       <PageHero
         eyebrow="Services"
-        title="Ten disciplines."
+        title="Eight disciplines."
         italic="One"
         accent=" team."
         body="From concept feasibility through certification, every service is delivered by chartered engineers under one roof."
