@@ -1,7 +1,7 @@
 import type { LucideIcon } from "lucide-react";
 import {
   Building2, HardHat, Layers, Waves, Droplets, FileText,
-  ClipboardList, Compass, BadgeCheck,
+  ClipboardList, Compass, BadgeCheck, Umbrella,
 } from "lucide-react";
 
 export type ServiceDef = {
