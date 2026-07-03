@@ -1,7 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
-import plamaLogoUrl from "@/assets/plama-logo.png";
+import plamaLogo from "@/assets/plama-logo.png.asset.json";
 
 const serviceLinks = [
   { to: "/services/structural", label: "Structural Engineering" },
