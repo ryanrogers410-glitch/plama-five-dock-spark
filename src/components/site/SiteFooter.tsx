@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, PhoneCall } from "lucide-react";
-import plamaLogoUrl from "@/assets/plama-logo.png";
+import plamaLogo from "@/assets/plama-logo.png.asset.json";
 
 const cols = [
   {
@@ -33,7 +33,7 @@ export function SiteFooter() {
       <div className="container-px mx-auto w-full py-14 grid gap-10 md:grid-cols-12">
         <div className="md:col-span-5">
           <Link to="/" className="inline-flex items-center">
-            <img src={plamaLogoUrl} alt="Plama Projects" className="h-10 w-auto" />
+            <img src={plamaLogo.url} alt="Plama Projects" className="h-16 w-auto" />
           </Link>
           <p className="mt-4 text-sm max-w-sm leading-relaxed text-white/60">
             Sydney-based multidisciplinary engineering consultancy. Structural, civil,
