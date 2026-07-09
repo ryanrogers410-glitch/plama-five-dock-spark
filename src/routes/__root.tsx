@@ -131,6 +131,7 @@ function RootComponent() {
           <Outlet />
         </main>
         <SiteFooter />
+        <FloatingWidgets />
       </div>
     </QueryClientProvider>
   );
