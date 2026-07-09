@@ -78,6 +78,34 @@ function Contact() {
                     className="mt-2 w-full rounded-md border border-border bg-white px-3 py-2 text-sm text-[var(--ink)] focus:outline-none focus:border-[var(--brand)]"
                     placeholder="Tell us about your site, timeline and what you're trying to build." />
                 </div>
+                <div>
+                  <label className="text-xs uppercase tracking-[0.22em] text-[var(--ink-soft)]">
+                    Attachments <span className="normal-case tracking-normal text-[var(--ink-soft)]">(drawings, photos, reports — files or a folder)</span>
+                  </label>
+                  <div className="mt-2 grid sm:grid-cols-2 gap-3">
+                    <label className="flex items-center justify-center gap-2 rounded-md border border-dashed border-border bg-white px-3 py-3 text-sm text-[var(--ink-soft)] hover:border-[var(--brand)] hover:text-[var(--brand)] cursor-pointer transition">
+                      <input type="file" name="files" multiple className="sr-only" />
+                      <span>+ Select files</span>
+                    </label>
+                    <label className="flex items-center justify-center gap-2 rounded-md border border-dashed border-border bg-white px-3 py-3 text-sm text-[var(--ink-soft)] hover:border-[var(--brand)] hover:text-[var(--brand)] cursor-pointer transition">
+                      <input
+                        type="file"
+                        name="folder"
+                        className="sr-only"
+                        ref={(el) => {
+                          if (el) {
+                            el.setAttribute("webkitdirectory", "");
+                            el.setAttribute("directory", "");
+                          }
+                        }}
+                      />
+                      <span>+ Select folder</span>
+                    </label>
+                  </div>
+                  <p className="mt-2 text-xs text-[var(--ink-soft)]">
+                    Large files? Email attachments directly to <a href="mailto:plama.pro@outlook.com" className="text-[var(--brand)] underline">plama.pro@outlook.com</a>.
+                  </p>
+                </div>
                 <button type="submit" className="btn-primary self-start">
                   Send enquiry
                 </button>
