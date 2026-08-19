@@ -45,7 +45,7 @@ const featuredProjects = [
     desc: "A representative example of our new-built engineering services, ensuring structural integrity and civil compliance from the ground up.",
   },
   {
-    img: secMarine,
+    img: photos.livingWindowWide,
     title: "Renovations & Additions",
     tag: "Structural · Remedial",
     desc: "Innovative structural solutions for complex renovations, providing stability and modern engineering to existing residential frameworks.",
