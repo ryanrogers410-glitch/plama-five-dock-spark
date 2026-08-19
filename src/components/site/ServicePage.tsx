@@ -5,14 +5,20 @@ import { CTASection } from "./CTASection";
 import { services, type ServiceDef } from "@/data/services";
 
 // Authentic high-quality images downloaded from the original site
-import img0 from "@/assets/original/original_0.png";
-import img1 from "@/assets/original/original_1.png";
+import img0 from "@/assets/original/site_img_0.png";
+import img1 from "@/assets/original/site_img_1.png";
 import img3 from "@/assets/original/original_3.jpg";
+import img4 from "@/assets/original/original_4.png";
+import img6 from "@/assets/original/site_img_6.png";
+import img7 from "@/assets/original/site_img_7.png";
+import img9 from "@/assets/original/site_img_9.png";
 import img10 from "@/assets/original/site_img_10.png";
 import img12 from "@/assets/original/site_img_12.png";
 import img13 from "@/assets/original/site_img_13.png";
 import img15 from "@/assets/original/site_img_15.png";
 import img16 from "@/assets/original/site_img_16.png";
+import img18 from "@/assets/original/site_img_18.png";
+import img19 from "@/assets/original/site_img_19.png";
 import heroImg from "@/assets/original/original_3.jpg";
 
 const serviceImages: Record<string, string> = {
@@ -26,10 +32,22 @@ const serviceImages: Record<string, string> = {
   "project-management": img1,
 };
 
+const serviceGalleryImages: Record<string, string> = {
+  structural: img18,
+  civil: img9,
+  facade: img6,
+  marine: img3,
+  hydraulic: img7,
+  weatherproofing: img4,
+  "expert-reports": img19,
+  "project-management": img1,
+};
+
 export function ServicePage({ service }: { service: ServiceDef }) {
   const Icon = service.icon;
   const related = services.filter((s) => s.slug !== service.slug).slice(0, 3);
   const primary = serviceImages[service.slug] ?? heroImg;
+  const secondary = serviceGalleryImages[service.slug] ?? primary;
 
   return (
     <>
@@ -48,7 +66,7 @@ export function ServicePage({ service }: { service: ServiceDef }) {
           <div className="lg:col-span-5 relative order-2 lg:order-1">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
               <img
-                src={primary}
+                src={secondary}
                 alt={service.title}
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover"
@@ -107,7 +125,7 @@ export function ServicePage({ service }: { service: ServiceDef }) {
         <div className="grid lg:grid-cols-2">
           <div className="relative min-h-[380px] lg:min-h-[560px]">
             <img
-              src={primary}
+              src={secondary}
               alt=""
               aria-hidden
               loading="lazy"
@@ -184,7 +202,7 @@ export function ServicePage({ service }: { service: ServiceDef }) {
           {/* Feature image tile spanning two cols */}
           <div className="relative lg:col-span-2 lg:row-span-2 min-h-[280px] rounded-2xl overflow-hidden">
             <img
-              src={primary}
+              src={secondary}
               alt=""
               aria-hidden
               loading="lazy"
@@ -252,7 +270,7 @@ export function ServicePage({ service }: { service: ServiceDef }) {
               </h2>
               <div className="mt-6 hidden lg:block aspect-[4/5] rounded-2xl overflow-hidden relative">
                 <img
-                  src={primary}
+                  src={secondary}
                   alt=""
                   aria-hidden
                   loading="lazy"
