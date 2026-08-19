@@ -1,16 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
-import heroImg from "@/assets/original/original_3.jpg";
-import secResidential from "@/assets/original/projects_0.jpg";
-import secMarine from "@/assets/original/original_3.jpg";
-
-import img10 from "@/assets/original/site_img_10.png";
-import img12 from "@/assets/original/site_img_12.png";
-import img13 from "@/assets/original/site_img_13.png";
-import img3 from "@/assets/original/original_3.jpg";
 import { ShieldCheck, Layers, Sparkles, Wallet, Gauge, Headphones } from "lucide-react";
 import { services } from "@/data/services";
+import { photos, accreditations } from "@/data/photos";
 import { CTASection } from "@/components/site/CTASection";
+
+const heroImg = photos.interiorLivingWide;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,10 +18,10 @@ export const Route = createFileRoute("/")({
 });
 
 const serviceImages: Record<string, string> = {
-  structural: img10,
-  civil: img12,
-  facade: img13,
-  marine: img3,
+  structural: photos.siteSteelFrame,
+  civil: photos.siteNewBuild,
+  facade: photos.glassSkylightPortrait,
+  marine: photos.marinaWharf,
 };
 
 const featuredServices = services
@@ -44,13 +39,13 @@ const strengths = [
 
 const featuredProjects = [
   {
-    img: secResidential,
+    img: photos.siteNewBuild,
     title: "New Built Project",
     tag: "Structural · Civil",
     desc: "A representative example of our new-built engineering services, ensuring structural integrity and civil compliance from the ground up.",
   },
   {
-    img: secMarine,
+    img: photos.livingWindowWide,
     title: "Renovations & Additions",
     tag: "Structural · Remedial",
     desc: "Innovative structural solutions for complex renovations, providing stability and modern engineering to existing residential frameworks.",
@@ -142,11 +137,9 @@ function Hero() {
             {/* Accreditations / Logos Slider */}
             {[...Array(2)].map((_, i) => (
               <div key={i} className="flex items-center gap-12 pr-12">
-                <img src="/assets/logos/logo_0.png" alt="Accreditation 1" className="h-10 md:h-12 w-auto object-contain" />
-                <img src="/assets/logos/logo_1.png" alt="Accreditation 2" className="h-10 md:h-12 w-auto object-contain" />
-                <img src="/assets/logos/logo_2.svg" alt="Accreditation 3" className="h-10 md:h-12 w-auto object-contain" />
-                <img src="/assets/original/site_img_2.svg" alt="Accreditation 4" className="h-10 md:h-12 w-auto object-contain" />
-                <img src="/assets/original/site_img_5.svg" alt="Accreditation 5" className="h-10 md:h-12 w-auto object-contain" />
+                {accreditations.map((a) => (
+                  <img key={a.src} src={a.src} alt={a.alt} loading="lazy" className="h-12 md:h-14 w-auto object-contain" />
+                ))}
               </div>
             ))}
           </div>
