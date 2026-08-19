@@ -37,13 +37,13 @@ export const services: ServiceDef[] = [
     eyebrow: "Structural",
     hero: { italic: "integrity", accent: " in design." },
     intro:
-      "We are specialists in designing, analyzing, and maintaining the adequacy and integrity of the structures. We ensure that the structures we create are safe and secure and compliant with the local authorities' controls, Australian Standards, and the Building Code of Australia (NCC).",
+      "We are specialists in designing, analyzing, and maintaining the adequacy and integrity of the structures. We ensure that the structures we create are safe and secure and compliant with the local authorities' controls, Australian Standards, and the Building Code of Australia (NCC). What makes us outstanding is our consideration of factors such as the environment, load-bearing capacity, and aesthetic appeal, married to the architectural design.",
     offerings: [
-      "Concrete, Steel, Timber, Aluminum, Composite, Glass design",
+      "Concrete, Steel, Timber, Aluminum, Composite, Glass",
       "Underpinning Design",
       "Rectifications & Remediations",
-      "Low - Mid - High-rise Building engineering",
-      "Residential - Industrial - Commercial sectors",
+      "Low - Mid - High-rise Building",
+      "Residential - Industrial - Commercial",
       "Aesthetic and architectural integration",
     ],
     process: baseProcess,
@@ -70,8 +70,8 @@ export const services: ServiceDef[] = [
       "Land Subdivision Infrastructure",
       "Soil and Water Management",
       "Stormwater Management",
-      "Civil Structures - roads, pavers, retaining walls",
-      "Temporary works including shoring and propping",
+      "Civil Structures - road, pavers, retaining walls, etc.",
+      "Temporary works including shoring, propping, scaffolding",
     ],
     process: baseProcess,
     benefits: [
@@ -91,7 +91,7 @@ export const services: ServiceDef[] = [
     eyebrow: "Façade",
     hero: { italic: "architectural", accent: " envelopes." },
     intro:
-      "We have experience in the engineering design of glazed features in buildings including windows, skylights, curtain walls, and storefront systems. Our work involves selection of materials, support systems, and wind load calculations.",
+      "We have experience in the engineering design of glazed features in buildings including windows, skylights, curtain walls, and storefront systems. Our work involves selection of materials, design of support systems, and wind load calculations with relevant safety requirements.",
     offerings: [
       "Wind Study and environmental load analysis",
       "Fire-rated Facade engineering",
@@ -145,14 +145,14 @@ export const services: ServiceDef[] = [
     eyebrow: "Expertise",
     hero: { italic: "forensic", accent: " precision." },
     intro:
-      "We are qualified professionals in carrying out investigations and providing findings regarding building failures. Our reports provide a comprehensive overview and methodology based on engineering expertise.",
+      "We are qualified professionals in carrying out investigations and providing findings, opinions, and conclusions with a comprehensive overview and methodology based on our expertise and supporting data.",
     offerings: [
       "Waterproofing and Leaking Reports",
       "Rising Damp and Tree Root Damage Reports",
       "Cracking Reports and forensic analysis",
       "Structural Adequacy assessments",
       "Dilapidation Reports",
-      "Expert Witness and building defect reports",
+      "NCAT and AFCA Expert Witness reports",
     ],
     process: baseProcess,
     benefits: [
@@ -172,7 +172,7 @@ export const services: ServiceDef[] = [
     eyebrow: "Marine",
     hero: { italic: "resilient", accent: " waterfronts." },
     intro:
-      "Focusing on structures in the marine environment, we account for the ever-changing marine conditions. This requires knowledge of multiple disciplines including civil and structural engineering.",
+      "Marine structures engineering is a field of engineering that focuses on the design, construction, and maintenance of structures in the marine environment, accounting for ever-changing conditions.",
     offerings: [
       "Jetties and Wharves",
       "Pontoons and Seawalls",

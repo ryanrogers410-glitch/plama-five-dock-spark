@@ -25,12 +25,12 @@ export const Route = createFileRoute("/projects")({
 });
 
 const projects = [
-  { img: secResidential, title: "Prestige Residential Rebuild", location: "Inner West Sydney", tags: ["Structural", "Civil"], desc: "Full structural and civil documentation for a knock-down rebuild on a challenging sloped site." },
-  { img: secCommercial, title: "Commercial Fit-out", location: "Sydney CBD", tags: ["Structural", "Façade"], desc: "Structural adaptation and façade interface design for a multi-tenant commercial refit." },
-  { img: secHealthcare, title: "Healthcare Facility Extension", location: "Greater Sydney", tags: ["Structural", "Project Mgmt"], desc: "Extension and upgrade works to an operating healthcare facility with strict compliance and staging requirements." },
-  { img: secMarine, title: "Waterfront Seawall & Jetty", location: "Sydney Harbour", tags: ["Marine", "Hydraulic"], desc: "Marine seawall remediation and private jetty design with full authority approvals." },
-  { img: secResidential, title: "Multi-Dwelling Development", location: "Northern Suburbs", tags: ["Structural", "Civil", "Hydraulic"], desc: "Coordinated structural, civil and stormwater engineering for a multi-dwelling residential development." },
-  { img: secCommercial, title: "Retail Shop Fit-out", location: "Inner West", tags: ["Structural", "Façade"], desc: "Structural and glazing engineering for a high-end retail fit-out with shopfront glazing." },
+  { img: proj1, title: "Knock Down - Rebuilt", location: "Sydney Metro", tags: ["Structural", "Civil"], desc: "Comprehensive structural and civil design for a significant residential redevelopment." },
+  { img: proj2, title: "Alterations & Additions", location: "Inner West Sydney", tags: ["Structural", "Remediation"], desc: "Structural engineering for a complex heritage alteration and modern addition." },
+  { img: proj3, title: "Façade Engineering", location: "Sydney CBD", tags: ["Glazing", "Wind Study"], desc: "Specialist glazing and support system engineering for a high-exposure facade." },
+  { img: proj4, title: "Marine Structure Remediation", location: "Sydney Harbour", tags: ["Marine", "Seawall"], desc: "Engineering design for the reconstruction of a stone seawall and private jetty." },
+  { img: proj1, title: "Subdivision Development", location: "Greater Sydney", tags: ["Civil", "Hydraulic"], desc: "Infrastructure and stormwater management for a multi-lot land subdivision." },
+  { img: proj2, title: "Flood Impact Assessment", location: "Western Sydney", tags: ["Hydraulic", "Expert Report"], desc: "1D/2D flood modeling and assessment for a new residential development." },
 ];
 
 function Projects() {
