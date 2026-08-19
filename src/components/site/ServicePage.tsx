@@ -35,6 +35,7 @@ import site_img_15 from "@/assets/original/site_img_15.png";
 import site_img_16 from "@/assets/original/site_img_16.png";
 import site_img_18 from "@/assets/original/site_img_18.png";
 import site_img_19 from "@/assets/original/site_img_19.png";
+import civil_overview from "@/assets/original/site_img_9.png";
 import heroImg from "@/assets/original/original_3.jpg";
 
 const serviceImages: Record<string, string> = {
@@ -50,7 +51,7 @@ const serviceImages: Record<string, string> = {
 
 const serviceGalleryImages: Record<string, string> = {
   structural: project_0,
-  civil: site_img_3,
+  civil: civil_overview,
   facade: site_img_4,
   marine: img3,
   hydraulic: projects_0,
