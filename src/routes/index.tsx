@@ -57,12 +57,46 @@ function Home() {
   return (
     <>
       <Hero />
+      <Accreditations />
       <Intro />
       <FeaturedServices />
       <WhyUs />
       <FeaturedProjects />
       <CTASection />
     </>
+  );
+}
+
+function Accreditations() {
+  return (
+    <section className="bg-[var(--surface)] border-b border-[var(--ink)]/10">
+      <div className="container-px mx-auto w-full py-10 md:py-14">
+        <div className="flex flex-col items-center text-center">
+          <span className="eyebrow">Accredited & Awarded</span>
+          <p className="mt-3 max-w-xl text-sm md:text-base text-[var(--ink-soft)] leading-relaxed">
+            Recognised by industry bodies and rated among Sydney&rsquo;s top structural engineers.
+          </p>
+        </div>
+
+        <div className="relative mt-8 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+          <div className="flex items-center gap-14 md:gap-20 animate-marquee w-max">
+            {[...Array(2)].map((_, i) => (
+              <div key={i} className="flex items-center gap-14 md:gap-20 pr-14 md:pr-20">
+                {accreditations.map((a) => (
+                  <img
+                    key={a.src}
+                    src={a.src}
+                    alt={a.alt}
+                    loading="lazy"
+                    className="h-14 md:h-16 w-auto object-contain grayscale opacity-70 transition-all duration-500 hover:grayscale-0 hover:opacity-100"
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
