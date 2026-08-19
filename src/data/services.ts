@@ -21,10 +21,10 @@ export type ServiceDef = {
 };
 
 const baseProcess = [
-  { step: "01", title: "Brief & Feasibility", desc: "Site review, constraint mapping and value engineering before a fee is agreed." },
-  { step: "02", title: "Concept Design", desc: "Options developed with the design team so intent, cost and buildability align early." },
-  { step: "03", title: "Documentation", desc: "Coordinated drawings and calculations built for builders — clear, buildable, defensible." },
-  { step: "04", title: "Certification", desc: "Compliance sign-off and support through construction, RFIs and handover." },
+  { step: "01", title: "Brief & Feasibility", desc: "Site review, constraint mapping and feasibility review to test the opportunity honestly." },
+  { step: "02", title: "Concept Design", desc: "Design and Document management for DA, CC, CDC so intent, cost and buildability align." },
+  { step: "03", title: "Documentation", desc: "Advanced CAD and finite element analysis (FEA) to ensure coordinated, buildable drawings." },
+  { step: "04", title: "Certification", desc: "Liaising and Coordinating authority approvals through to Occupancy Certificate." },
 ];
 
 export const services: ServiceDef[] = [
@@ -42,16 +42,15 @@ export const services: ServiceDef[] = [
       "Concrete, Steel, Timber, Aluminum, Composite, Glass",
       "Underpinning Design",
       "Rectifications & Remediations",
-      "Low - Mid - High-rise Building",
-      "Residential - Industrial - Commercial",
-      "Aesthetic and architectural integration",
+      "Low – Mid – High-rise Building",
+      "Residential – Industrial – Commercial",
     ],
     process: baseProcess,
     benefits: [
-      { title: "Code Compliance", desc: "Full compliance with Australian Standards and Building Code of Australia." },
-      { title: "Material Expertise", desc: "Deep knowledge of load-bearing capacity for concrete, steel, and timber." },
-      { title: "Innovative Solutions", desc: "Specific problems addressed with innovative structural engineering." },
-      { title: "Safety First", desc: "Ensuring structures are safe, secure, and built for their environment." },
+      { title: "Innovation", desc: "We deal with specific problems and provide innovative solutions in various sectors." },
+      { title: "Responsiveness", desc: "Focused on providing a high level of customer service through our experienced team." },
+      { title: "Cost Effectiveness", desc: "Tailored to meet the needs of the clients and designed to provide a cost-effective solution." },
+      { title: "Build-ability", desc: "Documentation that meets the time, cost, quality and build-ability expectations." },
     ],
     industries: ["Residential", "Commercial", "Industrial", "Knock-down and Rebuild", "Healthcare"],
   },
@@ -66,12 +65,14 @@ export const services: ServiceDef[] = [
     intro:
       "We have experience in the design, and maintenance of the physical and naturally built environment which includes in land title subdivision, earthworks, soil and water management and road construction.",
     offerings: [
-      "Traffic, Parking and Driveway Design (AS2890)",
+      "Traffic, Parking and Driveway Design in accordance with AS2890 and council’s controls",
       "Land Subdivision Infrastructure",
       "Soil and Water Management",
       "Stormwater Management",
-      "Civil Structures - road, pavers, retaining walls, etc.",
-      "Temporary works including shoring, propping, scaffolding",
+      "Civil Structures – road, pavers, retaining walls, etc.",
+      "Onsite Detention Systems/ Onsite Retention Systems",
+      "Rainwater Collection and Reuse Systems",
+      "Temporary works for major projects including shoring, propping, scaffolding, etc…",
     ],
     process: baseProcess,
     benefits: [
@@ -151,6 +152,17 @@ export const services: ServiceDef[] = [
       "Rising Damp and Tree Root Damage Reports",
       "Cracking Reports and forensic analysis",
       "Structural Adequacy assessments",
+      "Dilapidation Reports",
+      "Structural Report for Strata Management",
+      "Cracking Reports and forensic analysis",
+      "Waterproofing/Leaking Reports",
+      "Rising Damp and Tree Root Damage Reports",
+      "Flood Impact Assessment Reports",
+      "Flood Risk Management Reports",
+      "Insurance Reports",
+      "Expert Witness Reports",
+      "Building/ Structural Defects Reports",
+      "NCAT and AFCA Expert Witness reports",
       "Dilapidation Reports",
       "NCAT and AFCA Expert Witness reports",
     ],

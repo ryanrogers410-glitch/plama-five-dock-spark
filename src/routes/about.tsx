@@ -18,10 +18,10 @@ export const Route = createFileRoute("/about")({
 });
 
 const values = [
-  { title: "Innovation", desc: "Pragmatic engineering and meticulous detailing for every project." },
+  { title: "Innovation & thoroughness", desc: "Pragmatic engineering and meticulous detailing for every project." },
   { title: "Responsiveness", desc: "Fast project delivery and prompt replies to all client enquiries." },
-  { title: "Cost Effective", desc: "Solutions designed to provide efficient and budget-friendly outcomes." },
-  { title: "Hands-on", desc: "Senior engineers ensuring efficiency and quality from start to finish." },
+  { title: "Cost effectiveness", desc: "Solutions designed to provide efficient and budget-friendly outcomes." },
+  { title: "Hands-on approach", desc: "Ensuring efficiency & quality from start to finish." },
 ];
 
 function About() {
@@ -46,18 +46,20 @@ function About() {
           </div>
           <div className="lg:col-span-6 lg:col-start-7 space-y-4 text-[var(--ink-soft)] text-base leading-relaxed">
             <p>
-              Our clients include leading residential builders, development companies, government 
-              authorities, manufacturing companies and Architects. We are focused on providing 
-              a high level of customer service through our experienced team.
+              Plama Projects provides civil, structural engineering services to the residential, 
+              commercial, industrial and infrastructure market sectors. Our clients include 
+              leading residential builders, development companies, government authorities, 
+              manufacturing companies and Architects.
             </p>
             <p>
-              Our commitment is to ensure that the design and documentation we provide meets 
-              the time, cost, quality and build-ability expectations of our clients. 
-              We use modern engineering techniques to ensure the quality and accuracy of your projects.
+              Our professional engineers are fully qualified in Civil and Structural Engineering, 
+              involving in diverse design and construction of all sectors — commercial, industrial, 
+              infrastructure, community & residential.
             </p>
             <p>
-              We believe in an hands-on approach ensuring efficiency and quality, 
-              maintaining long-term client relationships and remaining sympathetic to stakeholder requirements.
+              We are focused on providing a high level of customer service through our experienced team. 
+              Our commitment is to ensure that the design and documentation we provide meets the 
+              time, cost, quality and build-ability expectations of our clients.
             </p>
           </div>
         </div>
@@ -112,10 +114,15 @@ function About() {
               </p>
               <div className="mt-6 grid sm:grid-cols-2 gap-3">
                 {[
-                  "Chartered Professional Engineer (CPEng)",
+                  "Chartered Professional Engineer",
+                  "Accredited by Engineers Australia",
+                  "National Professional Engineers (Structural and Civil)",
+                  "NSW Fair Trading – Class 2 Buildings",
                   "Registered Professional Engineer (Structure, Civil, Stormwater)",
-                  "Registered Design Practitioner & Principal Design Practitioner",
-                  "APEC Engineer & International Professional Engineer",
+                  "Registered Design Practitioner (Structure, Civil, Stormwater)",
+                  "Principal Design Practitioner",
+                  "APEC Engineer",
+                  "International Professional Engineer",
                 ].map((q) => (
                   <div key={q} className="flex items-start gap-3 border-l-2 border-[var(--accent-orange)] pl-3 py-1">
                     <span className="text-xs leading-relaxed text-white/90">{q}</span>
