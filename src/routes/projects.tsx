@@ -7,6 +7,10 @@ import secCommercial from "@/assets/sector-commercial.jpg";
 import secHealthcare from "@/assets/sector-healthcare.jpg";
 import secMarine from "@/assets/sector-marine.jpg";
 import heroImg from "@/assets/hero-structure.jpg";
+import proj1 from "@/assets/project-1.jpg";
+import proj2 from "@/assets/project-2.jpg";
+import proj3 from "@/assets/project-3.jpg";
+import proj4 from "@/assets/project-4.jpg";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
