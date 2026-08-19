@@ -6,7 +6,7 @@ import {
 
 export type ServiceDef = {
   slug: string;
-  route: `/services/${string}`;
+  route: string;
   icon: LucideIcon;
   title: string;
   short: string;
