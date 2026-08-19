@@ -29,12 +29,12 @@ const featuredServices = services
   .map((s) => ({ ...s, image: serviceImages[s.slug] }));
 
 const strengths = [
-  { icon: ShieldCheck, title: "Innovation & Thoroughness", desc: "Pragmatic engineering and meticulous detailing for every project." },
-  { icon: Layers, title: "Responsiveness", desc: "Fast project delivery and prompt replies to all client enquiries." },
-  { icon: Sparkles, title: "Cost Effectiveness", desc: "Solutions designed to provide efficient and budget-friendly outcomes." },
-  { icon: Wallet, title: "Hands-on Approach", desc: "Senior engineers ensuring efficiency and quality from start to finish." },
-  { icon: Gauge, title: "Long-term Relationships", desc: "Building trust and reliability with our clients over the long term." },
-  { icon: Headphones, title: "Flexibility", desc: "Adapting our expertise to the specific needs of each client and project." },
+  { icon: ShieldCheck, title: "Experienced team", desc: "Our professional engineers are fully qualified in Civil and Structural Engineering, involving in diverse design and construction of all sectors." },
+  { icon: Layers, title: "Customer service", desc: "We are focused on providing a high level of customer service through our experienced team." },
+  { icon: Sparkles, title: "Time and cost", desc: "Our commitment is to ensure that the design and documentation we provide meets the time, cost, quality and build-ability expectations of our clients." },
+  { icon: Wallet, title: "Broad vision", desc: "Professional engineers providing broad vision expertise for the residential, commercial, industrial and infrastructure market sectors." },
+  { icon: Gauge, title: "Quality assurance", desc: "We use advanced computer-aided design (CAD), finite element analysis (FEA) software, and modern engineering techniques." },
+  { icon: Headphones, title: "Diverse sectors", desc: "Clients include leading residential builders, development companies, government authorities, and manufacturing companies." },
 ];
 
 const featuredProjects = [
@@ -45,7 +45,7 @@ const featuredProjects = [
     desc: "A representative example of our new-built engineering services, ensuring structural integrity and civil compliance from the ground up.",
   },
   {
-    img: photos.livingWindowWide,
+    img: photos.siteSteelFrame,
     title: "Renovations & Additions",
     tag: "Structural · Remedial",
     desc: "Innovative structural solutions for complex renovations, providing stability and modern engineering to existing residential frameworks.",
