@@ -44,13 +44,13 @@ const strengths = [
 
 const featuredProjects = [
   {
-    img: "/src/assets/original/projects_0.jpg",
+    img: secResidential,
     title: "New Built Project",
     tag: "Structural · Civil",
     desc: "A representative example of our new-built engineering services, ensuring structural integrity and civil compliance from the ground up.",
   },
   {
-    img: "/src/assets/original/original_3.jpg",
+    img: secMarine,
     title: "Renovations & Additions",
     tag: "Structural · Remedial",
     desc: "Innovative structural solutions for complex renovations, providing stability and modern engineering to existing residential frameworks.",
@@ -114,27 +114,43 @@ function Hero() {
           </div>
         </div>
 
-        <div className="mt-10 md:mt-14 grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/15 border border-white/15 rounded-2xl overflow-hidden backdrop-blur-sm">
-          {[
-            ["2022", "Top 10 Structural (Sydney)"],
-            ["2021", "Top 10 Structural (Sydney)"],
-            ["100%", "Best Service in Industry"],
-            ["APEC", "Accredited Engineer"],
-            ["2020", "Top 10 Structural (Sydney)"],
-            ["2019", "Top 10 Structural (Sydney)"],
-            ["2018", "Top 10 Structural (Sydney)"],
-            ["Chartered", "Member of Engineers Australia"],
-          ].map(([k, v]) => (
-            <div key={v} className="bg-[#14181C]/60 px-5 py-4 border-r border-white/10 last:border-r-0">
+        <div className="mt-10 md:mt-14 max-w-2xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="bg-[#14181C]/60 backdrop-blur-sm px-6 py-5 rounded-2xl border border-white/15">
               <div className="font-display text-2xl md:text-3xl text-white">
-                {k}
-                <span className="text-[var(--accent-orange)]">.</span>
+                Top 10<span className="text-[var(--accent-orange)]">.</span>
               </div>
-              <div className="mt-1 text-[10px] uppercase tracking-[0.18em] text-white/65">
-                {v}
+              <div className="mt-1 text-[10px] uppercase tracking-[0.2em] text-white/65 leading-relaxed">
+                Structural Engineering Sydney <br />
+                2018 — 2022
               </div>
             </div>
-          ))}
+            <div className="bg-[#14181C]/60 backdrop-blur-sm px-6 py-5 rounded-2xl border border-white/15">
+              <div className="font-display text-2xl md:text-3xl text-white">
+                APEC<span className="text-[var(--accent-orange)]">.</span>
+              </div>
+              <div className="mt-1 text-[10px] uppercase tracking-[0.2em] text-white/65">
+                Accredited Engineer & <br />
+                Chartered Member EA
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 overflow-hidden py-4 border-t border-white/10">
+          <div className="flex items-center gap-12 animate-scroll w-max grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+            {/* Accreditations / Logos Slider */}
+            {[...Array(2)].map((_, i) => (
+              <div key={i} className="flex items-center gap-12 pr-12">
+                <img src="/src/assets/logos/logo_0.png" alt="Accreditation 1" className="h-10 md:h-12 w-auto object-contain" />
+                <img src="/src/assets/logos/logo_1.png" alt="Accreditation 2" className="h-10 md:h-12 w-auto object-contain" />
+                <img src="/src/assets/logos/logo_2.svg" alt="Accreditation 3" className="h-10 md:h-12 w-auto object-contain" />
+                {/* Fallback to original logos if available */}
+                <img src="/src/assets/original/site_img_2.svg" alt="Accreditation 4" className="h-10 md:h-12 w-auto object-contain" />
+                <img src="/src/assets/original/site_img_5.svg" alt="Accreditation 5" className="h-10 md:h-12 w-auto object-contain" />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
