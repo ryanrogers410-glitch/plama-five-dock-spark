@@ -4,9 +4,9 @@ import { PageHero } from "./PageHero";
 import { CTASection } from "./CTASection";
 import { services, type ServiceDef } from "@/data/services";
 
-// Authentic images downloaded from the original site
-import img0 from "@/assets/original/site_img_0.png";
-import img1 from "@/assets/original/site_img_1.png";
+// Authentic high-quality images downloaded from the original site
+import img0 from "@/assets/original/original_0.png";
+import img1 from "@/assets/original/original_1.png";
 import img3 from "@/assets/original/original_3.jpg";
 import img10 from "@/assets/original/site_img_10.png";
 import img12 from "@/assets/original/site_img_12.png";
