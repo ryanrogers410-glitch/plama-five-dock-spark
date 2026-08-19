@@ -3,25 +3,27 @@ import { ArrowUpRight, Check } from "lucide-react";
 import { PageHero } from "./PageHero";
 import { CTASection } from "./CTASection";
 import { services, type ServiceDef } from "@/data/services";
-import heroImg from "@/assets/hero-structure.jpg";
-import imgStructural from "@/assets/service-structural.jpg";
-import imgCivil from "@/assets/service-civil.jpg";
-import imgFacade from "@/assets/service-facade.jpg";
-import imgMarine from "@/assets/service-marine.jpg";
-import imgHydraulic from "@/assets/service-hydraulic.jpg";
-import imgExpert from "@/assets/service-expert.jpg";
-import imgPm from "@/assets/service-pm.jpg";
-import imgDetail from "@/assets/service-detail.jpg";
+
+// Authentic images downloaded from the original site
+import img0 from "@/assets/original/site_img_0.png";
+import img1 from "@/assets/original/site_img_1.png";
+import img3 from "@/assets/original/original_3.jpg";
+import img10 from "@/assets/original/site_img_10.png";
+import img12 from "@/assets/original/site_img_12.png";
+import img13 from "@/assets/original/site_img_13.png";
+import img15 from "@/assets/original/site_img_15.png";
+import img16 from "@/assets/original/site_img_16.png";
+import heroImg from "@/assets/original/original_3.jpg";
 
 const serviceImages: Record<string, string> = {
-  structural: imgStructural,
-  civil: imgCivil,
-  facade: imgFacade,
-  marine: imgMarine,
-  hydraulic: imgHydraulic,
-  weatherproofing: imgHydraulic,
-  "expert-reports": imgExpert,
-  "project-management": imgPm,
+  structural: img10,
+  civil: img12,
+  facade: img13,
+  marine: img3,
+  hydraulic: img15,
+  weatherproofing: img16,
+  "expert-reports": img0,
+  "project-management": img1,
 };
 
 export function ServicePage({ service }: { service: ServiceDef }) {
@@ -37,7 +39,7 @@ export function ServicePage({ service }: { service: ServiceDef }) {
         italic={service.hero.italic}
         accent={service.hero.accent}
         body={service.short}
-        image={heroImg}
+        image={primary}
       />
 
       {/* Overview — asymmetric with vertical image */}
@@ -250,7 +252,7 @@ export function ServicePage({ service }: { service: ServiceDef }) {
               </h2>
               <div className="mt-6 hidden lg:block aspect-[4/5] rounded-2xl overflow-hidden relative">
                 <img
-                  src={imgDetail}
+                  src={primary}
                   alt=""
                   aria-hidden
                   loading="lazy"
