@@ -4,14 +4,14 @@ import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
 const plamaLogo = { url: "/plama-logo.png" };
 
 const serviceLinks = [
-  { to: "/services/structural", label: "Structural Engineering" },
-  { to: "/services/civil", label: "Civil Engineering" },
-  { to: "/services/facade", label: "Glass & Façade Engineering" },
- { to: "/services/hydraulic", label: "Hydraulic & Stormwater" },
- { to: "/services/weatherproofing", label: "Weatherproofing & Waterproofing" },
-  { to: "/services/marine", label: "Marine Structural" },
-  { to: "/services/expert-reports", label: "Expert Reports & Certifications" },
-  { to: "/services/project-management", label: "Development & Project Mgmt" },
+  { to: "/services", hash: "structural", label: "Structural Engineering" },
+  { to: "/services", hash: "civil", label: "Civil Engineering" },
+  { to: "/services", hash: "facade", label: "Glass & Façade Engineering" },
+  { to: "/services", hash: "hydraulic", label: "Hydraulic & Stormwater" },
+  { to: "/services", hash: "weatherproofing", label: "Weatherproofing & Waterproofing" },
+  { to: "/services", hash: "marine", label: "Marine Structural" },
+  { to: "/services", hash: "expert-reports", label: "Expert Reports & Certifications" },
+  { to: "/services", hash: "project-management", label: "Development & Project Mgmt" },
 ] as const;
 
 export function SiteNav() {
@@ -81,8 +81,9 @@ export function SiteNav() {
                   <div className="my-1 border-t border-border" />
                   {serviceLinks.map((s) => (
                     <Link
-                      key={s.to}
+                      key={s.hash}
                       to={s.to}
+                      hash={s.hash}
                       className="block px-4 py-2 text-sm hover:bg-[var(--surface)] hover:text-[var(--brand)]"
                     >
                       {s.label}
@@ -129,7 +130,7 @@ export function SiteNav() {
             <MobileLink to="/services" label="All Services" />
             <div className="pl-4 border-l border-border ml-2 my-1 flex flex-col">
               {serviceLinks.map((s) => (
-                <MobileLink key={s.to} to={s.to} label={s.label} small />
+                <MobileLink key={s.hash} to={s.to} hash={s.hash} label={s.label} small />
               ))}
             </div>
             <MobileLink to="/industries" label="Industries" />
@@ -155,10 +156,11 @@ function NavLink({ to, label, exact }: { to: string; label: string; exact?: bool
   );
 }
 
-function MobileLink({ to, label, small }: { to: string; label: string; small?: boolean }) {
+function MobileLink({ to, hash, label, small }: { to: string; hash?: string; label: string; small?: boolean }) {
   return (
     <Link
       to={to}
+      hash={hash}
       className={`py-2 ${small ? "text-xs text-[var(--ink-soft)]" : ""} hover:text-[var(--brand)]`}
       activeProps={{ className: "text-[var(--accent-orange)] font-semibold" }}
     >
