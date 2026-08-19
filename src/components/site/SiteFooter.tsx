@@ -65,13 +65,11 @@ export function SiteFooter() {
         <div className="md:col-span-3">
           <div className="text-xs uppercase tracking-[0.22em] text-white/50">Services</div>
           <ul className="mt-4 space-y-2 text-sm">
-            {servicesLinks.map((l) => (
-              <li key={l.hash}>
-                <Link to={l.to} hash={l.hash} className="hover:text-white transition">
-                  {l.label}
-                </Link>
-              </li>
-            ))}
+            <li>
+              <Link to="/services" className="hover:text-white transition">
+                Engineering Services
+              </Link>
+            </li>
           </ul>
         </div>
 

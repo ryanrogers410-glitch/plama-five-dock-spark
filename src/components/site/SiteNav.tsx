@@ -57,42 +57,7 @@ export function SiteNav() {
         >
           <NavLink to="/" label="Home" exact />
           <NavLink to="/about" label="About" />
-          <div
-            className="relative"
-            onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => setServicesOpen(false)}
-          >
-            <button
-              type="button"
-              className="inline-flex items-center gap-1 hover:opacity-70 transition"
-              onClick={() => setServicesOpen((v) => !v)}
-            >
-              Services <ChevronDown className="h-3.5 w-3.5" />
-            </button>
-            {servicesOpen && (
-              <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[280px]">
-                <div className="bg-white rounded-xl shadow-2xl border border-border py-2 text-[var(--ink)]">
-                  <Link
-                    to="/services"
-                    className="block px-4 py-2 text-sm font-medium hover:bg-[var(--surface)] hover:text-[var(--brand)]"
-                  >
-                    All Services
-                  </Link>
-                  <div className="my-1 border-t border-border" />
-                  {serviceLinks.map((s) => (
-                    <Link
-                      key={s.hash}
-                      to={s.to}
-                      hash={s.hash}
-                      className="block px-4 py-2 text-sm hover:bg-[var(--surface)] hover:text-[var(--brand)]"
-                    >
-                      {s.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
+          <NavLink to="/services" label="Services" />
           {/* Industries removed as requested */}
           <NavLink to="/projects" label="Projects" />
           <NavLink to="/contact" label="Contact" />
@@ -127,12 +92,7 @@ export function SiteNav() {
           <div className="container-px mx-auto w-full py-4 flex flex-col text-[var(--ink)] text-sm">
             <MobileLink to="/" label="Home" />
             <MobileLink to="/about" label="About" />
-            <MobileLink to="/services" label="All Services" />
-            <div className="pl-4 border-l border-border ml-2 my-1 flex flex-col">
-              {serviceLinks.map((s) => (
-                <MobileLink key={s.hash} to={s.to} hash={s.hash} label={s.label} small />
-              ))}
-            </div>
+            <MobileLink to="/services" label="Services" />
             {/* Mobile link for industries removed */}
             <MobileLink to="/projects" label="Projects" />
             <MobileLink to="/contact" label="Contact" />
