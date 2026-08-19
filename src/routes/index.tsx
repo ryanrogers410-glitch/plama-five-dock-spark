@@ -1,16 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
-import heroImg from "@/assets/original/original_3.jpg";
-import secResidential from "@/assets/original/projects_0.jpg";
-import secMarine from "@/assets/original/original_3.jpg";
-
-import img10 from "@/assets/original/site_img_10.png";
-import img12 from "@/assets/original/site_img_12.png";
-import img13 from "@/assets/original/site_img_13.png";
-import img3 from "@/assets/original/original_3.jpg";
 import { ShieldCheck, Layers, Sparkles, Wallet, Gauge, Headphones } from "lucide-react";
 import { services } from "@/data/services";
+import { photos, accreditations } from "@/data/photos";
 import { CTASection } from "@/components/site/CTASection";
+
+const heroImg = photos.interiorLivingWide;
 
 export const Route = createFileRoute("/")({
   head: () => ({
