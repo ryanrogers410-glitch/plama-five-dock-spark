@@ -72,9 +72,9 @@ function Accreditations() {
     <section className="bg-[var(--surface)] border-b border-[var(--ink)]/10">
       <div className="container-px mx-auto w-full py-10 md:py-14">
         <div className="flex flex-col items-center text-center">
-          <span className="eyebrow">Accredited & Awarded</span>
+          <span className="eyebrow">Professional Accreditations</span>
           <p className="mt-3 max-w-xl text-sm md:text-base text-[var(--ink-soft)] leading-relaxed">
-            Recognised by industry bodies and rated among Sydney&rsquo;s top structural engineers.
+            Our team is accredited and registered with leading professional engineering bodies across Australia and the Asia-Pacific region.
           </p>
         </div>
 
