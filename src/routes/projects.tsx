@@ -21,8 +21,54 @@ export const Route = createFileRoute("/projects")({
 });
 
 const projects = [
-  { img: proj1, title: "New Built", location: "Sydney Metro", tags: ["Structural", "Civil"], desc: "Professional engineers involving in diverse design and construction of all sectors." },
-  { img: proj2, title: "Knock Down - Rebuilt", location: "Five Dock", tags: ["Structural", "Civil"], desc: "Structural engineering design for a significant residential redevelopment." },
+  { 
+    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/IMG_20180914_150128-scaled.jpg", 
+    title: "NEW BUILT", 
+    subtitle: "Knock Down - Rebuilt",
+    location: "Sydney Metro", 
+    tags: ["Structural", "Civil"], 
+    desc: "A significant residential new build featuring comprehensive structural and civil engineering solutions." 
+  },
+  { 
+    img: "https://plamaprojects.com.au/wp-content/uploads/2023/05/video-bg-1-1.jpg", 
+    title: "TOWNHOUSES", 
+    subtitle: "Knock Down - Rebuilt",
+    location: "Sydney Metro", 
+    tags: ["Structural", "Civil"], 
+    desc: "High-density residential development with complex structural framing and site coordination." 
+  },
+  { 
+    img: "https://plamaprojects.com.au/wp-content/uploads/2023/05/style_2_right1-1.jpeg", 
+    title: "RENOVATIONS", 
+    subtitle: "Alterations & Additions",
+    location: "Five Dock", 
+    tags: ["Structural", "Civil"], 
+    desc: "Sophisticated interior renovations requiring meticulous structural interventions and design sensitivity." 
+  },
+  { 
+    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/IMG_20170430_075357-1-scaled.jpg", 
+    title: "FACADE", 
+    subtitle: "FACADE ENGINEERING",
+    location: "Sydney Metro", 
+    tags: ["Facade"], 
+    desc: "Structural facade engineering for multi-story residential construction, ensuring safety and architectural intent." 
+  },
+  { 
+    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/flood-map-scaled.jpg", 
+    title: "FLOOD STUDY", 
+    subtitle: "Hydraulic & Stormwater",
+    location: "Sydney", 
+    tags: ["Hydraulic", "Stormwater"], 
+    desc: "Detailed flood mapping and hydraulic analysis for site feasibility and development approval." 
+  },
+  { 
+    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/stamped_1-AEP-Suspended-Floor-Max-Water-Depth-scaled.jpg", 
+    title: "DRAINAGE", 
+    subtitle: "Stormwater Management",
+    location: "Sydney Metro", 
+    tags: ["Stormwater"], 
+    desc: "Engineered stormwater drainage systems for complex urban residential developments." 
+  },
 ];
 
 function Projects() {
@@ -30,10 +76,10 @@ function Projects() {
     <>
       <PageHero
         eyebrow="Projects"
-        title="Engineered work across"
-        italic="Sydney"
-        accent="."
-        body="A representative selection of the residential, commercial, healthcare and waterfront work delivered by our multidisciplinary team."
+        title="We Have Solutions for A Wide Range of"
+        italic="Projects"
+        accent="!"
+        body="A representative selection of the residential, commercial, and infrastructure work delivered by our multidisciplinary team."
         image={heroImg}
       />
 
@@ -47,9 +93,9 @@ function Projects() {
               </div>
               <div className="p-5 flex-1 flex flex-col">
                 <div className="text-[10px] uppercase tracking-[0.22em] text-[var(--accent-orange)]">
-                  {p.location}
+                  {p.subtitle || p.location}
                 </div>
-                <h3 className="mt-2 font-display text-lg text-[var(--ink)]">{p.title}</h3>
+                <h3 className="mt-2 font-display text-xl text-[var(--ink)] tracking-wide">{p.title}</h3>
                 <p className="mt-2 text-sm text-[var(--ink-soft)] leading-relaxed flex-1">{p.desc}</p>
                 <div className="mt-3 flex flex-wrap gap-1.5">
                   {p.tags.map((t) => (
