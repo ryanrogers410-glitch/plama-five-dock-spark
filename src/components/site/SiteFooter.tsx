@@ -2,29 +2,22 @@ import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, PhoneCall } from "lucide-react";
 const plamaLogo = { url: "/plama-logo.png" };
 
-const cols = [
-  {
-    title: "Services",
-    links: [
-      { to: "/services/structural", label: "Structural Engineering" },
-      { to: "/services/civil", label: "Civil Engineering" },
-      { to: "/services/facade", label: "Glass & Façade" },
-      { to: "/services/hydraulic", label: "Hydraulic & Stormwater" },
-      { to: "/services/weatherproofing", label: "Weatherproofing & Waterproofing" },
-      { to: "/services/marine", label: "Marine Structural" },
-      { to: "/services/expert-reports", label: "Expert Reports" },
-      { to: "/services/project-management", label: "Project Management" },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      { to: "/about", label: "About Us" },
-      { to: "/industries", label: "Industries" },
-      { to: "/projects", label: "Projects" },
-      { to: "/contact", label: "Contact" },
-    ],
-  },
+const servicesLinks = [
+  { to: "/services", hash: "structural", label: "Structural Engineering" },
+  { to: "/services", hash: "civil", label: "Civil Engineering" },
+  { to: "/services", hash: "facade", label: "Glass & Façade" },
+  { to: "/services", hash: "hydraulic", label: "Hydraulic & Stormwater" },
+  { to: "/services", hash: "weatherproofing", label: "Weatherproofing & Waterproofing" },
+  { to: "/services", hash: "marine", label: "Marine Structural" },
+  { to: "/services", hash: "expert-reports", label: "Expert Reports" },
+  { to: "/services", hash: "project-management", label: "Project Management" },
+] as const;
+
+const companyLinks = [
+  { to: "/about", label: "About Us" },
+  { to: "/industries", label: "Industries" },
+  { to: "/projects", label: "Projects" },
+  { to: "/contact", label: "Contact" },
 ] as const;
 
 export function SiteFooter() {
@@ -69,20 +62,31 @@ export function SiteFooter() {
           </ul>
         </div>
 
-        {cols.map((col) => (
-          <div key={col.title} className="md:col-span-3">
-            <div className="text-xs uppercase tracking-[0.22em] text-white/50">{col.title}</div>
-            <ul className="mt-4 space-y-2 text-sm">
-              {col.links.map((l) => (
-                <li key={l.to}>
-                  <Link to={l.to} className="hover:text-white transition">
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <div className="md:col-span-3">
+          <div className="text-xs uppercase tracking-[0.22em] text-white/50">Services</div>
+          <ul className="mt-4 space-y-2 text-sm">
+            {servicesLinks.map((l) => (
+              <li key={l.hash}>
+                <Link to={l.to} hash={l.hash} className="hover:text-white transition">
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="md:col-span-3">
+          <div className="text-xs uppercase tracking-[0.22em] text-white/50">Company</div>
+          <ul className="mt-4 space-y-2 text-sm">
+            {companyLinks.map((l) => (
+              <li key={l.to}>
+                <Link to={l.to} className="hover:text-white transition">
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
 
         <div className="md:col-span-1" />
       </div>
