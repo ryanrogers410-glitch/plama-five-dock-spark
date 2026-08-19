@@ -70,6 +70,20 @@ function ServicesIndex() {
           const Icon = service.icon;
           const isEven = index % 2 === 0;
           
+          // Map to original site images for the services page
+          const serviceImages: Record<string, string> = {
+            structural: "https://plamaprojects.com.au/wp-content/uploads/2023/07/IMG_20180914_150128-scaled.jpg",
+            civil: "https://plamaprojects.com.au/wp-content/uploads/2023/05/video-bg-1-1.jpg",
+            facade: "https://plamaprojects.com.au/wp-content/uploads/2023/05/style_2_right1-1.jpeg",
+            marine: "https://plamaprojects.com.au/wp-content/uploads/2023/07/IMG_20170430_075357-1-scaled.jpg",
+            hydraulic: "https://plamaprojects.com.au/wp-content/uploads/2023/07/flood-map-scaled.jpg",
+            "expert-reports": "https://plamaprojects.com.au/wp-content/uploads/2023/07/stamped_1-AEP-Suspended-Floor-Max-Water-Depth-scaled.jpg",
+            weatherproofing: "https://plamaprojects.com.au/wp-content/uploads/2023/05/video-bg-1-1.jpg",
+            "project-management": "https://plamaprojects.com.au/wp-content/uploads/2023/07/IMG_20180914_150128-scaled.jpg"
+          };
+          
+          const imgUrl = serviceImages[service.slug] || serviceImages.structural;
+          
           return (
             <section 
               key={service.slug} 
@@ -90,13 +104,11 @@ function ServicesIndex() {
                     </div>
                     
                     <h2 className="font-display text-4xl md:text-5xl text-[var(--ink)] mb-6 leading-[1.1]">
-                      {service.title.split(" ").slice(0, -1).join(" ")} <span className="italic text-[var(--brand)]">{service.title.split(" ").slice(-1)}</span>
+                      {service.title}
                     </h2>
                     
                     <div className="space-y-4 text-[var(--ink-soft)] text-lg leading-relaxed">
-                      {service.intro.split('\n\n').map((para, i) => (
-                        <p key={i}>{para}</p>
-                      ))}
+                      <p>{service.intro}</p>
                     </div>
 
                     <div className="mt-10 grid sm:grid-cols-2 gap-x-8 gap-y-4">
@@ -113,7 +125,7 @@ function ServicesIndex() {
                   <div className={`lg:col-span-5 ${isEven ? 'lg:order-2 lg:col-start-8' : 'lg:order-1'}`}>
                     <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl group">
                       <img 
-                        src={`https://plamaprojects.com.au/wp-content/uploads/2023/07/IMG_20180914_150128-scaled.jpg`} 
+                        src={imgUrl} 
                         alt={service.title}
                         className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
