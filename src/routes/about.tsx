@@ -28,11 +28,11 @@ function About() {
   return (
     <>
       <PageHero
-        eyebrow="About Plama"
-        title="A consultancy built on"
-        italic="precision,"
-        accent=" trust and craft."
-        body="Plama Projects is a Sydney-based multidisciplinary engineering consultancy — nearly two decades of practice, delivered by senior engineers who own their outcomes."
+        eyebrow="Our Team"
+        title="A Few Words About"
+        italic="Our"
+        accent=" Firm."
+        body="Plama Projects provides civil, structural engineering services to the residential, commercial, industrial and infrastructure market sectors. Our professional engineers are fully qualified and involved in diverse projects across all sectors."
         image={heroImg}
       />
 
@@ -41,23 +41,23 @@ function About() {
           <div className="lg:col-span-5">
             <span className="eyebrow">Our Story</span>
             <h2 className="mt-4 font-display text-3xl md:text-4xl text-[var(--ink)] text-balance">
-              Nearly 20 years engineering the buildings that <span className="italic text-[var(--brand)]">shape Sydney.</span>
+              Professional engineers providing <span className="italic text-[var(--brand)]">broad vision</span> expertise.
             </h2>
           </div>
           <div className="lg:col-span-6 lg:col-start-7 space-y-4 text-[var(--ink-soft)] text-base leading-relaxed">
             <p>
-              Plama Projects was founded to bring senior-led engineering to every brief —
-              no matter the scale. From a knock-down rebuild in the inner west to a hospital
-              fit-out or a waterfront revetment, the standard doesn't change.
+              Our clients include leading residential builders, development companies, government 
+              authorities, manufacturing companies and Architects. We are focused on providing 
+              a high level of customer service through our experienced team.
             </p>
             <p>
-              We're headquartered in Five Dock and work across NSW. Our team is deliberately
-              multidisciplinary and deliberately in-house, so structural, civil, façade,
-              hydraulic and marine engineering all sit under one accountability.
+              Our commitment is to ensure that the design and documentation we provide meets 
+              the time, cost, quality and build-ability expectations of our clients. 
+              We use modern engineering techniques to ensure the quality and accuracy of your projects.
             </p>
             <p>
-              The result: clear documentation, fixed pricing and senior engineers who pick up
-              the phone. That's the standard our clients return for.
+              We believe in an hands-on approach ensuring efficiency and quality, 
+              maintaining long-term client relationships and remaining sympathetic to stakeholder requirements.
             </p>
           </div>
         </div>
@@ -104,18 +104,18 @@ function About() {
               <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-balance">
                 Lucas Tran<span className="text-[var(--accent-orange)]">.</span>
               </h2>
-              <p className="mt-2 text-white/70 text-sm">Principal Engineer & Founder</p>
+              <p className="mt-2 text-white/70 text-sm">Principal Engineer, Director, Founder</p>
               <p className="mt-4 text-sm leading-relaxed text-white/85">
-                Lucas founded Plama Projects to bring senior-led engineering to every brief.
-                His work spans residential rebuilds through to large-format commercial and
-                healthcare developments across New South Wales.
+                Lucas is the principal engineer/designer and founder of Plama Projects. 
+                His previous experience includes varied roles in design, project management 
+                and business management.
               </p>
               <div className="mt-6 grid sm:grid-cols-2 gap-3">
                 {[
                   "Chartered Professional Engineer (CPEng)",
-                  "Registered Building Practitioner (NSW)",
-                  "Engineers Australia — National Engineering Register",
-                  "Structural & Civil Engineering Specialisations",
+                  "Registered Professional Engineer (Structure, Civil, Stormwater)",
+                  "Registered Design Practitioner & Principal Design Practitioner",
+                  "APEC Engineer & International Professional Engineer",
                 ].map((q) => (
                   <div key={q} className="flex items-start gap-3 border-l-2 border-[var(--accent-orange)] pl-3 py-1">
                     <span className="text-xs leading-relaxed text-white/90">{q}</span>

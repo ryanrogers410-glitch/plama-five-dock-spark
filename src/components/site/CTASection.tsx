@@ -36,7 +36,7 @@ export function CTASection({
             </h2>
             <p className="mt-4 max-w-xl text-base text-white/75 leading-relaxed">
               {body ??
-                "Tell us about your site, timeline and what you're trying to build. We'll respond with a fixed scope, fixed fee, and a senior engineer on your call."}
+                "Our experienced team is equipped with the knowledge, skills, and tools to ensure efficiency and precision. We prioritize quality, excellence, and client satisfaction."}
             </p>
             <div className="mt-6 flex flex-wrap gap-4">
               <Link to="/contact" className="btn-primary">
