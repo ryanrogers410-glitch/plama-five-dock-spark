@@ -122,8 +122,13 @@ function Hero() {
             ["100%", "In-house delivery"],
           ].map(([k, v]) => (
             <div key={v} className="bg-[#14181C]/60 px-5 py-4">
-              <div className="font-display text-2xl md:text-3xl text-white">{k}<span className="text-[var(--accent-orange)]">.</span></div>
-              <div className="mt-1 text-[10px] uppercase tracking-[0.18em] text-white/65">{v}</div>
+              <div className="font-display text-2xl md:text-3xl text-white">
+                {k === "20" ? "2022" : k === "10" ? "2021" : k === "8" ? "100" : "APEC"}
+                <span className="text-[var(--accent-orange)]">{k === "100%" ? "" : "."}</span>
+              </div>
+              <div className="mt-1 text-[10px] uppercase tracking-[0.18em] text-white/65">
+                {k === "20" ? "Top 10 Structural (Sydney)" : k === "10" ? "Top 10 Structural (Sydney)" : k === "8" ? "% Best Service in Industry" : "Accredited Engineer"}
+              </div>
             </div>
           ))}
         </div>
