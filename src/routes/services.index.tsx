@@ -79,7 +79,7 @@ function ServicesIndex() {
       </section>
 
       {/* Services Loop */}
-      <div className="bg-white">
+      <div className="bg-[var(--surface)]">
         {services.map((service, index) => {
           const Icon = service.icon;
           const isEven = index % 2 === 0;
@@ -146,7 +146,7 @@ function ServicesIndex() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60" />
                       
                       {/* Floating tag */}
-                      <div className="absolute bottom-8 left-8 right-8 p-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl text-white">
+                      <div className="absolute bottom-8 left-8 right-8 p-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl text-white">
                         <p className="text-xs uppercase tracking-widest text-white/80 mb-2">Service Discipline</p>
                         <h4 className="font-display text-xl">{service.title}</h4>
                       </div>
