@@ -172,10 +172,9 @@ export function ServicePage({ service }: { service: ServiceDef }) {
       <section className="container-px mx-auto w-full py-14 md:py-24">
         <div className="grid lg:grid-cols-12 gap-8 mb-10">
           <div className="lg:col-span-6">
-            <span className="eyebrow">Why Plama</span>
+            <span className="eyebrow">Our Strength</span>
             <h2 className="mt-4 font-display text-3xl md:text-5xl text-[var(--ink)] text-balance leading-[1.05]">
-              The standard our clients{" "}
-              <span className="italic text-[var(--brand)]">come back for.</span>
+              Best Service in <span className="italic text-[var(--brand)]">Industry.</span>
             </h2>
           </div>
         </div>

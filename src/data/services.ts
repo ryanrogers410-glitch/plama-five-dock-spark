@@ -21,10 +21,10 @@ export type ServiceDef = {
 };
 
 const baseProcess = [
-  { step: "01", title: "Brief & Feasibility", desc: "Site review, constraint mapping and value engineering before a fee is agreed." },
-  { step: "02", title: "Concept Design", desc: "Options developed with the design team so intent, cost and buildability align early." },
-  { step: "03", title: "Documentation", desc: "Coordinated drawings and calculations built for builders — clear, buildable, defensible." },
-  { step: "04", title: "Certification", desc: "Compliance sign-off and support through construction, RFIs and handover." },
+  { step: "01", title: "Brief & Feasibility", desc: "Site review, constraint mapping and feasibility review to test the opportunity honestly." },
+  { step: "02", title: "Concept Design", desc: "Design and Document management for DA, CC, CDC so intent, cost and buildability align." },
+  { step: "03", title: "Documentation", desc: "Advanced CAD and finite element analysis (FEA) to ensure coordinated, buildable drawings." },
+  { step: "04", title: "Certification", desc: "Liaising and Coordinating authority approvals through to Occupancy Certificate." },
 ];
 
 export const services: ServiceDef[] = [
@@ -48,10 +48,10 @@ export const services: ServiceDef[] = [
     ],
     process: baseProcess,
     benefits: [
-      { title: "Code Compliance", desc: "Full compliance with Australian Standards and Building Code of Australia." },
-      { title: "Material Expertise", desc: "Deep knowledge of load-bearing capacity for concrete, steel, and timber." },
-      { title: "Innovative Solutions", desc: "Specific problems addressed with innovative structural engineering." },
-      { title: "Safety First", desc: "Ensuring structures are safe, secure, and built for their environment." },
+      { title: "Innovation", desc: "We deal with specific problems and provide innovative solutions in various sectors." },
+      { title: "Responsiveness", desc: "Focused on providing a high level of customer service through our experienced team." },
+      { title: "Cost Effectiveness", desc: "Tailored to meet the needs of the clients and designed to provide a cost-effective solution." },
+      { title: "Build-ability", desc: "Documentation that meets the time, cost, quality and build-ability expectations." },
     ],
     industries: ["Residential", "Commercial", "Industrial", "Knock-down and Rebuild", "Healthcare"],
   },
