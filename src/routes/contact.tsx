@@ -24,7 +24,7 @@ function Contact() {
         title="Let's engineer"
         italic="your next"
         accent=" project."
-        body="Tell us about your site, timeline and what you're trying to build. We'll respond with a fixed scope, a fixed fee, and a senior engineer on your call."
+        body="Contact us by phone, email or via the online form below. Our company delivers top-notch engineering services to a range of industries. Clients trust us to handle any project."
         image={heroImg}
       />
 

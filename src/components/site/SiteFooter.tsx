@@ -47,9 +47,7 @@ export function SiteFooter() {
 
 
           <p className="mt-4 text-sm max-w-sm leading-relaxed text-white/60">
-            Sydney-based multidisciplinary engineering consultancy. Structural, civil,
-            façade, marine and hydraulic engineering — delivered by senior engineers,
-            in-house, end-to-end.
+            With every new project, we are faced with a fresh challenge of upholding our commitment to providing top-notch customer satisfaction.
           </p>
           <ul className="mt-6 space-y-2 text-sm">
             <li className="flex items-start gap-3">

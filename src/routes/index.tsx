@@ -34,26 +34,26 @@ const featuredServices = services
   .map((s) => ({ ...s, image: serviceImages[s.slug] }));
 
 const strengths = [
-  { icon: ShieldCheck, title: "Fully Insured & Accredited", desc: "Chartered engineers, complete professional indemnity coverage." },
-  { icon: Layers, title: "All Disciplines In-House", desc: "One team, one accountability — no outsourcing, no handover gaps." },
-  { icon: Sparkles, title: "Innovative Solutions", desc: "Pragmatic engineering that unlocks design intent and reduces cost." },
-  { icon: Wallet, title: "Fixed, Transparent Pricing", desc: "Clear scopes and fees agreed up-front. No surprises, ever." },
-  { icon: Gauge, title: "Fast Project Delivery", desc: "Responsive turnaround that keeps your program on schedule." },
-  { icon: Headphones, title: "Senior-Led Service", desc: "Direct access to senior engineers from brief to certification." },
+  { icon: ShieldCheck, title: "Innovation & Thoroughness", desc: "Pragmatic engineering and meticulous detailing for every project." },
+  { icon: Layers, title: "Responsiveness", desc: "Fast project delivery and prompt replies to all client enquiries." },
+  { icon: Sparkles, title: "Cost Effectiveness", desc: "Solutions designed to provide efficient and budget-friendly outcomes." },
+  { icon: Wallet, title: "Hands-on Approach", desc: "Senior engineers ensuring efficiency and quality from start to finish." },
+  { icon: Gauge, title: "Long-term Relationships", desc: "Building trust and reliability with our clients over the long term." },
+  { icon: Headphones, title: "Flexibility", desc: "Adapting our expertise to the specific needs of each client and project." },
 ];
 
 const featuredProjects = [
   {
-    img: secResidential,
-    title: "High-End Residential",
+    img: "/src/assets/project-1.jpg",
+    title: "New Built Project",
     tag: "Structural · Civil",
-    desc: "Bespoke Sydney homes engineered end-to-end — structural, civil and stormwater coordinated in-house for prestige new builds and knock-down rebuilds.",
+    desc: "A representative example of our new-built engineering services, ensuring structural integrity and civil compliance from the ground up.",
   },
   {
-    img: secMarine,
-    title: "Waterfront Structures",
-    tag: "Marine · Hydraulic",
-    desc: "Jetties, seawalls and pontoons engineered against Sydney's coastal conditions — full authority approvals and marine-grade detailing.",
+    img: "/src/assets/project-2.jpg",
+    title: "Renovations & Additions",
+    tag: "Structural · Remedial",
+    desc: "Innovative structural solutions for complex renovations, providing stability and modern engineering to existing residential frameworks.",
   },
 ];
 
@@ -96,14 +96,13 @@ function Hero() {
             Engineering Consultancy · Sydney
           </div>
           <h1 className="mt-4 font-display text-white text-balance text-4xl leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl">
-            Engineering that<br />
-            <span className="italic font-light text-white/90">stands up</span> to
-            <span className="text-[var(--accent-orange)]"> scrutiny.</span>
+            Engineering for <br />
+            <span className="italic font-light text-white/90">broad vision</span> 
+            <span className="text-[var(--accent-orange)]"> professionals.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-base md:text-lg text-white/75 leading-relaxed">
-            Nearly two decades of multidisciplinary engineering for the homes, buildings and
-            waterfronts that shape Sydney — with the rigour of a large practice and the
-            responsiveness of a boutique.
+            With every new project, we are faced with a fresh challenge of upholding 
+            our commitment to providing top-notch customer satisfaction.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <Link to="/contact" className="btn-primary">
@@ -138,16 +137,16 @@ function Intro() {
     <section className="container-px mx-auto w-full py-16 md:py-24">
       <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
         <div className="lg:col-span-5">
-          <span className="eyebrow">About Plama</span>
+          <span className="eyebrow">Our Specializations</span>
           <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] text-balance">
-            A consultancy built on <span className="italic text-[var(--brand)]">precision</span>, trust and craft.
+            Innovative solutions in <span className="italic text-[var(--brand)]">various sectors.</span>
           </h2>
         </div>
         <div className="lg:col-span-6 lg:col-start-7">
           <p className="text-base leading-relaxed text-[var(--ink-soft)]">
-            Plama Projects is a multidisciplinary engineering consultancy headquartered in
-            Five Dock, NSW — combining nearly 20 years of practice with a tightly integrated
-            in-house team so every project is engineered end-to-end by people who own the outcome.
+            At our firm, we take pride in offering a broad services that cater to our clients' needs 
+            from the outset of a project all the way to its completion. We use advanced computer-aided design (CAD), 
+            finite element analysis (FEA) software, and modern engineering techniques to ensure the quality and accuracy of your projects.
           </p>
           <div className="mt-6">
             <Link to="/about" className="inline-flex items-center gap-2 text-sm font-semibold tracking-[0.15em] uppercase text-[var(--brand)] hover:text-[var(--accent-orange)]">
@@ -223,15 +222,15 @@ function WhyUs() {
     <section className="container-px mx-auto w-full py-16 md:py-24">
       <div className="grid lg:grid-cols-12 gap-8 mb-8">
         <div className="lg:col-span-6">
-          <span className="eyebrow">Why Plama</span>
+          <span className="eyebrow">Our Strengths</span>
           <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] text-balance">
-            The standard our clients <span className="italic text-[var(--brand)]">come back for.</span>
+            Our commitment to <span className="italic text-[var(--brand)]">excellence.</span>
           </h2>
         </div>
         <div className="lg:col-span-5 lg:col-start-8 flex items-end">
           <p className="text-sm text-[var(--ink-soft)]">
-            Six reasons Sydney architects, builders and developers keep choosing Plama for
-            work that has to hold up on paper and on site.
+            We are focused on providing a high level of customer service through our experienced team 
+            and ensuring the documentation we provide meets time and cost expectations.
           </p>
         </div>
       </div>
