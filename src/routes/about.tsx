@@ -142,10 +142,9 @@ function About() {
       </section>
 
       <section className="container-px mx-auto w-full py-16 md:py-24">
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           {[
             { to: "/services", label: "Explore Services", desc: "Structural, civil, façade, hydraulic, marine and more." },
-            { to: "/industries", label: "Industries", desc: "Where our engineering is delivered — from homes to hospitals." },
             { to: "/projects", label: "Projects", desc: "A selection of representative work across Sydney." },
           ].map((c) => (
             <Link key={c.to} to={c.to} className="group bg-white border border-border rounded-xl p-6 hover:border-[var(--brand)] transition-colors">
