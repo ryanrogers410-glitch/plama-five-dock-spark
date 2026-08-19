@@ -138,14 +138,13 @@ function Hero() {
         </div>
 
         <div className="mt-12 overflow-hidden py-4 border-t border-white/10">
-          <div className="flex items-center gap-12 animate-scroll w-max grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+          <div className="flex items-center gap-12 animate-marquee w-max grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
             {/* Accreditations / Logos Slider */}
             {[...Array(2)].map((_, i) => (
               <div key={i} className="flex items-center gap-12 pr-12">
                 <img src="/src/assets/logos/logo_0.png" alt="Accreditation 1" className="h-10 md:h-12 w-auto object-contain" />
                 <img src="/src/assets/logos/logo_1.png" alt="Accreditation 2" className="h-10 md:h-12 w-auto object-contain" />
                 <img src="/src/assets/logos/logo_2.svg" alt="Accreditation 3" className="h-10 md:h-12 w-auto object-contain" />
-                {/* Fallback to original logos if available */}
                 <img src="/src/assets/original/site_img_2.svg" alt="Accreditation 4" className="h-10 md:h-12 w-auto object-contain" />
                 <img src="/src/assets/original/site_img_5.svg" alt="Accreditation 5" className="h-10 md:h-12 w-auto object-contain" />
               </div>
