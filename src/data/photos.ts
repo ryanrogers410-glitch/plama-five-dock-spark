@@ -100,13 +100,12 @@ export const defaultServicePhotos: ServicePhotoSet = servicePhotos.structural;
 
 /** Accreditation / award badges shown in the homepage hero marquee. */
 export const accreditations = [
-  { src: "/assets/accreditations/serviceseekingbadges2018.png", alt: "ServiceSeeking Top 10 Structural Engineer in Sydney 2018" },
-  { src: "/assets/accreditations/serviceseekingbadges2019.png", alt: "ServiceSeeking Top 10 Structural Engineer in Sydney 2019" },
-  { src: "/assets/accreditations/serviceseekingbadges2020.png", alt: "ServiceSeeking Top 10 Structural Engineer in Sydney 2020" },
-  { src: "/assets/accreditations/serviceseekingbadges2021.png", alt: "ServiceSeeking Top 10 Structural Engineer in Sydney 2021" },
-  { src: "/assets/accreditations/serviceseekingbadges2022.png", alt: "ServiceSeeking Top 10 Structural Engineer in Sydney 2022" },
   { src: "/assets/accreditations/EAlogo.jpg", alt: "Engineers Australia" },
   { src: "/assets/accreditations/NERlogo.png", alt: "Registered on the National Engineering Register (NER)" },
   { src: "/assets/accreditations/APEC.jpg", alt: "APEC Registered Engineer" },
-  
+  { src: "/assets/accreditations/new-south-wales-nsw-government-fair-trading-vector-logo.png", alt: "NSW Fair Trading" },
+  { src: "/assets/accreditations/award-badge-two-line-large.png", alt: "Award Badge" },
+  { src: "/assets/accreditations/EAlogo.jpg", alt: "Engineers Australia" },
+  { src: "/assets/accreditations/NERlogo.png", alt: "Registered on the National Engineering Register (NER)" },
+  { src: "/assets/accreditations/APEC.jpg", alt: "APEC Registered Engineer" },
 ];
