@@ -21,10 +21,10 @@ export const Route = createFileRoute("/industries")({
 });
 
 const sectors = [
-  { img: secResidential, title: "Residential", desc: "Bespoke high-performance homes engineered for longevity, comfort and sustainability. From knock-down rebuilds to prestige new builds." },
-  { img: secCommercial, title: "Commercial", desc: "Scaled commercial builds delivered with precision, program discipline and buildable documentation — offices, retail, hospitality and shop fit-outs." },
-  { img: secHealthcare, title: "Healthcare & Hospitals", desc: "Critical infrastructure for life-saving environments — technical rigour balanced with human-centred design and stringent compliance." },
-  { img: secMarine, title: "Marine & Waterfront", desc: "Waterfront and marine structures engineered against the harshest coastal conditions — jetties, seawalls, pontoons and boardwalks." },
+  { img: secResidential, title: "Residential", desc: "Bespoke engineering for high-performance residential projects, from knock-down rebuilds to prestige new builds." },
+  { img: secCommercial, title: "Commercial", desc: "Technical delivery for commercial offices, retail fit-outs, and hospitality developments." },
+  { img: secHealthcare, title: "Healthcare & Hospitals", desc: "Critical infrastructure engineering, balancing technical rigour with human-centred design." },
+  { img: secMarine, title: "Knock-down & Rebuild", desc: "Expert assessment and structural remediation for complex residential redevelopment projects." },
 ];
 
 const tags = ["Residential", "Commercial", "Shop Fit-outs", "Industrial", "Healthcare", "Hospitals", "Sports Centres", "Knock Down & Rebuild", "Marine", "Public Realm", "Education", "Hospitality"];
