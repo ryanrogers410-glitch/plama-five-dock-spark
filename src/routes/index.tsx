@@ -4,10 +4,10 @@ import heroImg from "@/assets/original/original_3.jpg";
 import secResidential from "@/assets/original/projects_0.jpg";
 import secMarine from "@/assets/original/original_3.jpg";
 
-import svcStructural from "@/assets/service-structural.jpg";
-import svcCivil from "@/assets/service-civil.jpg";
-import svcFacade from "@/assets/service-facade.jpg";
-import svcMarine from "@/assets/service-marine.jpg";
+import img10 from "@/assets/original/site_img_10.png";
+import img12 from "@/assets/original/site_img_12.png";
+import img13 from "@/assets/original/site_img_13.png";
+import img3 from "@/assets/original/original_3.jpg";
 import { ShieldCheck, Layers, Sparkles, Wallet, Gauge, Headphones } from "lucide-react";
 import { services } from "@/data/services";
 import { CTASection } from "@/components/site/CTASection";
@@ -23,10 +23,10 @@ export const Route = createFileRoute("/")({
 });
 
 const serviceImages: Record<string, string> = {
-  structural: svcStructural,
-  civil: svcCivil,
-  facade: svcFacade,
-  marine: svcMarine,
+  structural: img10,
+  civil: img12,
+  facade: img13,
+  marine: img3,
 };
 
 const featuredServices = services
@@ -142,11 +142,11 @@ function Hero() {
             {/* Accreditations / Logos Slider */}
             {[...Array(2)].map((_, i) => (
               <div key={i} className="flex items-center gap-12 pr-12">
-                <img src="/src/assets/logos/logo_0.png" alt="Accreditation 1" className="h-10 md:h-12 w-auto object-contain" />
-                <img src="/src/assets/logos/logo_1.png" alt="Accreditation 2" className="h-10 md:h-12 w-auto object-contain" />
-                <img src="/src/assets/logos/logo_2.svg" alt="Accreditation 3" className="h-10 md:h-12 w-auto object-contain" />
-                <img src="/src/assets/original/site_img_2.svg" alt="Accreditation 4" className="h-10 md:h-12 w-auto object-contain" />
-                <img src="/src/assets/original/site_img_5.svg" alt="Accreditation 5" className="h-10 md:h-12 w-auto object-contain" />
+                <img src="/assets/logos/logo_0.png" alt="Accreditation 1" className="h-10 md:h-12 w-auto object-contain" />
+                <img src="/assets/logos/logo_1.png" alt="Accreditation 2" className="h-10 md:h-12 w-auto object-contain" />
+                <img src="/assets/logos/logo_2.svg" alt="Accreditation 3" className="h-10 md:h-12 w-auto object-contain" />
+                <img src="/assets/original/site_img_2.svg" alt="Accreditation 4" className="h-10 md:h-12 w-auto object-contain" />
+                <img src="/assets/original/site_img_5.svg" alt="Accreditation 5" className="h-10 md:h-12 w-auto object-contain" />
               </div>
             ))}
           </div>
