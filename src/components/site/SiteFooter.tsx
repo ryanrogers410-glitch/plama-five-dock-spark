@@ -15,7 +15,7 @@ const servicesLinks = [
 
 const companyLinks = [
   { to: "/about", label: "About Us" },
-  { to: "/industries", label: "Industries" },
+  // Industries link removed
   { to: "/projects", label: "Projects" },
   { to: "/contact", label: "Contact" },
 ] as const;

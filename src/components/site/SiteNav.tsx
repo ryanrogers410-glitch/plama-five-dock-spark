@@ -93,7 +93,7 @@ export function SiteNav() {
               </div>
             )}
           </div>
-          <NavLink to="/industries" label="Industries" />
+          {/* Industries removed as requested */}
           <NavLink to="/projects" label="Projects" />
           <NavLink to="/contact" label="Contact" />
         </nav>
@@ -133,7 +133,7 @@ export function SiteNav() {
                 <MobileLink key={s.hash} to={s.to} hash={s.hash} label={s.label} small />
               ))}
             </div>
-            <MobileLink to="/industries" label="Industries" />
+            {/* Mobile link for industries removed */}
             <MobileLink to="/projects" label="Projects" />
             <MobileLink to="/contact" label="Contact" />
           </div>
