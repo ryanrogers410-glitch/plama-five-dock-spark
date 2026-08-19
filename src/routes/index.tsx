@@ -132,18 +132,8 @@ function Hero() {
           </div>
         </div>
 
-        <div className="mt-12 overflow-hidden py-4 border-t border-white/10">
-          <div className="flex items-center gap-12 animate-marquee w-max grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
-            {/* Accreditations / Logos Slider */}
-            {[...Array(2)].map((_, i) => (
-              <div key={i} className="flex items-center gap-12 pr-12">
-                {accreditations.map((a) => (
-                  <img key={a.src} src={a.src} alt={a.alt} loading="lazy" className="h-12 md:h-14 w-auto object-contain" />
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
+
+
       </div>
     </section>
   );
