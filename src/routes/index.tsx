@@ -18,10 +18,10 @@ export const Route = createFileRoute("/")({
 });
 
 const serviceImages: Record<string, string> = {
-  structural: img10,
-  civil: img12,
-  facade: img13,
-  marine: img3,
+  structural: photos.siteSteelFrame,
+  civil: photos.siteNewBuild,
+  facade: photos.glassSkylightPortrait,
+  marine: photos.marinaWharf,
 };
 
 const featuredServices = services
