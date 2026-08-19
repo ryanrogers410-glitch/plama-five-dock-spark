@@ -90,7 +90,7 @@ export function ServicePage({ service }: { service: ServiceDef }) {
         <div className="grid lg:grid-cols-2">
           <div className="relative min-h-[380px] lg:min-h-[560px]">
             <img
-              src={secondary}
+              src={shots.wide}
               alt=""
               aria-hidden
               loading="lazy"
@@ -167,7 +167,7 @@ export function ServicePage({ service }: { service: ServiceDef }) {
           {/* Feature image tile spanning two cols */}
           <div className="relative lg:col-span-2 lg:row-span-2 min-h-[280px] rounded-2xl overflow-hidden">
             <img
-              src={secondary}
+              src={shots.wide}
               alt=""
               aria-hidden
               loading="lazy"
@@ -235,7 +235,7 @@ export function ServicePage({ service }: { service: ServiceDef }) {
               </h2>
               <div className="mt-6 hidden lg:block aspect-[4/5] rounded-2xl overflow-hidden relative">
                 <img
-                  src={secondary}
+                  src={shots.faq}
                   alt=""
                   aria-hidden
                   loading="lazy"
