@@ -96,9 +96,9 @@ function Hero() {
             Engineering Consultancy · Sydney
           </div>
           <h1 className="mt-4 font-display text-white text-balance text-4xl leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl">
-            Engineering for <br />
-            <span className="italic font-light text-white/90">broad vision</span> 
-            <span className="text-[var(--accent-orange)]"> professionals.</span>
+            Top 10 Structural Engineering Sydney <br />
+            <span className="italic font-light text-white/90">from 2018 to</span> 
+            <span className="text-[var(--accent-orange)]"> 2022.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-base md:text-lg text-white/75 leading-relaxed">
             With every new project, we are faced with a fresh challenge of upholding 
