@@ -4,53 +4,15 @@ import { PageHero } from "./PageHero";
 import { CTASection } from "./CTASection";
 import { services, type ServiceDef } from "@/data/services";
 
-// Authentic high-quality images downloaded from the original site
-import img0 from "@/assets/original/site_img_0.png";
-import img1 from "@/assets/original/site_img_1.png";
-import img3 from "@/assets/original/original_3.jpg";
-import img4 from "@/assets/original/original_4.png";
-import img6 from "@/assets/original/site_img_6.png";
-import img7 from "@/assets/original/site_img_7.png";
-import img9 from "@/assets/original/site_img_9.png";
-import img10 from "@/assets/original/site_img_10.png";
-import img12 from "@/assets/original/site_img_12.png";
-import img13 from "@/assets/original/site_img_13.png";
-import img15 from "@/assets/original/site_img_15.png";
-import img16 from "@/assets/original/site_img_16.png";
-import img18 from "@/assets/original/site_img_18.png";
-import img19 from "@/assets/original/site_img_19.png";
-import project_0 from "@/assets/original/project_0.jpg";
-import projects_0 from "@/assets/original/projects_0.jpg";
-import heroImg from "@/assets/original/original_3.jpg";
-import civilHd from "@/assets/original/civil_hd_final_0.jpg";
-
-const serviceImages: Record<string, string> = {
-  structural: img10,
-  civil: civilHd,
-  facade: img13,
-  marine: img3,
-  hydraulic: img15,
-  weatherproofing: img16,
-  "expert-reports": img0,
-  "project-management": img1,
-};
-
-const serviceGalleryImages: Record<string, string> = {
-  structural: project_0,
-  civil: civilHd,
-  facade: img6,
-  marine: img3,
-  hydraulic: projects_0,
-  weatherproofing: img4,
-  "expert-reports": img18,
-  "project-management": img1,
-};
+import { servicePhotos, defaultServicePhotos } from "@/data/photos";
 
 export function ServicePage({ service }: { service: ServiceDef }) {
   const Icon = service.icon;
   const related = services.filter((s) => s.slug !== service.slug).slice(0, 3);
-  const primary = serviceImages[service.slug] ?? heroImg;
-  const secondary = serviceGalleryImages[service.slug] ?? primary;
+  const shots = servicePhotos[service.slug] ?? defaultServicePhotos;
+  const primary = shots.hero;
+  const secondary = shots.portrait;
+
 
   return (
     <>
