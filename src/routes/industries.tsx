@@ -2,11 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { CTASection } from "@/components/site/CTASection";
-import secResidential from "@/assets/sector-residential.jpg";
-import secCommercial from "@/assets/sector-commercial.jpg";
-import secHealthcare from "@/assets/sector-healthcare.jpg";
-import secMarine from "@/assets/sector-marine.jpg";
-import heroImg from "@/assets/hero-structure.jpg";
+import secResidential from "@/assets/original/projects_0.jpg";
+import secCommercial from "@/assets/original/original_3.jpg";
+import secHealthcare from "@/assets/original/original_3.jpg";
+import secMarine from "@/assets/original/original_3.jpg";
+import heroImg from "@/assets/original/original_3.jpg";
 
 export const Route = createFileRoute("/industries")({
   head: () => ({
