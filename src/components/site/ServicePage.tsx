@@ -21,20 +21,31 @@ import img18 from "@/assets/original/site_img_18.png";
 import img19 from "@/assets/original/site_img_19.png";
 import project_0 from "@/assets/original/project_0.jpg";
 import projects_0 from "@/assets/original/projects_0.jpg";
+import site_img_0 from "@/assets/original/site_img_0.png";
+import site_img_1 from "@/assets/original/site_img_1.png";
 import site_img_3 from "@/assets/original/site_img_3.png";
 import site_img_4 from "@/assets/original/site_img_4.png";
+import site_img_6 from "@/assets/original/site_img_6.png";
+import site_img_7 from "@/assets/original/site_img_7.png";
+import site_img_9 from "@/assets/original/site_img_9.png";
+import site_img_10 from "@/assets/original/site_img_10.png";
+import site_img_12 from "@/assets/original/site_img_12.png";
+import site_img_13 from "@/assets/original/site_img_13.png";
+import site_img_15 from "@/assets/original/site_img_15.png";
+import site_img_16 from "@/assets/original/site_img_16.png";
 import site_img_18 from "@/assets/original/site_img_18.png";
+import site_img_19 from "@/assets/original/site_img_19.png";
 import heroImg from "@/assets/original/original_3.jpg";
 
 const serviceImages: Record<string, string> = {
-  structural: img10,
-  civil: img12,
-  facade: img13,
+  structural: site_img_10,
+  civil: site_img_12,
+  facade: site_img_13,
   marine: img3,
-  hydraulic: img15,
-  weatherproofing: img16,
-  "expert-reports": img0,
-  "project-management": img1,
+  hydraulic: site_img_15,
+  weatherproofing: site_img_16,
+  "expert-reports": site_img_0,
+  "project-management": site_img_1,
 };
 
 const serviceGalleryImages: Record<string, string> = {
@@ -45,7 +56,7 @@ const serviceGalleryImages: Record<string, string> = {
   hydraulic: projects_0,
   weatherproofing: img4,
   "expert-reports": site_img_18,
-  "project-management": img1,
+  "project-management": site_img_1,
 };
 
 export function ServicePage({ service }: { service: ServiceDef }) {
