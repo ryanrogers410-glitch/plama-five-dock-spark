@@ -39,7 +39,7 @@ const strengths = [
 
 const featuredProjects = [
   {
-    img: secResidential,
+    img: photos.siteNewBuild,
     title: "New Built Project",
     tag: "Structural · Civil",
     desc: "A representative example of our new-built engineering services, ensuring structural integrity and civil compliance from the ground up.",
