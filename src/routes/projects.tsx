@@ -2,15 +2,15 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { CTASection } from "@/components/site/CTASection";
-import secResidential from "@/assets/sector-residential.jpg";
-import secCommercial from "@/assets/sector-commercial.jpg";
-import secHealthcare from "@/assets/sector-healthcare.jpg";
-import secMarine from "@/assets/sector-marine.jpg";
-import heroImg from "@/assets/hero-structure.jpg";
-import proj1 from "@/assets/project-1.jpg";
-import proj2 from "@/assets/project-2.jpg";
-import proj3 from "@/assets/project-3.jpg";
-import proj4 from "@/assets/project-4.jpg";
+import secResidential from "@/assets/original/projects_0.jpg";
+import secCommercial from "@/assets/original/original_3.jpg";
+import secHealthcare from "@/assets/original/original_3.jpg";
+import secMarine from "@/assets/original/original_3.jpg";
+import heroImg from "@/assets/original/original_3.jpg";
+import proj1 from "@/assets/original/projects_0.jpg";
+import proj2 from "@/assets/original/original_3.jpg";
+import proj3 from "@/assets/original/projects_0.jpg";
+import proj4 from "@/assets/original/original_3.jpg";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({

@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
-import heroImg from "@/assets/hero-structure.jpg";
-import secResidential from "@/assets/sector-residential.jpg";
-import secMarine from "@/assets/sector-marine.jpg";
+import heroImg from "@/assets/original/original_3.jpg";
+import secResidential from "@/assets/original/projects_0.jpg";
+import secMarine from "@/assets/original/original_3.jpg";
 
 import svcStructural from "@/assets/service-structural.jpg";
 import svcCivil from "@/assets/service-civil.jpg";
@@ -44,13 +44,13 @@ const strengths = [
 
 const featuredProjects = [
   {
-    img: "/src/assets/project-1.jpg",
+    img: "/src/assets/original/projects_0.jpg",
     title: "New Built Project",
     tag: "Structural · Civil",
     desc: "A representative example of our new-built engineering services, ensuring structural integrity and civil compliance from the ground up.",
   },
   {
-    img: "/src/assets/project-2.jpg",
+    img: "/src/assets/original/original_3.jpg",
     title: "Renovations & Additions",
     tag: "Structural · Remedial",
     desc: "Innovative structural solutions for complex renovations, providing stability and modern engineering to existing residential frameworks.",
@@ -114,20 +114,24 @@ function Hero() {
           </div>
         </div>
 
-        <div className="mt-10 md:mt-14 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/15 border border-white/15 rounded-2xl overflow-hidden backdrop-blur-sm">
+        <div className="mt-10 md:mt-14 grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/15 border border-white/15 rounded-2xl overflow-hidden backdrop-blur-sm">
           {[
-            ["20", "Years of practice"],
-            ["10", "Engineering disciplines"],
-            ["8", "Sectors served"],
-            ["100%", "In-house delivery"],
+            ["2022", "Top 10 Structural (Sydney)"],
+            ["2021", "Top 10 Structural (Sydney)"],
+            ["100%", "Best Service in Industry"],
+            ["APEC", "Accredited Engineer"],
+            ["2020", "Top 10 Structural (Sydney)"],
+            ["2019", "Top 10 Structural (Sydney)"],
+            ["2018", "Top 10 Structural (Sydney)"],
+            ["Chartered", "Member of Engineers Australia"],
           ].map(([k, v]) => (
-            <div key={v} className="bg-[#14181C]/60 px-5 py-4">
+            <div key={v} className="bg-[#14181C]/60 px-5 py-4 border-r border-white/10 last:border-r-0">
               <div className="font-display text-2xl md:text-3xl text-white">
-                {k === "20" ? "2022" : k === "10" ? "2021" : k === "8" ? "100" : "APEC"}
-                <span className="text-[var(--accent-orange)]">{k === "100%" ? "" : "."}</span>
+                {k}
+                <span className="text-[var(--accent-orange)]">.</span>
               </div>
               <div className="mt-1 text-[10px] uppercase tracking-[0.18em] text-white/65">
-                {k === "20" ? "Top 10 Structural (Sydney)" : k === "10" ? "Top 10 Structural (Sydney)" : k === "8" ? "% Best Service in Industry" : "Accredited Engineer"}
+                {v}
               </div>
             </div>
           ))}
