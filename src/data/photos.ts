@@ -105,7 +105,7 @@ export const accreditations = [
   { src: "/assets/accreditations/APEC.jpg", alt: "APEC Registered Engineer" },
   { src: "/assets/accreditations/new-south-wales-nsw-government-fair-trading-vector-logo.png", alt: "NSW Fair Trading" },
   { src: "/assets/accreditations/award-badge-two-line-large.png", alt: "Award Badge" },
-  { src: "/assets/accreditations/EAlogo.jpg", alt: "Engineers Australia" },
-  { src: "/assets/accreditations/NERlogo.png", alt: "Registered on the National Engineering Register (NER)" },
-  { src: "/assets/accreditations/APEC.jpg", alt: "APEC Registered Engineer" },
+  { src: "/assets/accreditations/EAlogo.jpg", alt: "Engineers Australia (Repeated)" },
+  { src: "/assets/accreditations/NERlogo.png", alt: "NER (Repeated)" },
+  { src: "/assets/accreditations/APEC.jpg", alt: "APEC (Repeated)" },
 ];
