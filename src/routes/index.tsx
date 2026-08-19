@@ -88,7 +88,7 @@ function Accreditations() {
                     src={a.src}
                     alt={a.alt}
                     loading="lazy"
-                    className="h-14 md:h-16 w-auto object-contain grayscale opacity-70 transition-all duration-500 hover:grayscale-0 hover:opacity-100"
+                    className="h-20 md:h-24 w-auto object-contain transition-all duration-500"
                   />
                 ))}
               </div>
