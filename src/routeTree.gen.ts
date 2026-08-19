@@ -15,14 +15,6 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
-import { Route as ServicesWeatherproofingRouteImport } from './routes/services.weatherproofing'
-import { Route as ServicesStructuralRouteImport } from './routes/services.structural'
-import { Route as ServicesProjectManagementRouteImport } from './routes/services.project-management'
-import { Route as ServicesMarineRouteImport } from './routes/services.marine'
-import { Route as ServicesHydraulicRouteImport } from './routes/services.hydraulic'
-import { Route as ServicesFacadeRouteImport } from './routes/services.facade'
-import { Route as ServicesExpertReportsRouteImport } from './routes/services.expert-reports'
-import { Route as ServicesCivilRouteImport } from './routes/services.civil'
 
 const ProjectsRoute = ProjectsRouteImport.update({
   id: '/projects',
@@ -54,47 +46,6 @@ const ServicesIndexRoute = ServicesIndexRouteImport.update({
   path: '/services/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesWeatherproofingRoute = ServicesWeatherproofingRouteImport.update({
-  id: '/services/weatherproofing',
-  path: '/services/weatherproofing',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesStructuralRoute = ServicesStructuralRouteImport.update({
-  id: '/services/structural',
-  path: '/services/structural',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesProjectManagementRoute =
-  ServicesProjectManagementRouteImport.update({
-    id: '/services/project-management',
-    path: '/services/project-management',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ServicesMarineRoute = ServicesMarineRouteImport.update({
-  id: '/services/marine',
-  path: '/services/marine',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesHydraulicRoute = ServicesHydraulicRouteImport.update({
-  id: '/services/hydraulic',
-  path: '/services/hydraulic',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesFacadeRoute = ServicesFacadeRouteImport.update({
-  id: '/services/facade',
-  path: '/services/facade',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesExpertReportsRoute = ServicesExpertReportsRouteImport.update({
-  id: '/services/expert-reports',
-  path: '/services/expert-reports',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesCivilRoute = ServicesCivilRouteImport.update({
-  id: '/services/civil',
-  path: '/services/civil',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -102,14 +53,6 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/industries': typeof IndustriesRoute
   '/projects': typeof ProjectsRoute
-  '/services/civil': typeof ServicesCivilRoute
-  '/services/expert-reports': typeof ServicesExpertReportsRoute
-  '/services/facade': typeof ServicesFacadeRoute
-  '/services/hydraulic': typeof ServicesHydraulicRoute
-  '/services/marine': typeof ServicesMarineRoute
-  '/services/project-management': typeof ServicesProjectManagementRoute
-  '/services/structural': typeof ServicesStructuralRoute
-  '/services/weatherproofing': typeof ServicesWeatherproofingRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
@@ -118,14 +61,6 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/industries': typeof IndustriesRoute
   '/projects': typeof ProjectsRoute
-  '/services/civil': typeof ServicesCivilRoute
-  '/services/expert-reports': typeof ServicesExpertReportsRoute
-  '/services/facade': typeof ServicesFacadeRoute
-  '/services/hydraulic': typeof ServicesHydraulicRoute
-  '/services/marine': typeof ServicesMarineRoute
-  '/services/project-management': typeof ServicesProjectManagementRoute
-  '/services/structural': typeof ServicesStructuralRoute
-  '/services/weatherproofing': typeof ServicesWeatherproofingRoute
   '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
@@ -135,14 +70,6 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/industries': typeof IndustriesRoute
   '/projects': typeof ProjectsRoute
-  '/services/civil': typeof ServicesCivilRoute
-  '/services/expert-reports': typeof ServicesExpertReportsRoute
-  '/services/facade': typeof ServicesFacadeRoute
-  '/services/hydraulic': typeof ServicesHydraulicRoute
-  '/services/marine': typeof ServicesMarineRoute
-  '/services/project-management': typeof ServicesProjectManagementRoute
-  '/services/structural': typeof ServicesStructuralRoute
-  '/services/weatherproofing': typeof ServicesWeatherproofingRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
@@ -153,31 +80,9 @@ export interface FileRouteTypes {
     | '/contact'
     | '/industries'
     | '/projects'
-    | '/services/civil'
-    | '/services/expert-reports'
-    | '/services/facade'
-    | '/services/hydraulic'
-    | '/services/marine'
-    | '/services/project-management'
-    | '/services/structural'
-    | '/services/weatherproofing'
     | '/services/'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/about'
-    | '/contact'
-    | '/industries'
-    | '/projects'
-    | '/services/civil'
-    | '/services/expert-reports'
-    | '/services/facade'
-    | '/services/hydraulic'
-    | '/services/marine'
-    | '/services/project-management'
-    | '/services/structural'
-    | '/services/weatherproofing'
-    | '/services'
+  to: '/' | '/about' | '/contact' | '/industries' | '/projects' | '/services'
   id:
     | '__root__'
     | '/'
@@ -185,14 +90,6 @@ export interface FileRouteTypes {
     | '/contact'
     | '/industries'
     | '/projects'
-    | '/services/civil'
-    | '/services/expert-reports'
-    | '/services/facade'
-    | '/services/hydraulic'
-    | '/services/marine'
-    | '/services/project-management'
-    | '/services/structural'
-    | '/services/weatherproofing'
     | '/services/'
   fileRoutesById: FileRoutesById
 }
@@ -202,14 +99,6 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   IndustriesRoute: typeof IndustriesRoute
   ProjectsRoute: typeof ProjectsRoute
-  ServicesCivilRoute: typeof ServicesCivilRoute
-  ServicesExpertReportsRoute: typeof ServicesExpertReportsRoute
-  ServicesFacadeRoute: typeof ServicesFacadeRoute
-  ServicesHydraulicRoute: typeof ServicesHydraulicRoute
-  ServicesMarineRoute: typeof ServicesMarineRoute
-  ServicesProjectManagementRoute: typeof ServicesProjectManagementRoute
-  ServicesStructuralRoute: typeof ServicesStructuralRoute
-  ServicesWeatherproofingRoute: typeof ServicesWeatherproofingRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
@@ -257,62 +146,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services/weatherproofing': {
-      id: '/services/weatherproofing'
-      path: '/services/weatherproofing'
-      fullPath: '/services/weatherproofing'
-      preLoaderRoute: typeof ServicesWeatherproofingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services/structural': {
-      id: '/services/structural'
-      path: '/services/structural'
-      fullPath: '/services/structural'
-      preLoaderRoute: typeof ServicesStructuralRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services/project-management': {
-      id: '/services/project-management'
-      path: '/services/project-management'
-      fullPath: '/services/project-management'
-      preLoaderRoute: typeof ServicesProjectManagementRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services/marine': {
-      id: '/services/marine'
-      path: '/services/marine'
-      fullPath: '/services/marine'
-      preLoaderRoute: typeof ServicesMarineRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services/hydraulic': {
-      id: '/services/hydraulic'
-      path: '/services/hydraulic'
-      fullPath: '/services/hydraulic'
-      preLoaderRoute: typeof ServicesHydraulicRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services/facade': {
-      id: '/services/facade'
-      path: '/services/facade'
-      fullPath: '/services/facade'
-      preLoaderRoute: typeof ServicesFacadeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services/expert-reports': {
-      id: '/services/expert-reports'
-      path: '/services/expert-reports'
-      fullPath: '/services/expert-reports'
-      preLoaderRoute: typeof ServicesExpertReportsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services/civil': {
-      id: '/services/civil'
-      path: '/services/civil'
-      fullPath: '/services/civil'
-      preLoaderRoute: typeof ServicesCivilRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
@@ -322,14 +155,6 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   IndustriesRoute: IndustriesRoute,
   ProjectsRoute: ProjectsRoute,
-  ServicesCivilRoute: ServicesCivilRoute,
-  ServicesExpertReportsRoute: ServicesExpertReportsRoute,
-  ServicesFacadeRoute: ServicesFacadeRoute,
-  ServicesHydraulicRoute: ServicesHydraulicRoute,
-  ServicesMarineRoute: ServicesMarineRoute,
-  ServicesProjectManagementRoute: ServicesProjectManagementRoute,
-  ServicesStructuralRoute: ServicesStructuralRoute,
-  ServicesWeatherproofingRoute: ServicesWeatherproofingRoute,
   ServicesIndexRoute: ServicesIndexRoute,
 }
 export const routeTree = rootRouteImport
