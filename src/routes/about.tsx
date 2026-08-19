@@ -18,10 +18,10 @@ export const Route = createFileRoute("/about")({
 });
 
 const values = [
-  { title: "Senior-Led", desc: "Every project touched by a chartered engineer from brief to certification." },
-  { title: "In-House", desc: "All disciplines under one roof — no outsourcing, no interface gaps." },
-  { title: "Buildable", desc: "Documentation written for the builders who read it, not the shelf it sits on." },
-  { title: "Transparent", desc: "Fixed scopes, fixed fees, honest reporting — always." },
+  { title: "Innovation", desc: "Pragmatic engineering and meticulous detailing for every project." },
+  { title: "Responsiveness", desc: "Fast project delivery and prompt replies to all client enquiries." },
+  { title: "Cost Effective", desc: "Solutions designed to provide efficient and budget-friendly outcomes." },
+  { title: "Hands-on", desc: "Senior engineers ensuring efficiency and quality from start to finish." },
 ];
 
 function About() {
