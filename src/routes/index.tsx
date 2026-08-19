@@ -137,11 +137,9 @@ function Hero() {
             {/* Accreditations / Logos Slider */}
             {[...Array(2)].map((_, i) => (
               <div key={i} className="flex items-center gap-12 pr-12">
-                <img src="/assets/logos/logo_0.png" alt="Accreditation 1" className="h-10 md:h-12 w-auto object-contain" />
-                <img src="/assets/logos/logo_1.png" alt="Accreditation 2" className="h-10 md:h-12 w-auto object-contain" />
-                <img src="/assets/logos/logo_2.svg" alt="Accreditation 3" className="h-10 md:h-12 w-auto object-contain" />
-                <img src="/assets/original/site_img_2.svg" alt="Accreditation 4" className="h-10 md:h-12 w-auto object-contain" />
-                <img src="/assets/original/site_img_5.svg" alt="Accreditation 5" className="h-10 md:h-12 w-auto object-contain" />
+                {accreditations.map((a) => (
+                  <img key={a.src} src={a.src} alt={a.alt} loading="lazy" className="h-12 md:h-14 w-auto object-contain" />
+                ))}
               </div>
             ))}
           </div>
