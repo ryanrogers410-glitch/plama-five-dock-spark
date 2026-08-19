@@ -22,11 +22,11 @@ import img19 from "@/assets/original/site_img_19.png";
 import project_0 from "@/assets/original/project_0.jpg";
 import projects_0 from "@/assets/original/projects_0.jpg";
 import heroImg from "@/assets/original/original_3.jpg";
-import hdProject0 from "@/assets/original/hd_project_0.jpg";
+import civilHd from "@/assets/original/civil_hd_final_0.jpg";
 
 const serviceImages: Record<string, string> = {
   structural: img10,
-  civil: hdProject0,
+  civil: civilHd,
   facade: img13,
   marine: img3,
   hydraulic: img15,
@@ -37,7 +37,7 @@ const serviceImages: Record<string, string> = {
 
 const serviceGalleryImages: Record<string, string> = {
   structural: project_0,
-  civil: hdProject0,
+  civil: civilHd,
   facade: img6,
   marine: img3,
   hydraulic: projects_0,
