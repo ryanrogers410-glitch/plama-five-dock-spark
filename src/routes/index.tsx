@@ -142,11 +142,11 @@ function Hero() {
             {/* Accreditations / Logos Slider */}
             {[...Array(2)].map((_, i) => (
               <div key={i} className="flex items-center gap-12 pr-12">
-                <img src="/src/assets/logos/logo_0.png" alt="Accreditation 1" className="h-10 md:h-12 w-auto object-contain" />
-                <img src="/src/assets/logos/logo_1.png" alt="Accreditation 2" className="h-10 md:h-12 w-auto object-contain" />
-                <img src="/src/assets/logos/logo_2.svg" alt="Accreditation 3" className="h-10 md:h-12 w-auto object-contain" />
-                <img src="/src/assets/original/site_img_2.svg" alt="Accreditation 4" className="h-10 md:h-12 w-auto object-contain" />
-                <img src="/src/assets/original/site_img_5.svg" alt="Accreditation 5" className="h-10 md:h-12 w-auto object-contain" />
+                <img src="/assets/logos/logo_0.png" alt="Accreditation 1" className="h-10 md:h-12 w-auto object-contain" />
+                <img src="/assets/logos/logo_1.png" alt="Accreditation 2" className="h-10 md:h-12 w-auto object-contain" />
+                <img src="/assets/logos/logo_2.svg" alt="Accreditation 3" className="h-10 md:h-12 w-auto object-contain" />
+                <img src="/assets/original/site_img_2.svg" alt="Accreditation 4" className="h-10 md:h-12 w-auto object-contain" />
+                <img src="/assets/original/site_img_5.svg" alt="Accreditation 5" className="h-10 md:h-12 w-auto object-contain" />
               </div>
             ))}
           </div>
