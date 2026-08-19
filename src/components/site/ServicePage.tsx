@@ -19,6 +19,11 @@ import img15 from "@/assets/original/site_img_15.png";
 import img16 from "@/assets/original/site_img_16.png";
 import img18 from "@/assets/original/site_img_18.png";
 import img19 from "@/assets/original/site_img_19.png";
+import project_0 from "@/assets/original/project_0.jpg";
+import projects_0 from "@/assets/original/projects_0.jpg";
+import site_img_3 from "@/assets/original/site_img_3.png";
+import site_img_4 from "@/assets/original/site_img_4.png";
+import site_img_18 from "@/assets/original/site_img_18.png";
 import heroImg from "@/assets/original/original_3.jpg";
 
 const serviceImages: Record<string, string> = {
@@ -33,13 +38,13 @@ const serviceImages: Record<string, string> = {
 };
 
 const serviceGalleryImages: Record<string, string> = {
-  structural: img18,
-  civil: img9,
-  facade: img6,
+  structural: project_0,
+  civil: site_img_3,
+  facade: site_img_4,
   marine: img3,
-  hydraulic: img7,
+  hydraulic: projects_0,
   weatherproofing: img4,
-  "expert-reports": img19,
+  "expert-reports": site_img_18,
   "project-management": img1,
 };
 
