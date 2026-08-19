@@ -96,14 +96,13 @@ function Hero() {
             Engineering Consultancy · Sydney
           </div>
           <h1 className="mt-4 font-display text-white text-balance text-4xl leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl">
-            Engineering that<br />
-            <span className="italic font-light text-white/90">stands up</span> to
-            <span className="text-[var(--accent-orange)]"> scrutiny.</span>
+            Engineering for <br />
+            <span className="italic font-light text-white/90">broad vision</span> 
+            <span className="text-[var(--accent-orange)]"> professionals.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-base md:text-lg text-white/75 leading-relaxed">
-            Nearly two decades of multidisciplinary engineering for the homes, buildings and
-            waterfronts that shape Sydney — with the rigour of a large practice and the
-            responsiveness of a boutique.
+            With every new project, we are faced with a fresh challenge of upholding 
+            our commitment to providing top-notch customer satisfaction.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <Link to="/contact" className="btn-primary">
