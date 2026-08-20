@@ -9,7 +9,7 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 import { SiteNav } from "@/components/site/SiteNav";
-import { SiteFooter } from "@/components/site/SiteFooter";
+
 import { FloatingWidgets } from "@/components/site/FloatingWidgets";
 
 import appCss from "../styles.css?url";
@@ -126,7 +126,7 @@ function RootComponent() {
           {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
           <Outlet />
         </main>
-        <SiteFooter />
+        
         <FloatingWidgets />
       </div>
     </QueryClientProvider>
