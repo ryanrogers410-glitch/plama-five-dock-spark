@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, PhoneCall } from "lucide-react";
-const plamaLogo = { url: "/plama-logo.png" };
+
 
 const servicesLinks = [
   { to: "/services", hash: "structural", label: "Structural Engineering" },
