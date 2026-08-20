@@ -34,9 +34,8 @@ export function SiteFooter() {
       <div className="relative container-px mx-auto w-full py-14 grid gap-10 md:grid-cols-12">
 
         <div className="md:col-span-5">
-          <Link to="/" className="inline-flex items-center">
-            <img src={plamaLogo.url} alt="Plama Projects" className="h-12 w-auto" />
-          </Link>
+
+
 
 
           <p className="mt-4 text-sm max-w-sm leading-relaxed text-white/60">
