@@ -30,7 +30,7 @@ const projects = [
     desc: "A significant residential new build featuring comprehensive structural and civil engineering solutions." 
   },
   { 
-    img: "https://plamaprojects.com.au/wp-content/uploads/2023/05/video-bg-1-1.jpg", 
+    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/IMG_20170430_075357-1-scaled.jpg", 
     title: "TOWNHOUSES", 
     subtitle: "Knock Down - Rebuilt",
     location: "Sydney Metro", 
