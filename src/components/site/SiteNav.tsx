@@ -51,7 +51,7 @@ export function SiteNav() {
 
 
         <nav
-          className={`hidden lg:flex items-center gap-7 text-sm transition-colors ${
+          className={`hidden lg:flex items-center gap-9 text-lg md:text-xl transition-colors ${
             solid ? "text-[var(--ink)]" : "text-white/85"
           }`}
         >
