@@ -20,7 +20,7 @@ export const Route = createFileRoute("/about")({
 const values = [
   { title: "Innovation & thoroughness", desc: "Pragmatic engineering and meticulous detailing for every project." },
   { title: "Responsiveness", desc: "Fast project delivery and prompt replies to all client enquiries." },
-  { title: "Cost effectiveness", desc: "Solutions designed to provide efficient and budget-friendly outcomes." },
+  
   { title: "Hands-on approach", desc: "Ensuring efficiency & quality from start to finish." },
 ];
 
