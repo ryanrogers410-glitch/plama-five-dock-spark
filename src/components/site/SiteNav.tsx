@@ -48,22 +48,33 @@ export function SiteNav() {
           <img src={plamaLogo.url} alt="Plama Projects" className="h-28 md:h-36 w-auto" />
         </Link>
 
+        <div className="hidden lg:flex items-center gap-8">
+          <nav
+            className={`flex items-center gap-9 text-lg md:text-xl transition-colors ${
+              solid ? "text-[var(--ink)]" : "text-white/85"
+            }`}
+          >
+            <NavLink to="/" label="Home" exact />
+            <NavLink to="/about" label="About" />
+            <NavLink to="/services" label="Services" />
+            {/* Industries removed as requested */}
+            <NavLink to="/projects" label="Projects" />
+            <NavLink to="/contact" label="Contact" />
+          </nav>
 
+          <Link
+            to="/contact"
+            className={`inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium whitespace-nowrap transition ${
+              solid
+                ? "bg-[var(--brand)] text-white hover:bg-[var(--accent-orange)]"
+                : "bg-white text-[var(--brand)] hover:bg-[var(--accent-orange)] hover:text-white"
+            }`}
+          >
+            Request Consultation <ArrowUpRight className="h-4 w-4" />
+          </Link>
+        </div>
 
-        <nav
-          className={`hidden lg:flex items-center gap-9 text-lg md:text-xl transition-colors ${
-            solid ? "text-[var(--ink)]" : "text-white/85"
-          }`}
-        >
-          <NavLink to="/" label="Home" exact />
-          <NavLink to="/about" label="About" />
-          <NavLink to="/services" label="Services" />
-          {/* Industries removed as requested */}
-          <NavLink to="/projects" label="Projects" />
-          <NavLink to="/contact" label="Contact" />
-        </nav>
-
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 lg:hidden">
           <Link
             to="/contact"
             className={`hidden sm:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium whitespace-nowrap transition ${
@@ -77,7 +88,7 @@ export function SiteNav() {
           <button
             type="button"
             aria-label="Toggle menu"
-            className={`lg:hidden grid place-items-center h-10 w-10 rounded-md ${
+            className={`grid place-items-center h-10 w-10 rounded-md ${
               solid ? "text-[var(--ink)]" : "text-white"
             }`}
             onClick={() => setMobileOpen((v) => !v)}
