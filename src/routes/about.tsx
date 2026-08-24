@@ -73,7 +73,7 @@ function About() {
               What we hold ourselves to.
             </h2>
           </div>
-          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
+          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
             {values.map((v, i) => (
               <div key={v.title} className="bg-white p-6">
                 <div className="text-xs tracking-[0.22em] uppercase text-[var(--accent-orange)]">0{i + 1}</div>
