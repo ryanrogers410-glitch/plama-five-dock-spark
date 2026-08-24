@@ -45,13 +45,13 @@ export function SiteNav() {
 
       <div className="container-px mx-auto w-full flex items-center justify-between py-4 md:py-5">
         <Link to="/" className="flex items-center">
-          <img src={plamaLogo.url} alt="Plama Projects" className="h-14 md:h-16 w-auto" />
+          <img src={plamaLogo.url} alt="Plama Projects" className="h-28 md:h-36 w-auto" />
         </Link>
 
 
 
         <nav
-          className={`hidden lg:flex items-center gap-7 text-sm transition-colors ${
+          className={`hidden lg:flex items-center gap-9 text-lg md:text-xl transition-colors ${
             solid ? "text-[var(--ink)]" : "text-white/85"
           }`}
         >

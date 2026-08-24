@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, Quote } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { CTASection } from "@/components/site/CTASection";
-import founderImg from "@/assets/founder-lucas.jpg";
 import heroImg from "@/assets/hero-structure.jpg";
 
 export const Route = createFileRoute("/about")({
@@ -20,7 +19,7 @@ export const Route = createFileRoute("/about")({
 const values = [
   { title: "Innovation & thoroughness", desc: "Pragmatic engineering and meticulous detailing for every project." },
   { title: "Responsiveness", desc: "Fast project delivery and prompt replies to all client enquiries." },
-  { title: "Cost effectiveness", desc: "Solutions designed to provide efficient and budget-friendly outcomes." },
+  
   { title: "Hands-on approach", desc: "Ensuring efficiency & quality from start to finish." },
 ];
 
@@ -73,7 +72,7 @@ function About() {
               What we hold ourselves to.
             </h2>
           </div>
-          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
+          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
             {values.map((v, i) => (
               <div key={v.title} className="bg-white p-6">
                 <div className="text-xs tracking-[0.22em] uppercase text-[var(--accent-orange)]">0{i + 1}</div>
@@ -89,17 +88,13 @@ function About() {
         <div className="absolute -top-32 -right-32 h-80 w-80 rounded-full bg-[var(--accent-orange)]/20 blur-3xl" />
         <div className="container-px mx-auto w-full py-16 md:py-24 relative">
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-5">
-              <div className="relative">
-                <img src={founderImg} alt="Lucas Tran, Principal Engineer & Founder" loading="lazy"
-                  className="w-full rounded-2xl object-cover aspect-[4/5]" />
-                <div className="absolute -bottom-4 -right-4 hidden md:block bg-[var(--accent-orange)] text-white p-4 rounded-xl max-w-[160px]">
-                  <div className="font-display text-xl leading-none">20<span className="text-base">+</span></div>
-                  <div className="mt-1 text-[10px] uppercase tracking-[0.18em]">Years engineering Sydney</div>
-                </div>
+            <div className="lg:col-span-4">
+              <div className="inline-block bg-[var(--accent-orange)] text-white p-6 rounded-2xl">
+                <div className="font-display text-4xl leading-none">20<span className="text-2xl">+</span></div>
+                <div className="mt-2 text-[10px] uppercase tracking-[0.18em]">Years engineering Sydney</div>
               </div>
             </div>
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-8">
               <span className="inline-flex items-center gap-2 text-xs tracking-[0.22em] uppercase text-white/70">
                 <span className="h-px w-8 bg-[var(--accent-orange)]" /> Founder Spotlight
               </span>

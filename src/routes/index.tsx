@@ -125,14 +125,32 @@ function Hero() {
             Engineering Consultancy · Sydney
           </div>
           <h1 className="mt-4 font-display text-white text-balance text-4xl leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl">
-            Top 10 Structural Engineering Sydney <br />
-            <span className="italic font-light text-white/90">from 2018 to</span> 
-            <span className="text-[var(--accent-orange)]"> 2022.</span>
+            Engineering Firm <br />
+            <span className="italic font-light text-white/90">based in</span>
+            <span className="text-[var(--accent-orange)]"> Sydney.</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-base md:text-lg text-white/75 leading-relaxed">
-            With every new project, we are faced with a fresh challenge of upholding 
-            our commitment to providing top-notch customer satisfaction.
-          </p>
+          <div className="mt-6 max-w-3xl space-y-4 text-base md:text-lg text-white/75 leading-relaxed">
+            <p>
+              Plama Projects banks on nearly 20 years of experience in the construction and building
+              consulting industry and has been in the Sydney market since 2017. We have experience in
+              residential, commercial, high rise and industrial buildings. We cover the Sydney metropolitan
+              area and the built environment — in particular throughout the Eastern Suburbs, Sydney CBD,
+              Northern Beaches, Hills District, Canterbury-Bankstown, Northern Suburbs, South Western Sydney,
+              Western Sydney, Forest District, South-Eastern Sydney, Fairfield-Liverpool, Strathfield-Homebush,
+              and Drummoyne, Five Dock area where the business is located.
+            </p>
+            <p>
+              Our hours of operation are from 9am to 5:30pm Monday to Friday and flexible on demand. We are
+              fully insured &amp; accredited. Our projects are highly recognized and delivered quickly at the
+              highest quality with satisfaction guaranteed. We maintain the integrity of designs by carrying
+              out in-house services for a wide range of aspects of the project such as Structure, Stormwater,
+              Hydraulic and Civil, Glass and Façade Engineering.
+            </p>
+            <p>
+              Our prices are affordable, all-inclusive &amp; fixed without compromising standard and quality —
+              quick turnover, reliable and accountable, efficient and best customer services.
+            </p>
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <Link to="/contact" className="btn-primary">
               Request a Consultation <ArrowUpRight className="h-4 w-4" />
@@ -145,15 +163,6 @@ function Hero() {
 
         <div className="mt-10 md:mt-14 max-w-2xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="bg-[#14181C]/60 backdrop-blur-sm px-6 py-5 rounded-2xl border border-white/15">
-              <div className="font-display text-2xl md:text-3xl text-white">
-                Top 10<span className="text-[var(--accent-orange)]">.</span>
-              </div>
-              <div className="mt-1 text-[10px] uppercase tracking-[0.2em] text-white/65 leading-relaxed">
-                Structural Engineering Sydney <br />
-                2018 — 2022
-              </div>
-            </div>
             <div className="bg-[#14181C]/60 backdrop-blur-sm px-6 py-5 rounded-2xl border border-white/15">
               <div className="font-display text-2xl md:text-3xl text-white">
                 APEC<span className="text-[var(--accent-orange)]">.</span>
@@ -208,7 +217,7 @@ function FeaturedServices() {
           <div className="max-w-2xl">
             <span className="eyebrow">Featured Services</span>
             <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] text-balance">
-              Ten disciplines. <span className="italic text-[var(--brand)]">One team.</span>
+              Multidisciplinary. <span className="italic text-[var(--brand)]">One team.</span>
             </h2>
           </div>
           <Link to="/services" className="inline-flex items-center gap-2 text-sm font-semibold tracking-[0.15em] uppercase text-[var(--brand)] hover:text-[var(--accent-orange)]">
@@ -263,9 +272,9 @@ function WhyUs() {
     <section className="container-px mx-auto w-full py-16 md:py-24">
       <div className="grid lg:grid-cols-12 gap-8 mb-8">
         <div className="lg:col-span-6">
-          <span className="eyebrow">Our Strengths</span>
+          <span className="eyebrow">Why Choose Us</span>
           <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] text-balance">
-            Our commitment to <span className="italic text-[var(--brand)]">excellence.</span>
+            Best fit <span className="italic text-[var(--brand)]">services.</span>
           </h2>
         </div>
         <div className="lg:col-span-5 lg:col-start-8 flex items-end">
