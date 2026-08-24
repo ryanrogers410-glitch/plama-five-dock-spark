@@ -217,7 +217,7 @@ function FeaturedServices() {
           <div className="max-w-2xl">
             <span className="eyebrow">Featured Services</span>
             <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] text-balance">
-              Ten disciplines. <span className="italic text-[var(--brand)]">One team.</span>
+              Multidisciplinary. <span className="italic text-[var(--brand)]">One team.</span>
             </h2>
           </div>
           <Link to="/services" className="inline-flex items-center gap-2 text-sm font-semibold tracking-[0.15em] uppercase text-[var(--brand)] hover:text-[var(--accent-orange)]">
@@ -272,9 +272,9 @@ function WhyUs() {
     <section className="container-px mx-auto w-full py-16 md:py-24">
       <div className="grid lg:grid-cols-12 gap-8 mb-8">
         <div className="lg:col-span-6">
-          <span className="eyebrow">Our Strengths</span>
+          <span className="eyebrow">Why Choose Us</span>
           <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] text-balance">
-            Our commitment to <span className="italic text-[var(--brand)]">excellence.</span>
+            Best fit <span className="italic text-[var(--brand)]">services.</span>
           </h2>
         </div>
         <div className="lg:col-span-5 lg:col-start-8 flex items-end">
