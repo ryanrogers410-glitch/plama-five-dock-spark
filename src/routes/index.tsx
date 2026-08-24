@@ -165,15 +165,6 @@ function Hero() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="bg-[#14181C]/60 backdrop-blur-sm px-6 py-5 rounded-2xl border border-white/15">
               <div className="font-display text-2xl md:text-3xl text-white">
-                Top 10<span className="text-[var(--accent-orange)]">.</span>
-              </div>
-              <div className="mt-1 text-[10px] uppercase tracking-[0.2em] text-white/65 leading-relaxed">
-                Structural Engineering Sydney <br />
-                2018 — 2022
-              </div>
-            </div>
-            <div className="bg-[#14181C]/60 backdrop-blur-sm px-6 py-5 rounded-2xl border border-white/15">
-              <div className="font-display text-2xl md:text-3xl text-white">
                 APEC<span className="text-[var(--accent-orange)]">.</span>
               </div>
               <div className="mt-1 text-[10px] uppercase tracking-[0.2em] text-white/65">
