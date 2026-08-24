@@ -66,7 +66,7 @@ export function SiteNav() {
         <div className="flex items-center gap-2">
           <Link
             to="/contact"
-            className={`hidden sm:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition ${
+            className={`hidden sm:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium whitespace-nowrap transition ${
               solid
                 ? "bg-[var(--brand)] text-white hover:bg-[var(--accent-orange)]"
                 : "bg-white text-[var(--brand)] hover:bg-[var(--accent-orange)] hover:text-white"
