@@ -1,6 +1,6 @@
 // High-quality photography sourced from the original Plama Projects
 // media library (Panda Studio project shots + on-site construction photos),
-// plus one openly-licensed marine/wharf photograph.
+// all sourced from the original site.
 
 import interiorLivingWide from "@/assets/photos/interior-living-wide.jpg";
 import kitchenPortrait from "@/assets/photos/kitchen-portrait.jpg";
@@ -17,25 +17,6 @@ import vanityWide from "@/assets/photos/vanity-wide.jpg";
 import siteSteelFrame from "@/assets/photos/site-steel-frame.jpg";
 import siteNewBuild from "@/assets/photos/site-new-build.jpg";
 import siteFitout from "@/assets/photos/site-fitout.jpg";
-import marinaWharf from "@/assets/photos/marina-wharf.jpg";
-
-// Engineering-discipline photography
-import svcStructural from "@/assets/service-structural.jpg";
-import svcCivil from "@/assets/service-civil.jpg";
-import svcCivilPortrait from "@/assets/service-civil-portrait.jpg";
-import svcFacade from "@/assets/service-facade.jpg";
-import svcMarine from "@/assets/service-marine.jpg";
-import svcHydraulic from "@/assets/service-hydraulic.jpg";
-import svcHydraulicPortrait from "@/assets/service-hydraulic-portrait.jpg";
-import svcWeatherproofing from "@/assets/service-weatherproofing.jpg";
-import svcExpert from "@/assets/service-expert.jpg";
-import svcPm from "@/assets/service-pm.jpg";
-import svcDetail from "@/assets/service-detail.jpg";
-import sectorCommercial from "@/assets/sector-commercial.jpg";
-import sectorMarine from "@/assets/sector-marine.jpg";
-import project1 from "@/assets/project-1.jpg";
-import project4 from "@/assets/project-4.jpg";
-import heroStructure from "@/assets/hero-structure.jpg";
 
 export const photos = {
   interiorLivingWide,
@@ -53,23 +34,6 @@ export const photos = {
   siteSteelFrame,
   siteNewBuild,
   siteFitout,
-  marinaWharf,
-  svcStructural,
-  svcCivil,
-  svcCivilPortrait,
-  svcFacade,
-  svcMarine,
-  svcHydraulic,
-  svcHydraulicPortrait,
-  svcWeatherproofing,
-  svcExpert,
-  svcPm,
-  svcDetail,
-  sectorCommercial,
-  sectorMarine,
-  project1,
-  project4,
-  heroStructure,
 };
 
 export type ServicePhotoSet = {
@@ -81,55 +45,56 @@ export type ServicePhotoSet = {
 
 export const servicePhotos: Record<string, ServicePhotoSet> = {
   structural: {
-    hero: svcStructural,
+    hero: interiorLivingWide,
     portrait: siteSteelFrame,
     wide: siteNewBuild,
-    faq: project4,
+    faq: kitchenDarkPortrait,
   },
   civil: {
-    hero: svcCivil,
-    portrait: svcCivilPortrait,
-    wide: svcCivil,
-    faq: svcCivilPortrait,
+    hero: siteNewBuild,
+    portrait: siteSteelFrame,
+    wide: siteFitout,
+    faq: siteNewBuild,
   },
   facade: {
-    hero: svcFacade,
-    portrait: sectorCommercial,
-    wide: svcFacade,
-    faq: sectorCommercial,
+    hero: skylightDetail,
+    portrait: glassSkylightPortrait,
+    wide: livingWindowWide,
+    faq: glassSkylightPortrait,
   },
   hydraulic: {
-    hero: svcHydraulic,
-    portrait: svcHydraulicPortrait,
-    wide: svcHydraulic,
-    faq: svcHydraulicPortrait,
+    hero: vanityWide,
+    portrait: bathroomPortrait,
+    wide: vanityWide,
+    faq: bathroomPortrait,
   },
   weatherproofing: {
-    hero: svcWeatherproofing,
-    portrait: svcDetail,
-    wide: svcWeatherproofing,
-    faq: svcDetail,
+    hero: livingWindowWide,
+    portrait: bathroomPortrait,
+    wide: skylightDetail,
+    faq: vanityWide,
   },
   marine: {
-    hero: svcMarine,
-    portrait: sectorMarine,
-    wide: marinaWharf,
-    faq: sectorMarine,
+    hero: siteNewBuild,
+    portrait: siteSteelFrame,
+    wide: siteFitout,
+    faq: siteSteelFrame,
   },
   "expert-reports": {
-    hero: svcExpert,
-    portrait: svcDetail,
-    wide: svcExpert,
-    faq: svcExpert,
+    hero: siteFitout,
+    portrait: siteSteelFrame,
+    wide: siteNewBuild,
+    faq: joineryArch,
   },
   "project-management": {
-    hero: svcPm,
-    portrait: project4,
-    wide: heroStructure,
-    faq: svcPm,
+    hero: kitchenIslandWide,
+    portrait: kitchenPortrait,
+    wide: diningWide,
+    faq: diningPortrait,
   },
 };
 
+export const defaultServicePhotos: ServicePhotoSet = servicePhotos.structural;
 
 /** Accreditation / award badges shown in the homepage hero marquee. */
 export const accreditations = [

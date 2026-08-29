@@ -5,7 +5,7 @@ import { services } from "@/data/services";
 import { photos, accreditations } from "@/data/photos";
 import { CTASection } from "@/components/site/CTASection";
 
-const heroImg = photos.heroStructure;
+const heroImg = photos.interiorLivingWide;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -222,41 +222,31 @@ function FeaturedServices() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {featuredServices.map(({ title, short, route, image }, i) => (
+          {featuredServices.map(({ title, short, route }, i) => (
             <Link
               key={title}
               to={route}
-              className="group relative overflow-hidden rounded-xl bg-[var(--brand)] aspect-[4/5] block"
+              className="group relative overflow-hidden rounded-xl border border-border bg-white p-6 flex flex-col justify-between transition hover:-translate-y-1 hover:shadow-lg"
             >
-              <img
-                src={image}
-                alt={title}
-                loading="lazy"
-                width={1024}
-                height={1280}
-                className="absolute inset-0 h-full w-full object-cover opacity-70 transition-all duration-700 group-hover:opacity-90 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#14181C] via-[#14181C]/60 to-transparent" />
-              <div className="absolute inset-0 p-5 lg:p-6 flex flex-col justify-between text-white">
-                <div className="flex items-start justify-between">
-                  <span className="inline-flex items-center gap-2 text-[10px] tracking-[0.22em] uppercase text-white/80">
-                    <span className="h-px w-6 bg-[var(--accent-orange)]" />
-                    Service
-                  </span>
-                  <span className="text-[10px] text-white/60">0{i + 1}</span>
-                </div>
-                <div>
-                  <h3 className="font-display text-lg md:text-xl">{title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-white/80 line-clamp-3">{short}</p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold tracking-[0.15em] uppercase text-white group-hover:text-[var(--accent-orange)] transition-colors">
-                    Learn more
-                    <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </span>
-                </div>
+              <div className="flex items-start justify-between">
+                <span className="inline-flex items-center gap-2 text-[10px] tracking-[0.22em] uppercase text-[var(--ink-soft)]">
+                  <span className="h-px w-6 bg-[var(--accent-orange)]" />
+                  Service
+                </span>
+                <span className="text-[10px] text-[var(--ink-soft)]">0{i + 1}</span>
+              </div>
+              <div className="mt-8">
+                <h3 className="font-display text-lg md:text-xl text-[var(--ink)]">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--ink-soft)] line-clamp-3">{short}</p>
+                <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold tracking-[0.15em] uppercase text-[var(--brand)] group-hover:text-[var(--accent-orange)] transition-colors">
+                  Learn more
+                  <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </span>
               </div>
             </Link>
           ))}
         </div>
+
 
       </div>
     </section>
