@@ -59,7 +59,7 @@ export function ServicePage({ service }: { service: ServiceDef }) {
           <div className="lg:col-span-4 lg:col-start-9">
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl group">
               <img
-                src={imgUrl}
+                src={portraitUrl}
                 alt={service.title}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />

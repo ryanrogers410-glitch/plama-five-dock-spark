@@ -4,9 +4,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { CTASection } from "@/components/site/CTASection";
 import { photos } from "@/data/photos";
 
-const heroImg = photos.diningWide;
-const proj1 = photos.siteNewBuild;
-const proj2 = photos.siteSteelFrame;
+const heroImg = photos.heroStructure;
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -22,7 +20,7 @@ export const Route = createFileRoute("/projects")({
 
 const projects = [
   { 
-    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/IMG_20180914_150128-scaled.jpg", 
+    img: photos.siteNewBuild, 
     title: "NEW BUILT", 
     subtitle: "Knock Down - Rebuilt",
     location: "Sydney Metro", 
@@ -30,7 +28,7 @@ const projects = [
     desc: "A significant residential new build featuring comprehensive structural and civil engineering solutions." 
   },
   { 
-    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/IMG_20170430_075357-1-scaled.jpg", 
+    img: photos.project1, 
     title: "TOWNHOUSES", 
     subtitle: "Knock Down - Rebuilt",
     location: "Sydney Metro", 
@@ -38,7 +36,7 @@ const projects = [
     desc: "High-density residential development with complex structural framing and site coordination." 
   },
   { 
-    img: "https://plamaprojects.com.au/wp-content/uploads/2023/05/style_2_right1-1.jpeg", 
+    img: photos.siteFitout, 
     title: "RENOVATIONS", 
     subtitle: "Alterations & Additions",
     location: "Five Dock", 
@@ -46,7 +44,7 @@ const projects = [
     desc: "Sophisticated interior renovations requiring meticulous structural interventions and design sensitivity." 
   },
   { 
-    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/IMG_20170430_075357-1-scaled.jpg", 
+    img: photos.svcFacade, 
     title: "FACADE", 
     subtitle: "FACADE ENGINEERING",
     location: "Sydney Metro", 
@@ -54,7 +52,7 @@ const projects = [
     desc: "Structural facade engineering for multi-story residential construction, ensuring safety and architectural intent." 
   },
   { 
-    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/flood-map-scaled.jpg", 
+    img: photos.svcHydraulic, 
     title: "FLOOD STUDY", 
     subtitle: "Hydraulic & Stormwater",
     location: "Sydney", 
@@ -62,7 +60,7 @@ const projects = [
     desc: "Detailed flood mapping and hydraulic analysis for site feasibility and development approval." 
   },
   { 
-    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/stamped_1-AEP-Suspended-Floor-Max-Water-Depth-scaled.jpg", 
+    img: photos.svcHydraulicPortrait, 
     title: "DRAINAGE", 
     subtitle: "Stormwater Management",
     location: "Sydney Metro", 
