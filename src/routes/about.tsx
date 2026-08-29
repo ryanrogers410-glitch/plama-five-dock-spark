@@ -139,10 +139,15 @@ function About() {
       <section className="container-px mx-auto w-full py-16 md:py-24">
         <div className="grid md:grid-cols-2 gap-4">
           {[
-            { to: "/services", label: "Explore Services", desc: "Structural, civil, façade, hydraulic, marine and more." },
+            { to: "/services/$slug", params: { slug: "structural" }, label: "Explore Services", desc: "Structural, civil, façade, hydraulic, marine and more." },
             { to: "/projects", label: "Projects", desc: "A selection of representative work across Sydney." },
           ].map((c) => (
-            <Link key={c.to} to={c.to} className="group bg-white border border-border rounded-xl p-6 hover:border-[var(--brand)] transition-colors">
+            <Link
+              key={c.label}
+              to={c.to}
+              params={"params" in c ? c.params : undefined}
+              className="group bg-white border border-border rounded-xl p-6 hover:border-[var(--brand)] transition-colors"
+            >
               <h3 className="font-display text-xl text-[var(--ink)]">{c.label}</h3>
               <p className="mt-2 text-sm text-[var(--ink-soft)]">{c.desc}</p>
               <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold tracking-[0.15em] uppercase text-[var(--brand)] group-hover:text-[var(--accent-orange)]">
