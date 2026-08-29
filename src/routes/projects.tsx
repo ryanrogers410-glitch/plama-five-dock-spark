@@ -1,12 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
+import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { CTASection } from "@/components/site/CTASection";
 import { photos } from "@/data/photos";
 
 const heroImg = photos.diningWide;
-const proj1 = photos.siteNewBuild;
-const proj2 = photos.siteSteelFrame;
 
 export const Route = createFileRoute("/projects")({
   head: () => ({

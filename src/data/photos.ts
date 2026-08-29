@@ -1,6 +1,6 @@
 // High-quality photography sourced from the original Plama Projects
 // media library (Panda Studio project shots + on-site construction photos),
-// plus one openly-licensed marine/wharf photograph.
+// all sourced from the original site.
 
 import interiorLivingWide from "@/assets/photos/interior-living-wide.jpg";
 import kitchenPortrait from "@/assets/photos/kitchen-portrait.jpg";
@@ -17,7 +17,6 @@ import vanityWide from "@/assets/photos/vanity-wide.jpg";
 import siteSteelFrame from "@/assets/photos/site-steel-frame.jpg";
 import siteNewBuild from "@/assets/photos/site-new-build.jpg";
 import siteFitout from "@/assets/photos/site-fitout.jpg";
-import marinaWharf from "@/assets/photos/marina-wharf.jpg";
 
 export const photos = {
   interiorLivingWide,
@@ -35,7 +34,6 @@ export const photos = {
   siteSteelFrame,
   siteNewBuild,
   siteFitout,
-  marinaWharf,
 };
 
 export type ServicePhotoSet = {
@@ -77,10 +75,10 @@ export const servicePhotos: Record<string, ServicePhotoSet> = {
     faq: vanityWide,
   },
   marine: {
-    hero: marinaWharf,
-    portrait: marinaWharf,
-    wide: marinaWharf,
-    faq: marinaWharf,
+    hero: siteNewBuild,
+    portrait: siteSteelFrame,
+    wide: siteFitout,
+    faq: siteSteelFrame,
   },
   "expert-reports": {
     hero: siteFitout,
