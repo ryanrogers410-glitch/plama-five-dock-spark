@@ -38,9 +38,19 @@ export function SiteNav() {
       }`}
     >
 
-      <div className="container-px mx-auto w-full flex items-center justify-between py-4 md:py-5">
+      <div
+        className={`container-px mx-auto w-full flex items-center justify-between transition-all duration-300 ${
+          solid ? "py-2 md:py-3" : "py-4 md:py-5"
+        }`}
+      >
         <Link to="/" className="flex items-center">
-          <img src={plamaLogo.url} alt="Plama Projects" className="h-28 md:h-36 w-auto" />
+          <img
+            src={plamaLogo.url}
+            alt="Plama Projects"
+            className={`w-auto transition-all duration-300 ${
+              solid ? "h-[5.6rem] md:h-[7.2rem]" : "h-28 md:h-36"
+            }`}
+          />
         </Link>
 
         <div className="hidden lg:flex items-center gap-8">
