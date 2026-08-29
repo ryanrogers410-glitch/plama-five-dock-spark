@@ -6,6 +6,7 @@ import { photos, accreditations } from "@/data/photos";
 import { CTASection } from "@/components/site/CTASection";
 
 const heroImg = photos.interiorLivingWide;
+const servicesBackdrop = photos.siteSteelFrame;
 
 export const Route = createFileRoute("/")({
   head: () => ({
