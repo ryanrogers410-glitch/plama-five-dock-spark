@@ -5,7 +5,7 @@ import { services } from "@/data/services";
 import { photos, accreditations } from "@/data/photos";
 import { CTASection } from "@/components/site/CTASection";
 
-const heroImg = photos.interiorLivingWide;
+const heroImg = photos.heroStructure;
 
 export const Route = createFileRoute("/")({
   head: () => ({
