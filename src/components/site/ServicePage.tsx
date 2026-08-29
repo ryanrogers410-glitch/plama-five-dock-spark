@@ -54,7 +54,7 @@ export function ServicePage({ service }: { service: ServiceDef }) {
         </div>
       </section>
 
-      </section>
+
 
       {/* Process — horizontal columns */}
       <section className="bg-[var(--surface)] border-y border-border py-16 md:py-24">
