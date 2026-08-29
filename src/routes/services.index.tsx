@@ -133,6 +133,14 @@ function ServicesIndex() {
                         </div>
                       ))}
                     </div>
+
+                    <Link
+                      to="/services/$slug"
+                      params={{ slug: service.slug }}
+                      className="mt-10 inline-flex items-center gap-2 text-sm font-semibold tracking-[0.15em] uppercase text-[var(--brand)] hover:text-[var(--accent-orange)] transition"
+                    >
+                      Explore this service <ArrowUpRight className="h-4 w-4" />
+                    </Link>
                   </div>
 
                   {/* Image Side */}
