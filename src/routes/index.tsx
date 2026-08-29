@@ -6,6 +6,7 @@ import { photos, accreditations } from "@/data/photos";
 import { CTASection } from "@/components/site/CTASection";
 
 const heroImg = photos.interiorLivingWide;
+const servicesBackdrop = photos.siteSteelFrame;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -207,16 +208,24 @@ function Intro() {
 
 function FeaturedServices() {
   return (
-    <section className="bg-[var(--surface)] py-16 md:py-24">
+    <section className="relative isolate overflow-hidden py-20 md:py-28">
+      <img
+        src={servicesBackdrop}
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        className="absolute inset-0 -z-20 h-full w-full object-cover"
+      />
+      <div className="absolute inset-0 -z-10 bg-[var(--brand-deep)]/85" />
       <div className="container-px mx-auto w-full">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
           <div className="max-w-2xl">
-            <span className="eyebrow">Featured Services</span>
-            <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] text-balance">
-              Multidisciplinary. <span className="italic text-[var(--brand)]">One team.</span>
+            <span className="eyebrow text-white/60">Featured Services</span>
+            <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl text-white text-balance">
+              Multidisciplinary. <span className="italic text-white/75">One team.</span>
             </h2>
           </div>
-          <span className="text-sm font-semibold tracking-[0.15em] uppercase text-[var(--ink-soft)]">
+          <span className="text-sm font-semibold tracking-[0.15em] uppercase text-white/60">
             All {featuredServices.length} disciplines
           </span>
         </div>
@@ -226,19 +235,19 @@ function FeaturedServices() {
             <Link
               key={title}
               to={route}
-              className="group relative overflow-hidden rounded-xl border border-border bg-white p-6 flex flex-col justify-between transition hover:-translate-y-1 hover:shadow-lg"
+              className="group relative overflow-hidden rounded-xl border border-white/15 bg-white/8 backdrop-blur-sm p-6 flex flex-col justify-between transition hover:-translate-y-1 hover:bg-white/15 hover:border-white/30"
             >
               <div className="flex items-start justify-between">
-                <span className="inline-flex items-center gap-2 text-[10px] tracking-[0.22em] uppercase text-[var(--ink-soft)]">
+                <span className="inline-flex items-center gap-2 text-[10px] tracking-[0.22em] uppercase text-white/60">
                   <span className="h-px w-6 bg-[var(--accent-orange)]" />
                   Service
                 </span>
-                <span className="text-[10px] text-[var(--ink-soft)]">0{i + 1}</span>
+                <span className="text-[10px] text-white/50">0{i + 1}</span>
               </div>
               <div className="mt-8">
-                <h3 className="font-display text-lg md:text-xl text-[var(--ink)]">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--ink-soft)] line-clamp-3">{short}</p>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold tracking-[0.15em] uppercase text-[var(--brand)] group-hover:text-[var(--accent-orange)] transition-colors">
+                <h3 className="font-display text-lg md:text-xl text-white">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-white/70 line-clamp-3">{short}</p>
+                <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold tracking-[0.15em] uppercase text-[var(--accent-orange)] transition-colors">
                   Learn more
                   <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </span>
@@ -246,6 +255,7 @@ function FeaturedServices() {
             </Link>
           ))}
         </div>
+
 
 
       </div>

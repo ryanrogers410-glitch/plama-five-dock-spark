@@ -68,7 +68,7 @@ export const servicePhotos: Record<string, ServicePhotoSet> = {
     wide: vanityWide,
     faq: bathroomPortrait,
   },
-  weatherproofing: {
+  certificates: {
     hero: livingWindowWide,
     portrait: bathroomPortrait,
     wide: skylightDetail,

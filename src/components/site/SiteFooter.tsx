@@ -5,11 +5,11 @@ import { Mail, MapPin, Phone, PhoneCall } from "lucide-react";
 const servicesLinks = [
   { to: "/services", hash: "structural", label: "Structural Engineering" },
   { to: "/services", hash: "civil", label: "Civil Engineering" },
-  { to: "/services", hash: "facade", label: "Glass & Façade" },
+  { to: "/services", hash: "facade", label: "Glazing/ Glass and Façade" },
   { to: "/services", hash: "hydraulic", label: "Hydraulic & Stormwater" },
-  { to: "/services", hash: "weatherproofing", label: "Weatherproofing & Waterproofing" },
   { to: "/services", hash: "marine", label: "Marine Structural" },
-  { to: "/services", hash: "expert-reports", label: "Expert Reports" },
+  { to: "/services", hash: "expert-reports", label: "Expert Report" },
+  { to: "/services", hash: "certificates", label: "Certificate" },
   { to: "/services", hash: "project-management", label: "Project Management" },
 ] as const;
 
