@@ -266,7 +266,7 @@ export const services: ServiceDef[] = [
 
 export const otherDisciplines = [
   { icon: Compass, title: "Stormwater Engineering", desc: "On-site detention, WSUD and stormwater concept to construction.", route: "/services/civil" },
-  { icon: BadgeCheck, title: "Engineering Certificates", desc: "Compliance certificates issued by registered engineers.", route: "/services/expert-reports" },
+  { icon: BadgeCheck, title: "Engineering Certificates", desc: "Compliance certificates issued by registered engineers.", route: "/services/certificates" },
 ] as const;
 
 export function getService(slug: string): ServiceDef | undefined {
