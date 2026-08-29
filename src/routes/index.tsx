@@ -17,16 +17,12 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const serviceImages: Record<string, string> = {
-  structural: photos.siteSteelFrame,
-  civil: photos.siteNewBuild,
-  facade: photos.glassSkylightPortrait,
-  marine: photos.marinaWharf,
-};
+import { servicePhotos } from "@/data/photos";
 
-const featuredServices = services
-  .filter((s) => ["structural", "civil", "facade", "marine"].includes(s.slug))
-  .map((s) => ({ ...s, image: serviceImages[s.slug] }));
+const featuredServices = services.map((s) => ({
+  ...s,
+  image: servicePhotos[s.slug]?.hero ?? servicePhotos.structural.hero,
+}));
 
 const strengths = [
   { icon: ShieldCheck, title: "Experienced team", desc: "Our professional engineers are fully qualified in Civil and Structural Engineering, involving in diverse design and construction of all sectors." },
@@ -155,7 +151,7 @@ function Hero() {
             <Link to="/contact" className="btn-primary">
               Request a Consultation <ArrowUpRight className="h-4 w-4" />
             </Link>
-            <Link to="/services" className="inline-flex items-center gap-2.5 text-white/90 hover:text-white text-sm font-medium px-2 group">
+            <Link to="/services/$slug" params={{ slug: "structural" }} className="inline-flex items-center gap-2.5 text-white/90 hover:text-white text-sm font-medium px-2 group">
               <span className="border-b border-white/30 group-hover:border-white pb-0.5">Explore our services</span>
             </Link>
           </div>
@@ -220,9 +216,9 @@ function FeaturedServices() {
               Multidisciplinary. <span className="italic text-[var(--brand)]">One team.</span>
             </h2>
           </div>
-          <Link to="/services" className="inline-flex items-center gap-2 text-sm font-semibold tracking-[0.15em] uppercase text-[var(--brand)] hover:text-[var(--accent-orange)]">
-            All services <ArrowUpRight className="h-4 w-4" />
-          </Link>
+          <span className="text-sm font-semibold tracking-[0.15em] uppercase text-[var(--ink-soft)]">
+            All {featuredServices.length} disciplines
+          </span>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
