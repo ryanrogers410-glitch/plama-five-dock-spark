@@ -1,18 +1,13 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
+import { services } from "@/data/services";
 const plamaLogo = { url: "/plama-logo.png" };
 
-const serviceLinks = [
-  { to: "/services", hash: "structural", label: "Structural Engineering" },
-  { to: "/services", hash: "civil", label: "Civil Engineering" },
-  { to: "/services", hash: "facade", label: "Glass & Façade Engineering" },
-  { to: "/services", hash: "hydraulic", label: "Hydraulic & Stormwater" },
-  { to: "/services", hash: "weatherproofing", label: "Weatherproofing & Waterproofing" },
-  { to: "/services", hash: "marine", label: "Marine Structural" },
-  { to: "/services", hash: "expert-reports", label: "Expert Reports & Certifications" },
-  { to: "/services", hash: "project-management", label: "Development & Project Mgmt" },
-] as const;
+const serviceLinks = services.map((s) => ({
+  slug: s.slug,
+  label: s.title,
+}));
 
 export function SiteNav() {
   const [scrolled, setScrolled] = useState(false);
@@ -56,8 +51,33 @@ export function SiteNav() {
           >
             <NavLink to="/" label="Home" exact />
             <NavLink to="/about" label="About" />
-            <NavLink to="/services" label="Services" />
-            {/* Industries removed as requested */}
+            {/* Services dropdown */}
+            <div className="relative group">
+              <button
+                type="button"
+                className="inline-flex items-center gap-1.5 hover:opacity-70 transition"
+                aria-haspopup="true"
+              >
+                Services
+                <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
+              </button>
+              <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 transition-all duration-200">
+                <div className="w-80 rounded-xl bg-white shadow-2xl border border-[#C9C3B6]/60 py-2 overflow-hidden">
+                  {serviceLinks.map((s) => (
+                    <Link
+                      key={s.slug}
+                      to="/services/$slug"
+                      params={{ slug: s.slug }}
+                      className="flex items-center justify-between px-5 py-2.5 text-sm text-[var(--ink)] hover:bg-[var(--surface)] hover:text-[var(--brand)] transition"
+                      activeProps={{ className: "text-[var(--accent-orange)] font-semibold" }}
+                    >
+                      {s.label}
+                      <ArrowUpRight className="h-3.5 w-3.5 opacity-0 group-hover:opacity-40" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
             <NavLink to="/projects" label="Projects" />
             <NavLink to="/contact" label="Contact" />
           </nav>
@@ -103,8 +123,32 @@ export function SiteNav() {
           <div className="container-px mx-auto w-full py-4 flex flex-col text-[var(--ink)] text-sm">
             <MobileLink to="/" label="Home" />
             <MobileLink to="/about" label="About" />
-            <MobileLink to="/services" label="Services" />
-            {/* Mobile link for industries removed */}
+            <button
+              type="button"
+              className="flex items-center justify-between py-2 text-left hover:text-[var(--brand)]"
+              onClick={() => setServicesOpen((v) => !v)}
+              aria-expanded={servicesOpen}
+            >
+              Services
+              <ChevronDown
+                className={`h-4 w-4 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+            {servicesOpen && (
+              <div className="flex flex-col pl-4 border-l border-border ml-1">
+                {serviceLinks.map((s) => (
+                  <Link
+                    key={s.slug}
+                    to="/services/$slug"
+                    params={{ slug: s.slug }}
+                    className="py-2 text-xs text-[var(--ink-soft)] hover:text-[var(--brand)]"
+                    activeProps={{ className: "text-[var(--accent-orange)] font-semibold" }}
+                  >
+                    {s.label}
+                  </Link>
+                ))}
+              </div>
+            )}
             <MobileLink to="/projects" label="Projects" />
             <MobileLink to="/contact" label="Contact" />
           </div>
@@ -127,12 +171,11 @@ function NavLink({ to, label, exact }: { to: string; label: string; exact?: bool
   );
 }
 
-function MobileLink({ to, hash, label, small }: { to: string; hash?: string; label: string; small?: boolean }) {
+function MobileLink({ to, label }: { to: string; label: string }) {
   return (
     <Link
       to={to}
-      hash={hash}
-      className={`py-2 ${small ? "text-xs text-[var(--ink-soft)]" : ""} hover:text-[var(--brand)]`}
+      className="py-2 hover:text-[var(--brand)]"
       activeProps={{ className: "text-[var(--accent-orange)] font-semibold" }}
     >
       {label}
