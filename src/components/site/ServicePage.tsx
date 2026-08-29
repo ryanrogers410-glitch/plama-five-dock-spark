@@ -16,7 +16,7 @@ export function ServicePage({ service }: { service: ServiceDef }) {
         body={service.short}
       />
 
-      {/* Overview — asymmetric with portrait image */}
+      {/* Overview */}
       <section className="container-px mx-auto w-full py-16 md:py-24">
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-7">
@@ -38,33 +38,22 @@ export function ServicePage({ service }: { service: ServiceDef }) {
               )}
             </h2>
             <p className="mt-6 text-lg text-[var(--ink-soft)] leading-relaxed">{service.intro}</p>
+          </div>
 
-            <h3 className="mt-12 font-display text-2xl text-[var(--ink)]">What we deliver</h3>
-            <div className="mt-6 grid sm:grid-cols-2 gap-x-8 gap-y-4">
+          <div className="lg:col-span-5">
+            <h3 className="font-display text-2xl text-[var(--ink)]">What we deliver</h3>
+            <div className="mt-6 grid gap-y-4">
               {service.offerings.map((offering) => (
-                <div key={offering} className="flex items-start gap-3 group">
+                <div key={offering} className="flex items-start gap-3">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent-orange)]" />
                   <span className="text-sm md:text-base text-[var(--ink)] leading-snug">{offering}</span>
                 </div>
               ))}
             </div>
           </div>
-
-          <div className="lg:col-span-4 lg:col-start-9">
-            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl group">
-              <img
-                src={imgUrl}
-                alt={service.title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60" />
-              <div className="absolute bottom-8 left-8 right-8 p-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl text-white">
-                <p className="text-xs uppercase tracking-widest text-white/80 mb-2">Service Discipline</p>
-                <h4 className="font-display text-xl">{service.title}</h4>
-              </div>
-            </div>
-          </div>
         </div>
+      </section>
+
       </section>
 
       {/* Process — horizontal columns */}
