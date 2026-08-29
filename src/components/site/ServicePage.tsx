@@ -4,20 +4,8 @@ import { PageHero } from "@/components/site/PageHero";
 import { CTASection } from "@/components/site/CTASection";
 import { services, type ServiceDef } from "@/data/services";
 
-const serviceImages: Record<string, string> = {
-  structural: "https://plamaprojects.com.au/wp-content/uploads/2023/07/IMG_20180914_150128-scaled.jpg",
-  civil: "https://plamaprojects.com.au/wp-content/uploads/2023/05/video-bg-1-1.jpg",
-  facade: "https://plamaprojects.com.au/wp-content/uploads/2023/05/style_2_right1-1.jpeg",
-  marine: "https://plamaprojects.com.au/wp-content/uploads/2023/07/IMG_20170430_075357-1-scaled.jpg",
-  hydraulic: "https://plamaprojects.com.au/wp-content/uploads/2023/07/flood-map-scaled.jpg",
-  "expert-reports": "https://plamaprojects.com.au/wp-content/uploads/2023/07/stamped_1-AEP-Suspended-Floor-Max-Water-Depth-scaled.jpg",
-  weatherproofing: "https://plamaprojects.com.au/wp-content/uploads/2023/05/video-bg-1-1.jpg",
-  "project-management": "https://plamaprojects.com.au/wp-content/uploads/2023/07/IMG_20180914_150128-scaled.jpg",
-};
-
 export function ServicePage({ service }: { service: ServiceDef }) {
   const Icon = service.icon;
-  const imgUrl = serviceImages[service.slug] ?? serviceImages.structural;
   const related = services.filter((s) => s.slug !== service.slug).slice(0, 4);
 
   return (
@@ -26,7 +14,6 @@ export function ServicePage({ service }: { service: ServiceDef }) {
         eyebrow={`Services — ${service.eyebrow}`}
         title={service.title}
         body={service.short}
-        image={imgUrl}
       />
 
       {/* Overview — asymmetric with portrait image */}
