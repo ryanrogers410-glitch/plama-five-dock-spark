@@ -37,17 +37,16 @@ const strengths = [
 const featuredProjects = [
   {
     img: photos.siteNewBuild,
-    title: "New Built Project",
+    title: "New Build / Knock Down Rebuild",
     tag: "Structural · Civil",
-    desc: "A representative example of our new-built engineering services, ensuring structural integrity and civil compliance from the ground up.",
   },
   {
-    img: photos.siteSteelFrame,
-    title: "Renovations & Additions",
-    tag: "Structural · Remedial",
-    desc: "Innovative structural solutions for complex renovations, providing stability and modern engineering to existing residential frameworks.",
+    img: photos.bathroomPortrait,
+    title: "Renovations, Alterations & Additions",
+    tag: "Structural · Civil",
   },
 ];
+
 
 
 function Home() {
@@ -321,7 +320,7 @@ function FeaturedProjects() {
         </div>
 
         <div className="space-y-16 md:space-y-24">
-          {featuredProjects.map(({ img, title, tag, desc }, i) => {
+          {featuredProjects.map(({ img, title, tag }, i) => {
             const idx = String(i + 1).padStart(2, "0");
             const isRight = i % 2 === 0;
             return (
@@ -340,7 +339,7 @@ function FeaturedProjects() {
                       <span>{tag}</span>
                     </div>
                     <h3 className="mt-2 font-display text-2xl md:text-3xl italic">{title}</h3>
-                    <p className="mt-3 text-sm leading-relaxed text-white/80 max-w-md">{desc}</p>
+                    
                     <Link to="/projects" className="mt-4 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-white group/link">
                       View project <span className="h-px w-6 bg-[var(--accent-orange)] transition-all group-hover/link:w-10" />
                     </Link>
