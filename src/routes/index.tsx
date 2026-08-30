@@ -339,7 +339,7 @@ function FeaturedProjects() {
                       <span>{tag}</span>
                     </div>
                     <h3 className="mt-2 font-display text-2xl md:text-3xl italic">{title}</h3>
-                    <p className="mt-3 text-sm leading-relaxed text-white/80 max-w-md">{desc}</p>
+                    
                     <Link to="/projects" className="mt-4 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-white group/link">
                       View project <span className="h-px w-6 bg-[var(--accent-orange)] transition-all group-hover/link:w-10" />
                     </Link>
