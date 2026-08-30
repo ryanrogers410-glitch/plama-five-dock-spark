@@ -37,17 +37,16 @@ const strengths = [
 const featuredProjects = [
   {
     img: photos.siteNewBuild,
-    title: "New Built Project",
+    title: "New Build / Knock Down Rebuild",
     tag: "Structural · Civil",
-    desc: "A representative example of our new-built engineering services, ensuring structural integrity and civil compliance from the ground up.",
   },
   {
-    img: photos.siteSteelFrame,
-    title: "Renovations & Additions",
-    tag: "Structural · Remedial",
-    desc: "Innovative structural solutions for complex renovations, providing stability and modern engineering to existing residential frameworks.",
+    img: photos.bathroomPortrait,
+    title: "Renovations, Alterations & Additions",
+    tag: "Structural · Civil",
   },
 ];
+
 
 
 function Home() {
