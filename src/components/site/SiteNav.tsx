@@ -40,7 +40,7 @@ export function SiteNav() {
 
       <div
         className={`container-px mx-auto w-full flex items-center justify-between transition-all duration-300 ${
-          scrolled ? "py-1" : "py-4 md:py-5"
+          scrolled ? "py-2" : "py-3 md:py-4"
         }`}
       >
         <Link to="/" className="flex items-center">
@@ -48,7 +48,7 @@ export function SiteNav() {
             src={plamaLogo.url}
             alt="Plama Projects"
             className={`w-auto transition-all duration-300 ${
-              scrolled ? "h-[1.4rem] md:h-[1.8rem]" : "h-28 md:h-36"
+              scrolled ? "h-8 md:h-10" : "h-20 md:h-28"
             }`}
           />
         </Link>

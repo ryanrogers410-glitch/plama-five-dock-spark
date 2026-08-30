@@ -56,7 +56,7 @@ export function SiteFooter() {
             </li>
             <li className="flex items-start gap-3">
               <MapPin className="h-4 w-4 mt-0.5 text-[var(--accent-orange)]" />
-              <span>1 Kerin Avenue, Five Dock NSW 2046</span>
+              <span>1 Kerin Avenue,<br />Five Dock NSW 2046</span>
             </li>
           </ul>
         </div>
