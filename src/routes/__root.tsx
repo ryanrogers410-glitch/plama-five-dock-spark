@@ -126,7 +126,7 @@ function RootComponent() {
           {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
           <Outlet />
         </main>
-        
+        <SiteFooter />
         <FloatingWidgets />
       </div>
     </QueryClientProvider>
