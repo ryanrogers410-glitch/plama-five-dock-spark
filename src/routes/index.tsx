@@ -36,14 +36,14 @@ const strengths = [
 
 const featuredProjects = [
   {
-    img: photos.siteNewBuild,
-    title: "New Build / Knock Down Rebuild",
-    tag: "Structural · Civil",
+    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/IMG_20180914_150128-scaled.jpg",
+    title: "New Built",
+    tag: "Knock Down - Rebuilt",
   },
   {
-    img: photos.bathroomPortrait,
-    title: "Renovations, Alterations & Additions",
-    tag: "Structural · Civil",
+    img: "https://plamaprojects.com.au/wp-content/uploads/2023/05/style_2_right1-1.jpeg",
+    title: "Renovations",
+    tag: "Alterations & Additions",
   },
 ];
 

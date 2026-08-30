@@ -17,37 +17,15 @@ export const Route = createFileRoute("/projects")({
   component: Projects,
 });
 
+const B="https://plamaprojects.com.au/wp-content/uploads/";
+
 const projects = [
-  {
-    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/IMG_20180914_150128-scaled.jpg",
-    title: "New Built",
-    tag: "Knock Down · Rebuilt",
-  },
-  {
-    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/IMG_20170430_075357-1-scaled.jpg",
-    title: "Townhouses",
-    tag: "Knock Down · Rebuilt",
-  },
-  {
-    img: photos.bathroomPortrait,
-    title: "Renovations",
-    tag: "Alterations & Additions",
-  },
-  {
-    img: "https://plamaprojects.com.au/wp-content/uploads/2023/05/style_2_right1-1.jpeg",
-    title: "Façade",
-    tag: "Façade Engineering",
-  },
-  {
-    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/flood-map-scaled.jpg",
-    title: "Flood Study",
-    tag: "Hydraulic · Stormwater",
-  },
-  {
-    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/stamped_1-AEP-Suspended-Floor-Max-Water-Depth-scaled.jpg",
-    title: "Drainage",
-    tag: "Stormwater Management",
-  },
+  { img: B + "2023/07/IMG_20180914_150128-scaled.jpg", title: "New Built", tag: "Knock Down - Rebuilt" },
+  { img: B + "2023/05/video-bg-1-1.jpg", title: "Townhouses", tag: "Knock Down - Rebuilt" },
+  { img: B + "2023/05/style_2_right1-1.jpeg", title: "Renovations", tag: "Alterations & Additions" },
+  { img: B + "2023/07/IMG_20170430_075357-1-scaled.jpg", title: "Facade", tag: "Facade Engineering" },
+  { img: B + "2023/07/flood-map-scaled.jpg", title: "Flood Study", tag: "Flood Study" },
+  { img: B + "2023/07/stamped_1-AEP-Suspended-Floor-Max-Water-Depth-scaled.jpg", title: "Flood Study", tag: "Flood Study" },
 ];
 
 function Projects() {
@@ -68,7 +46,7 @@ function Projects() {
             const idx = String(i + 1).padStart(2, "0");
             const isRight = i % 2 === 0;
             return (
-              <div key={title} className="relative grid grid-cols-12 gap-3 md:gap-6 items-center">
+              <div key={title + i} className="relative grid grid-cols-12 gap-3 md:gap-6 items-center">
                 <div className={`col-span-11 ${isRight ? "col-start-1" : "col-start-2"} relative`}>
                   <div className="relative overflow-hidden aspect-[4/3] md:aspect-[16/9] group rounded-lg">
                     <img
