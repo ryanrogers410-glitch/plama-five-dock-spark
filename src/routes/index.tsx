@@ -320,7 +320,7 @@ function FeaturedProjects() {
         </div>
 
         <div className="space-y-16 md:space-y-24">
-          {featuredProjects.map(({ img, title, tag, desc }, i) => {
+          {featuredProjects.map(({ img, title, tag }, i) => {
             const idx = String(i + 1).padStart(2, "0");
             const isRight = i % 2 === 0;
             return (
