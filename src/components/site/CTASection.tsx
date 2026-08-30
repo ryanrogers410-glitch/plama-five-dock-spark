@@ -61,7 +61,7 @@ export function CTASection({
               <Mail className="h-4 w-4 text-[var(--accent-orange)]" /> plama.pro@outlook.com
             </a>
             <div className="text-white/60 text-xs uppercase tracking-[0.22em] mt-2">
-              Five Dock, NSW · Mon–Fri 9:00–5:30
+              1 Kerin Avenue, Five Dock NSW 2046 · Mon–Fri 9:00–5:30
             </div>
           </div>
         </div>
