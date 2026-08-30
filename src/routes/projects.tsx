@@ -18,53 +18,35 @@ export const Route = createFileRoute("/projects")({
 });
 
 const projects = [
-  { 
-    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/IMG_20180914_150128-scaled.jpg", 
-    title: "NEW BUILT", 
-    subtitle: "Knock Down - Rebuilt",
-    location: "Sydney Metro", 
-    tags: ["Structural", "Civil"], 
-    desc: "A significant residential new build featuring comprehensive structural and civil engineering solutions." 
+  {
+    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/IMG_20180914_150128-scaled.jpg",
+    title: "New Built",
+    tag: "Knock Down · Rebuilt",
   },
-  { 
-    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/IMG_20170430_075357-1-scaled.jpg", 
-    title: "TOWNHOUSES", 
-    subtitle: "Knock Down - Rebuilt",
-    location: "Sydney Metro", 
-    tags: ["Structural", "Civil"], 
-    desc: "High-density residential development with complex structural framing and site coordination." 
+  {
+    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/IMG_20170430_075357-1-scaled.jpg",
+    title: "Townhouses",
+    tag: "Knock Down · Rebuilt",
   },
-  { 
-    img: "https://plamaprojects.com.au/wp-content/uploads/2023/05/style_2_right1-1.jpeg", 
-    title: "RENOVATIONS", 
-    subtitle: "Alterations & Additions",
-    location: "Five Dock", 
-    tags: ["Structural", "Civil"], 
-    desc: "Sophisticated interior renovations requiring meticulous structural interventions and design sensitivity." 
+  {
+    img: photos.bathroomPortrait,
+    title: "Renovations",
+    tag: "Alterations & Additions",
   },
-  { 
-    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/IMG_20170430_075357-1-scaled.jpg", 
-    title: "FACADE", 
-    subtitle: "FACADE ENGINEERING",
-    location: "Sydney Metro", 
-    tags: ["Facade"], 
-    desc: "Structural facade engineering for multi-story residential construction, ensuring safety and architectural intent." 
+  {
+    img: "https://plamaprojects.com.au/wp-content/uploads/2023/05/style_2_right1-1.jpeg",
+    title: "Façade",
+    tag: "Façade Engineering",
   },
-  { 
-    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/flood-map-scaled.jpg", 
-    title: "FLOOD STUDY", 
-    subtitle: "Hydraulic & Stormwater",
-    location: "Sydney", 
-    tags: ["Hydraulic", "Stormwater"], 
-    desc: "Detailed flood mapping and hydraulic analysis for site feasibility and development approval." 
+  {
+    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/flood-map-scaled.jpg",
+    title: "Flood Study",
+    tag: "Hydraulic · Stormwater",
   },
-  { 
-    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/stamped_1-AEP-Suspended-Floor-Max-Water-Depth-scaled.jpg", 
-    title: "DRAINAGE", 
-    subtitle: "Stormwater Management",
-    location: "Sydney Metro", 
-    tags: ["Stormwater"], 
-    desc: "Engineered stormwater drainage systems for complex urban residential developments." 
+  {
+    img: "https://plamaprojects.com.au/wp-content/uploads/2023/07/stamped_1-AEP-Suspended-Floor-Max-Water-Depth-scaled.jpg",
+    title: "Drainage",
+    tag: "Stormwater Management",
   },
 ];
 
@@ -80,28 +62,41 @@ function Projects() {
         image={heroImg}
       />
 
-      <section className="container-px mx-auto w-full py-16 md:py-24">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {projects.map((p, i) => (
-            <div
-              key={p.title}
-              className={`relative overflow-hidden rounded-lg group ${
-                i % 5 === 0 ? "sm:col-span-2 aspect-[16/9]" : "aspect-[4/3]"
-              }`}
-            >
-              <img
-                src={p.img}
-                alt=""
-                loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-            </div>
-          ))}
+      <section className="container-px mx-auto w-full py-16 md:py-24 overflow-hidden">
+        <div className="space-y-16 md:space-y-24">
+          {projects.map(({ img, title, tag }, i) => {
+            const idx = String(i + 1).padStart(2, "0");
+            const isRight = i % 2 === 0;
+            return (
+              <div key={title} className="relative grid grid-cols-12 gap-3 md:gap-6 items-center">
+                <div className={`col-span-11 ${isRight ? "col-start-1" : "col-start-2"} relative`}>
+                  <div className="relative overflow-hidden aspect-[4/3] md:aspect-[16/9] group rounded-lg">
+                    <img
+                      src={img}
+                      alt={title}
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+                <div className={`col-span-11 md:col-span-6 -mt-10 md:mt-0 md:absolute md:top-1/2 md:-translate-y-1/2 z-10 ${isRight ? "col-start-2 md:right-0" : "col-start-1 md:left-0"}`}>
+                  <div className={`bg-[var(--brand)] text-white p-5 md:p-7 shadow-xl ${isRight ? "border-l-4" : "border-r-4"} border-[var(--accent-orange)]`}>
+                    <div className="flex items-center gap-3 text-[10px] tracking-[0.22em] uppercase text-white/60">
+                      <span>{idx}</span>
+                      <span className="h-px w-8 bg-[var(--accent-orange)]" />
+                      <span>{tag}</span>
+                    </div>
+                    <h3 className="mt-2 font-display text-2xl md:text-3xl italic">{title}</h3>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
-
 
       <CTASection />
     </>
   );
 }
+
