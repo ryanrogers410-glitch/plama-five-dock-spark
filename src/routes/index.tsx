@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { ShieldCheck, Layers, Sparkles, Wallet, Gauge, Headphones } from "lucide-react";
 import { services } from "@/data/services";
-import { photos, accreditations } from "@/data/photos";
+import { photos, accreditations, servicePhotos } from "@/data/photos";
 import { CTASection } from "@/components/site/CTASection";
 
 const heroImg = photos.interiorLivingWide;
@@ -17,8 +17,6 @@ export const Route = createFileRoute("/")({
   }),
   component: Home,
 });
-
-import { servicePhotos } from "@/data/photos";
 
 const featuredServices = services.map((s) => ({
   ...s,
@@ -151,7 +149,7 @@ function Hero() {
             <Link to="/contact" className="btn-primary">
               Request a Consultation <ArrowUpRight className="h-4 w-4" />
             </Link>
-            <Link to="/services/$slug" params={{ slug: "structural" }} className="inline-flex items-center gap-2.5 text-white/90 hover:text-white text-sm font-medium px-2 group">
+            <Link to="/services" className="inline-flex items-center gap-2.5 text-white/90 hover:text-white text-sm font-medium px-2 group">
               <span className="border-b border-white/30 group-hover:border-white pb-0.5">Explore our services</span>
             </Link>
           </div>
