@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Clock, Mail, MapPin, Phone, PhoneCall } from "lucide-react";
-import type { ReactNode } from "react";
+import { CheckCircle2, Clock, Loader2, Mail, MapPin, Phone, PhoneCall, XCircle } from "lucide-react";
+import { useState, type FormEvent, type ReactNode } from "react";
 import { PageHero } from "@/components/site/PageHero";
 import heroImg from "@/assets/hero-structure.jpg";
 
@@ -57,63 +57,7 @@ function Contact() {
               <h3 className="mt-4 font-display text-2xl md:text-3xl text-[var(--ink)]">
                 Brief us on your project.
               </h3>
-              <form
-                className="mt-6 grid gap-4"
-                action="mailto:plama.pro@outlook.com"
-                method="post"
-                encType="text/plain"
-              >
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <Field label="Full name" name="name" required />
-                  <Field label="Email" name="email" type="email" required />
-                </div>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <Field label="Phone" name="phone" type="tel" />
-                  <Field label="Project location" name="location" placeholder="Suburb, NSW" />
-                </div>
-                <Field label="Service required" name="service" placeholder="e.g. Structural, Civil, Façade" />
-                <div>
-                  <label className="text-xs uppercase tracking-[0.22em] text-[var(--ink-soft)]">Project brief</label>
-                  <textarea name="message" rows={5} required
-                    className="mt-2 w-full rounded-md border border-border bg-white px-3 py-2 text-sm text-[var(--ink)] focus:outline-none focus:border-[var(--brand)]"
-                    placeholder="Tell us about your site, timeline and what you're trying to build." />
-                </div>
-                <div>
-                  <label className="text-xs uppercase tracking-[0.22em] text-[var(--ink-soft)]">
-                    Attachments <span className="normal-case tracking-normal text-[var(--ink-soft)]">(drawings, photos, reports — files or a folder)</span>
-                  </label>
-                  <div className="mt-2 grid sm:grid-cols-2 gap-3">
-                    <label className="flex items-center justify-center gap-2 rounded-md border border-dashed border-border bg-white px-3 py-3 text-sm text-[var(--ink-soft)] hover:border-[var(--brand)] hover:text-[var(--brand)] cursor-pointer transition">
-                      <input type="file" name="files" multiple className="sr-only" />
-                      <span>+ Select files</span>
-                    </label>
-                    <label className="flex items-center justify-center gap-2 rounded-md border border-dashed border-border bg-white px-3 py-3 text-sm text-[var(--ink-soft)] hover:border-[var(--brand)] hover:text-[var(--brand)] cursor-pointer transition">
-                      <input
-                        type="file"
-                        name="folder"
-                        className="sr-only"
-                        ref={(el) => {
-                          if (el) {
-                            el.setAttribute("webkitdirectory", "");
-                            el.setAttribute("directory", "");
-                          }
-                        }}
-                      />
-                      <span>+ Select folder</span>
-                    </label>
-                  </div>
-                  <p className="mt-2 text-xs text-[var(--ink-soft)]">
-                    Large files? Email attachments directly to <a href="mailto:plama.pro@outlook.com" className="text-[var(--brand)] underline">plama.pro@outlook.com</a>.
-                  </p>
-                </div>
-                <button type="submit" className="btn-primary self-start">
-                  Send enquiry
-                </button>
-                <p className="text-xs text-[var(--ink-soft)]">
-                  Prefer to email directly? Reach us at{" "}
-                  <a href="mailto:plama.pro@outlook.com" className="text-[var(--brand)] hover:text-[var(--accent-orange)] underline">plama.pro@outlook.com</a>.
-                </p>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>
@@ -158,5 +102,132 @@ function Field({
         className="mt-2 w-full rounded-md border border-border bg-white px-3 py-2 text-sm text-[var(--ink)] focus:outline-none focus:border-[var(--brand)]"
       />
     </div>
+  );
+}
+
+type SubmitState = "idle" | "sending" | "success" | "error";
+
+function ContactForm() {
+  const [state, setState] = useState<SubmitState>("idle");
+  const [error, setError] = useState<string>("");
+  const [fileCount, setFileCount] = useState(0);
+  const [filesKey, setFilesKey] = useState(0);
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const formEl = e.currentTarget;
+    const data = new FormData(formEl);
+
+    // Merge folder-selection files into the "files" payload
+    const folderFiles = data.getAll("folder").filter((f): f is File => f instanceof File && f.size > 0);
+    data.delete("folder");
+    for (const f of folderFiles) data.append("files", f);
+
+    setState("sending");
+    setError("");
+    try {
+      const res = await fetch("/api/public/contact", { method: "POST", body: data });
+      const json = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string };
+      if (!res.ok || !json.ok) {
+        setState("error");
+        setError(json.error || "Something went wrong sending your enquiry. Please try again or email us directly.");
+        return;
+      }
+      setState("success");
+      formEl.reset();
+      setFileCount(0);
+      setFilesKey((k) => k + 1);
+    } catch {
+      setState("error");
+      setError("Network error — please check your connection and try again.");
+    }
+  }
+
+  if (state === "success") {
+    return (
+      <div className="mt-6 rounded-md border border-[var(--brand)]/30 bg-[var(--brand)]/5 p-6 text-center">
+        <CheckCircle2 className="mx-auto h-8 w-8 text-[var(--brand)]" />
+        <h4 className="mt-3 font-display text-xl text-[var(--ink)]">Enquiry sent.</h4>
+        <p className="mt-2 text-sm text-[var(--ink-soft)]">
+          Thank you — a senior engineer will be in touch shortly. For anything urgent, call{" "}
+          <a href="tel:0452588578" className="text-[var(--brand)] underline">0452 588 578</a>.
+        </p>
+        <button
+          type="button"
+          onClick={() => setState("idle")}
+          className="mt-4 text-xs uppercase tracking-[0.22em] text-[var(--brand)] hover:text-[var(--accent-orange)]"
+        >
+          Send another enquiry
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <form className="mt-6 grid gap-4" onSubmit={handleSubmit}>
+      <div className="grid sm:grid-cols-2 gap-4">
+        <Field label="Full name" name="name" required />
+        <Field label="Email" name="email" type="email" required />
+      </div>
+      <div className="grid sm:grid-cols-2 gap-4">
+        <Field label="Phone" name="phone" type="tel" />
+        <Field label="Project location" name="location" placeholder="Suburb, NSW" />
+      </div>
+      <Field label="Service required" name="service" placeholder="e.g. Structural, Civil, Façade" />
+      <div>
+        <label className="text-xs uppercase tracking-[0.22em] text-[var(--ink-soft)]">Project brief *</label>
+        <textarea name="message" rows={5} required
+          className="mt-2 w-full rounded-md border border-border bg-white px-3 py-2 text-sm text-[var(--ink)] focus:outline-none focus:border-[var(--brand)]"
+          placeholder="Tell us about your site, timeline and what you're trying to build." />
+      </div>
+      <div key={filesKey}>
+        <label className="text-xs uppercase tracking-[0.22em] text-[var(--ink-soft)]">
+          Attachments <span className="normal-case tracking-normal text-[var(--ink-soft)]">(drawings, photos, reports — max 8MB per file, 20MB total)</span>
+        </label>
+        <div className="mt-2 grid sm:grid-cols-2 gap-3">
+          <label className="flex items-center justify-center gap-2 rounded-md border border-dashed border-border bg-white px-3 py-3 text-sm text-[var(--ink-soft)] hover:border-[var(--brand)] hover:text-[var(--brand)] cursor-pointer transition">
+            <input
+              type="file"
+              name="files"
+              multiple
+              className="sr-only"
+              onChange={(e) => setFileCount(e.target.files?.length ?? 0)}
+            />
+            <span>{fileCount > 0 ? `${fileCount} file(s) selected` : "+ Select files"}</span>
+          </label>
+          <label className="flex items-center justify-center gap-2 rounded-md border border-dashed border-border bg-white px-3 py-3 text-sm text-[var(--ink-soft)] hover:border-[var(--brand)] hover:text-[var(--brand)] cursor-pointer transition">
+            <input
+              type="file"
+              name="folder"
+              className="sr-only"
+              ref={(el) => {
+                if (el) {
+                  el.setAttribute("webkitdirectory", "");
+                  el.setAttribute("directory", "");
+                }
+              }}
+            />
+            <span>+ Select folder</span>
+          </label>
+        </div>
+      </div>
+      {state === "error" && (
+        <div className="flex items-start gap-2 rounded-md border border-red-300 bg-red-50 px-3 py-2 text-sm text-red-700">
+          <XCircle className="h-4 w-4 mt-0.5 shrink-0" />
+          <span>{error}</span>
+        </div>
+      )}
+      <button type="submit" disabled={state === "sending"} className="btn-primary self-start disabled:opacity-60">
+        {state === "sending" ? (
+          <>Sending <Loader2 className="h-4 w-4 animate-spin" /></>
+        ) : (
+          "Send enquiry"
+        )}
+      </button>
+      <p className="text-xs text-[var(--ink-soft)]">
+        Prefer to email directly? Reach us at{" "}
+        <a href="mailto:plama.pro@outlook.com" className="text-[var(--brand)] hover:text-[var(--accent-orange)] underline">plama.pro@outlook.com</a>.
+      </p>
+    </form>
   );
 }
