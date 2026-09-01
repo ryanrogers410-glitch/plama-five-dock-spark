@@ -100,7 +100,7 @@ export const Route = createFileRoute("/api/public/contact")({
           body: JSON.stringify({
             from:
               process.env["CONTACT_FROM_EMAIL"] ||
-              "Plama Projects Website <enquiries@plamaprojects.com.au>",
+              "Plama Projects Website <enquiries@plama.websolutionsydney.com.au>",
             to: ["plama.pro@outlook.com"],
             reply_to: email,
             subject: `New enquiry: ${service || "General"} — ${name}`,
