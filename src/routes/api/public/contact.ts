@@ -98,7 +98,9 @@ export const Route = createFileRoute("/api/public/contact")({
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            from: "Plama Projects Website <enquiries@plamaprojects.com.au>",
+            from:
+              process.env["CONTACT_FROM_EMAIL"] ||
+              "Plama Projects Website <enquiries@plamaprojects.com.au>",
             to: ["plama.pro@outlook.com"],
             reply_to: email,
             subject: `New enquiry: ${service || "General"} — ${name}`,
@@ -110,10 +112,11 @@ export const Route = createFileRoute("/api/public/contact")({
         if (!response.ok) {
           const body = await response.text();
           console.error(`Resend send failed [${response.status}]: ${body}`);
-          return Response.json(
-            { ok: false, error: `Email provider error [${response.status}]: ${body}` },
-            { status: 502 },
-          );
+          const friendly =
+            response.status === 403 && body.includes("not verified")
+              ? "Email sending is not active yet: the sending domain is still being verified. Please email plama.pro@outlook.com directly in the meantime."
+              : `Email provider error [${response.status}]: ${body}`;
+          return Response.json({ ok: false, error: friendly }, { status: 502 });
         }
 
         return Response.json({ ok: true });
