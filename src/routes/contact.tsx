@@ -57,12 +57,7 @@ function Contact() {
               <h3 className="mt-4 font-display text-2xl md:text-3xl text-[var(--ink)]">
                 Brief us on your project.
               </h3>
-              <form
-                className="mt-6 grid gap-4"
-                action="mailto:plama.pro@outlook.com"
-                method="post"
-                encType="text/plain"
-              >
+              <ContactForm />
                 <div className="grid sm:grid-cols-2 gap-4">
                   <Field label="Full name" name="name" required />
                   <Field label="Email" name="email" type="email" required />
